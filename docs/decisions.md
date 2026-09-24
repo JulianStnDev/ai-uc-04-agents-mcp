@@ -423,3 +423,20 @@ Offen:
   die Trajektorie im Kontext steht). **Gesamt ca. 3,95 USD.** Die Neubewertung
   von v1/v2 war beauftragt, ihre Kosten habe ich aber vorher nicht geschätzt.
   Ab jetzt steht vor jeder Neubewertung eine Schätzung.
+
+## 2026-09-24: Datums-Fix im Judge (j3) ohne Neubewertung, Abschluss
+
+- Judge **j3** = j2 + Referenztag „heute“ (`<heute>2026-09-24</heute>`, aus
+  `data/kunden.json`). Schlüsse aus dem Datum gelten als gedeckt, wenn sie
+  rechnerisch stimmen. Es wurde **nicht neu bewertet** (Entscheidung Julian).
+  Die veröffentlichten Werte v1–v3 beruhen auf j2 und lassen sich mit
+  `score.py … --judge-version j2` aus dem Cache ohne API-Aufrufe
+  reproduzieren (geprüft: byteidentisch). Neue Läufe werden mit j3 bewertet.
+- Im README steht bei `keine_spekulation`, dass es mindestens 5 bekannte
+  Fehlurteile wegen des fehlenden Datums gibt. Der Wert ist eher zu streng.
+- **Gesamtkosten des Use Case: 6,68 USD** (v1 1,38 · v2 1,36 · v3 1,25 ·
+  Neubewertung mit j2 2,69). Die Überschreitung im v3-Schritt steht im README.
+  **Regel ab jetzt: erst schätzen, dann laufen**, für jeden bezahlten Schritt,
+  auch für Neubewertungen durch den Judge.
+- README nach Schema fertiggestellt, mit Kurzfassung für Gründer.
+  meta.json auf `done`.

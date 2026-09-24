@@ -13,7 +13,7 @@
 | erstattung_ok | 100% |
 | uebergabe_ok | 91% |
 | entwurf_ok | 82% |
-| keine_spekulation (Judge j2) | 64% |
+| keine_spekulation | 64% |
 | Erfolgsquote streng (+ keine_spekulation) / pass^3 streng | 60% / 40% |
 | Pflicht-Eingriffe (Stop-Hook) | nicht vorhanden (vor v3) |
 | Pflicht erfüllt ohne Eingriff | 98% |

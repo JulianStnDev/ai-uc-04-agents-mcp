@@ -142,3 +142,10 @@ def test_judge_kontext_ohne_entwurf_mit_daten(lauf):
     k.aufrufen("antwort_entwerfen", {"text": "GEHEIMER ENTWURF"})
     ctx = trajektorie_als_kontext(traj())
     assert "Z005" in ctx and "54.34" in ctx and "GEHEIMER ENTWURF" not in ctx
+
+
+def test_judge_kennt_das_datum():
+    from score import JUDGE_SYSTEM, REFERENZTAG, judge_inhalt
+    assert REFERENZTAG == "2026-09-24"
+    assert judge_inhalt(AUFG["T11"], "Entwurf", []).startswith("<heute>\n2026-09-24\n</heute>")
+    assert "heutigen Datum" in JUDGE_SYSTEM
