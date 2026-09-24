@@ -1,0 +1,95 @@
+{
+  "run_id": "T14_lauf2",
+  "ticket_id": "T14",
+  "prompt_version": "v3",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 32.147,
+  "sdk_start_s": 0.264,
+  "agent_s": 31.15,
+  "sdk_ende_s": 0.733,
+  "cli_duration_ms": 31155,
+  "cli_duration_api_ms": 32192,
+  "kosten_usd": 0.03435035,
+  "num_turns": 8,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 6465,
+    "cache_creation_input_tokens": 7055,
+    "cache_read_input_tokens": 26266,
+    "output_tokens": 3083,
+    "output_tokens_details": {
+      "thinking_tokens": 1595
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 7055
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 223,
+        "cache_read_input_tokens": 6491,
+        "cache_creation_input_tokens": 564,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 564,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 945,
+      "outputTokens": 16,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0010249999999999999,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 6465,
+      "outputTokens": 3083,
+      "cacheReadInputTokens": 26266,
+      "cacheCreationInputTokens": 7055,
+      "webSearchRequests": 0,
+      "costUSD": 0.033325350000000004,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1595,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Erledigt:** Kunde K006 (Felix Braun) nachgeschlagen. Da er die Kündigung für ein anderes Konto (Google Play/felix.braun@gmail.com) verlangt als das, von dem er schreibt, habe ich die Anfrage an einen Menschen übergeben mit der Bitte um Identitätsverifikation. Antwortentwurf gespeichert.",
+  "pflicht_hook": true,
+  "eingriffe": 1,
+  "eingriffe_details": [
+    {
+      "zeit": 1790271429.835808,
+      "fehlt": [
+        "kunde_nachschlagen"
+      ],
+      "stop_hook_active": false
+    }
+  ],
+  "pflichten_offen_am_ende": []
+}

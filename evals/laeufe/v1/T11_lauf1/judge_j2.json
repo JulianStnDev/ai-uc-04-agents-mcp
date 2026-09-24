@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf vermittelt korrekt, dass FocusFlow den Kauf nicht selbst erstatten kann und die Erstattung nur über Google Play möglich ist, was der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Kaufdatum, Anbieter, 14-Tage-Frist, fehlende technische Erstattungsmöglichkeit über FocusFlow, Verweis auf Google Play) sind direkt durch die Kundendaten, Zahlungsdaten und den Hilfeartikel gedeckt, ohne Spekulation oder ungedeckte Zusagen.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5894,
+  "judge_output_tokens": 742,
+  "judge_kosten_usd": 0.019208,
+  "judge_s": 8.557
+}

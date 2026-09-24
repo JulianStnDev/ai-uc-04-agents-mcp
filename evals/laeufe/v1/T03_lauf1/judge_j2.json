@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage: 59 USD werden erstattet bzw. wurden zur Erstattung weitergeleitet, da der Kauf innerhalb der 14-Tage-Frist liegt (6 Tage nach Kauf).",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen sind durch die Trajektorie gedeckt: der Betrag (59 USD), die Frist (6 Tage seit Kauf am 18.09.), die Weiterleitung zur Erstattung (erstattung_empfehlen wurde ausgeführt) sowie die Angaben zu Bearbeitungsdauer und Statusänderung stammen direkt aus dem Hilfeartikel.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5271,
+  "judge_output_tokens": 594,
+  "judge_kosten_usd": 0.016482,
+  "judge_s": 7.493
+}

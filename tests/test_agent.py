@@ -46,3 +46,27 @@ def test_v2_unterscheidet_sich_nur_in_den_regeln():
     assert v1.split("## Vorgehen")[0] == v2.split("## Vorgehen")[0]  # Rolle + Matrix identisch
     assert "Vermute niemals" in v2 and "Vermute niemals" not in v1
     assert "anderes Konto" in v2 and "weder Kundendaten noch Hilfe" in v2
+
+
+def test_v3_ist_v1_plus_zwei_regeln():
+    v1, v3 = agent.SYSTEM_PROMPT_V1, agent.SYSTEM_PROMPT_V3
+    zeilen = lambda p: [z for z in p.splitlines() if z.strip()]
+    neu = [z for z in zeilen(v3) if z not in zeilen(v1)]
+    assert len(neu) == 3  # zwei neue Regeln + umnummerierte Entwurfsregel (5. -> 7.)
+    assert any("anderes Konto" in z for z in neu) and any("Vermute niemals" in z for z in neu)
+    assert "weder Kundendaten noch Hilfe" not in v3  # T02-Regel aus v2 entfällt
+
+
+def test_stop_hook_blockiert_bis_pflichten_erfuellt(tmp_path):
+    k = Werkzeugkasten(run_id="s", runs_dir=tmp_path)
+    eingriffe = []
+    hook = agent.pflicht_stop_hook(k, eingriffe)
+    r = asyncio.run(hook({"hook_event_name": "Stop", "stop_hook_active": False}, None, None))
+    assert r["decision"] == "block" and "kunde_nachschlagen" in r["reason"] and "antwort_entwerfen" in r["reason"]
+    k.aufrufen("an_mensch_uebergeben", {"grund": "fremdes Konto"})
+    k.aufrufen("kunde_nachschlagen", {"suche": "K006"})
+    r = asyncio.run(hook({"hook_event_name": "Stop", "stop_hook_active": True}, None, None))
+    assert r["decision"] == "block" and "kunde_nachschlagen" not in r["reason"]
+    k.aufrufen("antwort_entwerfen", {"text": "Hallo Felix"})
+    assert asyncio.run(hook({"hook_event_name": "Stop", "stop_hook_active": True}, None, None)) == {}
+    assert [e["fehlt"] for e in eingriffe] == [["kunde_nachschlagen", "antwort_entwerfen"], ["antwort_entwerfen"]]

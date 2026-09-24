@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage klar: FocusFlow kann App-Store-Käufe nicht selbst erstatten, die Erstattung muss direkt über reportaproblem.apple.com bei Apple beantragt werden. Es gibt keinen Widerspruch zur Soll-Aussage.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Die Aussage 'Apple kümmert sich dann um die volle Rückerstattung' ist eine konkrete Ergebniszusage, die nicht durch die Trajektorie gedeckt ist – der Hilfeartikel sagt lediglich, dass dort die Richtlinien des jeweiligen Stores gelten, nicht dass eine volle Erstattung garantiert ist. Auch die Formulierung 'Apple hat die volle Kontrolle über diese Transaktionen' geht über die im Artikel genannte technische Unmöglichkeit hinaus.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 4940,
+  "judge_output_tokens": 1136,
+  "judge_kosten_usd": 0.02124,
+  "judge_s": 11.723
+}

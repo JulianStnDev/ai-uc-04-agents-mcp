@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Die Kernaussage – Weiterleitung an einen Mitarbeiter, weil zum Konto keine Zahlung gefunden wurde – wird im Entwurf nicht klar vermittelt. Stattdessen wird eine andere, nicht belegte Erklärung (App-Store-Synchronisationsproblem) präsentiert, die den eigentlichen Übergabegrund verschleiert bzw. ihm widerspricht.",
+  "entwurf_ok": false,
+  "keine_spekulation_begruendung": "Der Entwurf enthält mehrere unbelegte Behauptungen: dass die Abbuchung über Apple läuft und deshalb nicht sichtbar ist, dass eine Synchronisationsverzögerung vorliegt, die 'normalerweise innerhalb weniger Stunden' behoben sei, sowie eine detaillierte Anleitung zum Force-Close der App – all das findet sich nicht in der Trajektorie und ist reine Spekulation.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5371,
+  "judge_output_tokens": 1230,
+  "judge_kosten_usd": 0.023042,
+  "judge_s": 13.98
+}

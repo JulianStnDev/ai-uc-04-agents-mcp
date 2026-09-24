@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf gibt die Kernaussage korrekt wieder: Eine anteilige Erstattung ist wegen Ablauf der 14-Tage-Frist nicht möglich, was exakt der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Angaben (Kündigung durchgeführt, Pro-Zugang bis 15.08.2027, Kaufdatum 15.08.2026, 14-Tage-Frist aus der Erstattungsrichtlinie) sind wörtlich durch die Trajektorie gedeckt, es werden keine Ursachen oder Fristen erfunden.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 6923,
+  "judge_output_tokens": 416,
+  "judge_kosten_usd": 0.018006,
+  "judge_s": 5.732
+}

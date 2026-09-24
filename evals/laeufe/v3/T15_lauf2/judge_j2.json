@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf gibt die Kernaussage korrekt wieder: Der bereits begonnene Monat wird nicht erstattet, was exakt der Erstattungsrichtlinie für Monatsabos entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen sind durch die Trajektorie gedeckt: Die Kündigung wurde ausgeführt und wird zum 08.10.2026 wirksam (laut abo_kuendigen-Ergebnis), die Nicht-Erstattung begonnener Monate entspricht der Erstattungsrichtlinie, und der Beginn des aktuellen Monats am 08.09. stimmt mit periode_start überein.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5886,
+  "judge_output_tokens": 460,
+  "judge_kosten_usd": 0.016372,
+  "judge_s": 5.667
+}

@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Die Kernaussage verlangt, dass eines der beiden Pro-Abos zwingend gekündigt werden und auslaufen muss, bevor eine Zusammenführung möglich ist. Der Entwurf verwässert dies zu einer bloßen Möglichkeit ('eventuell eines der Pro-Abos kündigen') und erwähnt nicht, dass die Kündigung vor der Zusammenführung erfolgen und die Laufzeit ablaufen muss, wodurch die Verbindlichkeit der Kernaussage nicht vermittelt wird.",
+  "entwurf_ok": false,
+  "keine_spekulation_begruendung": "Alle Aussagen (zwei getrennte Konten, mögliche Zusammenführung, Voraussetzung eines einzigen Pro-Abos, Weiterleitung an den Support) sind durch die Hilfeartikel bzw. die tatsächlich ausgeführte Übergabe gedeckt; konkrete Fristen oder Ergebnisse werden nicht zugesagt.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5787,
+  "judge_output_tokens": 2296,
+  "judge_kosten_usd": 0.034534,
+  "judge_s": 23.787
+}

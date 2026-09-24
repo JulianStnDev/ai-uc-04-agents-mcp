@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf teilt klar mit, dass die doppelte Abbuchung von 54,34 USD zur Erstattung weitergeleitet wurde und zurückerstattet wird, was der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (doppelte Belastung am 14.09., Betrag 54,34 USD, Weiterleitung zur Erstattung, 5-10 Werktage laut Hilfeartikel, Pro-Zugang bleibt aktiv) sind durch die Trajektorie bzw. die dort genannten Hilfeartikel und Aktionen gedeckt.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5976,
+  "judge_output_tokens": 1007,
+  "judge_kosten_usd": 0.022022,
+  "judge_s": 17.15
+}

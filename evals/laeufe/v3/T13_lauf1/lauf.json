@@ -1,0 +1,87 @@
+{
+  "run_id": "T13_lauf1",
+  "ticket_id": "T13",
+  "prompt_version": "v3",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 27.994,
+  "sdk_start_s": 0.387,
+  "agent_s": 26.489,
+  "sdk_ende_s": 1.118,
+  "cli_duration_ms": 26496,
+  "cli_duration_api_ms": 27189,
+  "kosten_usd": 0.028580300000000003,
+  "num_turns": 7,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2801,
+    "cache_creation_input_tokens": 9414,
+    "cache_read_input_tokens": 14638,
+    "output_tokens": 2299,
+    "output_tokens_details": {
+      "thinking_tokens": 1188
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 9414
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 232,
+        "cache_read_input_tokens": 7628,
+        "cache_creation_input_tokens": 1786,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1786,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 973,
+      "outputTokens": 16,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0010530000000000001,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2801,
+      "outputTokens": 2299,
+      "cacheReadInputTokens": 14638,
+      "cacheCreationInputTokens": 9414,
+      "webSearchRequests": 0,
+      "costUSD": 0.027527299999999998,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1188,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:** Ich habe Hannahs Fall überprüft, dabei entdeckt, dass ihr Abo im System auf „FREE\" steht und keine Zahlungen registriert sind – obwohl sie eine Abbuchung beschreibt. Da es sich um ein technisches Problem handelt und sie bereits zweimal ohne Antwort geschrieben hat, habe ich den Fall mit hoher Priorität an unser Support-Team übergeben und ihr einen beruhigenden Antwort-Entwurf hinterlegt.",
+  "pflicht_hook": true,
+  "eingriffe": 0,
+  "eingriffe_details": [],
+  "pflichten_offen_am_ende": []
+}

@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf gibt die Kernaussage korrekt wieder: Der bereits laufende Monat (Periode 08.09.–08.10.2026) wird gemäß Richtlinie nicht erstattet. Zusätzlich wird korrekt über die durchgeführte Kündigung informiert, was den Kernaussagen nicht widerspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen sind durch die Trajektorie gedeckt: die Nichterstattung entspricht wörtlich dem Hilfeartikel, das Kündigungsdatum 08.10.2026 stammt direkt aus dem Tool-Ergebnis von abo_kuendigen, und der Hinweis auf den Wechsel zu Free bzw. die Möglichkeit eines neuen Abos ist eine naheliegende, logisch zwingende Folgerung aus dem Ende des Pro-Zugangs. Es werden keine Ursachen, Fristen oder Ergebnisse behauptet, die nicht in der Trajektorie stehen.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5676,
+  "judge_output_tokens": 1410,
+  "judge_kosten_usd": 0.025452,
+  "judge_s": 16.701
+}

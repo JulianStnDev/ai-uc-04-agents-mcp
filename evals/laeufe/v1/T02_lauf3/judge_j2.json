@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Die Soll-Kernaussage – dass laut Zahlungsdaten im September nur eine Abbuchung über 6,99 USD erfolgt ist und keine Doppelabbuchung vorliegt – wird im Entwurf nicht vermittelt; stattdessen wird nur angekündigt, dies noch zu prüfen. Damit fehlt die eigentliche Hauptaussage.",
+  "entwurf_ok": false,
+  "keine_spekulation_begruendung": "Der Entwurf behauptet nichts Unbelegtes: Die Prüfung im Zahlungssystem und die Zusage einer vollständigen Erstattung bei bestätigter Doppelabbuchung entsprechen der Übergabe und der Erstattungsrichtlinie aus der Trajektorie, konkrete Fristen oder Ergebnisse werden nicht genannt.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5730,
+  "judge_output_tokens": 1118,
+  "judge_kosten_usd": 0.02264,
+  "judge_s": 11.634
+}

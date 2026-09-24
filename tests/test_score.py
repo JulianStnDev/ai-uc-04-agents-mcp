@@ -94,10 +94,12 @@ def test_pflicht_zaehlt_nur_erfolgreiche_aufrufe(lauf):
 
 def test_uebergabe_soll_und_ist(lauf):
     k, traj = lauf
-    assert not bewerte_deterministisch(AUFG["T07"], [])["uebergabe_ok"]
-    k.aufrufen("an_mensch_uebergeben", {"grund": "Konten zusammenführen", "kunden_id": "K006"})
+    assert not bewerte_deterministisch(AUFG["T13"], [])["uebergabe_ok"]         # Pflicht
+    assert bewerte_deterministisch(AUFG["T07"], [])["uebergabe_ok"]             # optional (T07 korrigiert)
+    k.aufrufen("an_mensch_uebergeben", {"grund": "Keine Zahlung gefunden", "kunden_id": "K009"})
+    assert bewerte_deterministisch(AUFG["T13"], traj())["uebergabe_ok"]
     assert bewerte_deterministisch(AUFG["T07"], traj())["uebergabe_ok"]
-    assert not bewerte_deterministisch(AUFG["T08"], traj())["uebergabe_ok"]
+    assert not bewerte_deterministisch(AUFG["T08"], traj())["uebergabe_ok"]      # verboten
 
 
 def empf(zid, betrag):
@@ -131,3 +133,12 @@ def test_obere_grenze_dreierregel_und_clopper_pearson():
     assert obere_grenze_95(0, 2) == 1.0 and obere_grenze_95(0, 0) is None
     # Referenzwert Clopper-Pearson einseitig 95 %: k=1, n=10 -> 0.3942
     assert obere_grenze_95(1, 10) == pytest.approx(0.3942, abs=1e-3)
+
+
+def test_judge_kontext_ohne_entwurf_mit_daten(lauf):
+    from score import trajektorie_als_kontext
+    k, traj = lauf
+    k.aufrufen("zahlungen_ansehen", {"kunden_id": "K001"})
+    k.aufrufen("antwort_entwerfen", {"text": "GEHEIMER ENTWURF"})
+    ctx = trajektorie_als_kontext(traj())
+    assert "Z005" in ctx and "54.34" in ctx and "GEHEIMER ENTWURF" not in ctx

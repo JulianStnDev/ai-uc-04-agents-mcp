@@ -1,0 +1,87 @@
+{
+  "run_id": "T09_lauf2",
+  "ticket_id": "T09",
+  "prompt_version": "v3",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 20.121,
+  "sdk_start_s": 0.485,
+  "agent_s": 18.425,
+  "sdk_ende_s": 1.211,
+  "cli_duration_ms": 18436,
+  "cli_duration_api_ms": 19579,
+  "kosten_usd": 0.0252627,
+  "num_turns": 4,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 5975,
+    "cache_creation_input_tokens": 6934,
+    "cache_read_input_tokens": 5742,
+    "output_tokens": 1803,
+    "output_tokens_details": {
+      "thinking_tokens": 984
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 6934
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 363,
+        "cache_read_input_tokens": 5742,
+        "cache_creation_input_tokens": 1192,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1192,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 951,
+      "outputTokens": 16,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001031,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 5975,
+      "outputTokens": 1803,
+      "cacheReadInputTokens": 5742,
+      "cacheCreationInputTokens": 6934,
+      "webSearchRequests": 0,
+      "costUSD": 0.024231700000000002,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 984,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:**\n\nIch habe Noras Konto (K013) nachgeschlagen, den Abo-Status überprüft und die Richtlinien gesichtet. Die Kündigung wurde definitiv angenommen (Status: gekuendigt) und das Pro-Abo läuft regelkonform bis zum 5. Oktober 2026 weiter – danach erfolgt die automatische Umstellung auf Free. Ein beruhigender Antwortentwurf ist gespeichert und kann versendet werden.",
+  "pflicht_hook": true,
+  "eingriffe": 0,
+  "eingriffe_details": [],
+  "pflichten_offen_am_ende": []
+}

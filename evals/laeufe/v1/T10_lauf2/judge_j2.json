@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf nennt korrekt Google Play als Kündigungsweg, da das Abo dort abgeschlossen wurde, und enthält damit die Kernaussage vollständig und widerspruchsfrei.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Kündigungsweg, Enddatum 21.10.2026 laut Kundendaten, Datenerhalt, keine weitere Abbuchung, E-Mail-Bestätigung) sind wörtlich durch den Hilfeartikel bzw. die Kundendaten gedeckt, es werden keine spekulativen Ursachen oder unbelegten Zusagen gemacht.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 4845,
+  "judge_output_tokens": 365,
+  "judge_kosten_usd": 0.01334,
+  "judge_s": 4.548
+}

@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf bestätigt klar, dass die 59-USD-Verlängerung erstattet bzw. zur Erstattung weitergeleitet wurde und begründet dies mit der eingehaltenen 14-Tage-Frist, was der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Berechtigung zur Erstattung, 14-Tage-Frist, Weiterleitung, 5–10 Werktage Bearbeitungszeit, Herabstufung auf Free mit Datenerhalt) sind wörtlich durch die Trajektorie (Zahlungsdaten, Erstattungsrichtlinie, erstattung_empfehlen) gedeckt, ohne spekulative Zusätze.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5378,
+  "judge_output_tokens": 891,
+  "judge_kosten_usd": 0.019666,
+  "judge_s": 9.908
+}

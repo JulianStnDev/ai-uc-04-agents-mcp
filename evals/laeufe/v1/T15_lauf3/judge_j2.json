@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf gibt klar die Kernaussage wieder, dass der bereits begonnene Monat (08.09.–08.10.2026) nicht erstattet wird, und widerspricht ihr nicht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Kündigungsdatum 08.10.2026, laufender Pro-Zugang bis Periodenende, Nichterstattung laufender Monate) sind wörtlich durch die Trajektorie (abo_kuendigen-Ergebnis und Hilfeartikel) gedeckt.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5879,
+  "judge_output_tokens": 332,
+  "judge_kosten_usd": 0.015078,
+  "judge_s": 4.793
+}

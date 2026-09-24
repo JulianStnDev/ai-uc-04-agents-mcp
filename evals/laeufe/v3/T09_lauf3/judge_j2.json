@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf nennt zwar korrekt das Datum 5. Oktober 2026, widerspricht sich aber selbst, indem er später schreibt, Nora könne Pro nur 'bis Ende September' nutzen und sei 'ab Oktober' im Free-Plan – das widerspricht der Kernaussage, dass Pro bis zum 05.10.2026 aktiv bleibt.",
+  "entwurf_ok": false,
+  "keine_spekulation_begruendung": "Die Aussage 'bis Ende September' ist eine konkrete, falsche Zeitangabe, die nicht durch die Trajektorie (periode_ende: 2026-10-05) gedeckt ist, alle anderen Aussagen sind aber durch die Kundendaten und den Hilfeartikel belegt.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5212,
+  "judge_output_tokens": 1257,
+  "judge_kosten_usd": 0.022994,
+  "judge_s": 14.048
+}

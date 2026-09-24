@@ -1,0 +1,87 @@
+{
+  "run_id": "T15_lauf3",
+  "ticket_id": "T15",
+  "prompt_version": "v3",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 30.681,
+  "sdk_start_s": 0.239,
+  "agent_s": 29.078,
+  "sdk_ende_s": 1.364,
+  "cli_duration_ms": 29083,
+  "cli_duration_api_ms": 30332,
+  "kosten_usd": 0.028063499999999998,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2785,
+    "cache_creation_input_tokens": 8450,
+    "cache_read_input_tokens": 12390,
+    "output_tokens": 2482,
+    "output_tokens_details": {
+      "thinking_tokens": 1670
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 8450
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 531,
+        "cache_read_input_tokens": 6820,
+        "cache_creation_input_tokens": 1630,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1630,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 957,
+      "outputTokens": 22,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001067,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2785,
+      "outputTokens": 2482,
+      "cacheReadInputTokens": 12390,
+      "cacheCreationInputTokens": 8450,
+      "webSearchRequests": 0,
+      "costUSD": 0.0269965,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1670,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "Ich habe das Ticket bearbeitet:\n\n**Durchgeführt:**\n- ✓ Das Monatsabo von Max Wolf (K012) zum Ende der aktuellen Periode (08.10.2026) gekündigt\n- ✓ Antwortentwurf verfasst und gespeichert\n\n**Grund:** Nach der FocusFlow-Erstattungsrichtlinie werden bereits begonnene Monate grundsätzlich nicht erstattet – auch nicht anteilig. Max Wolfs aktuelle Abrechnung läuft vom 08.09. bis 08.10.2026 und ist noch aktiv. Eine Erstattung ist daher nicht möglich. Die Kündigung wurde durchgeführt, da der Kunde dies ausdrücklich verlangt hat. Das Abo läuft bis zum Ende der Periode weiter, danach wird auf Free umgestellt.",
+  "pflicht_hook": true,
+  "eingriffe": 0,
+  "eingriffe_details": [],
+  "pflichten_offen_am_ende": []
+}

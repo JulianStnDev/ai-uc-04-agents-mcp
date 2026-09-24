@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf erwähnt zwar, dass beide Konten Pro-Abos haben und eine Erstattung des gekündigten Abos nicht automatisch erfolgt, verschweigt aber die klare Kernaussage, dass Felix vor der Zusammenführung eines der beiden Pro-Abos aktiv kündigen und auslaufen lassen muss, weil nur ein Konto Pro haben darf. Stattdessen wird die Verantwortung komplett an das Support-Team delegiert, ohne die eigentliche Voraussetzung zu benennen.",
+  "entwurf_ok": false,
+  "keine_spekulation_begruendung": "Die Aussage, das Team werde 'alle Optionen durchsprechen', ist eine konkrete Zusage, die in der Trajektorie nicht belegt ist – dort steht nur der Übergabegrund, nicht ein Versprechen zu Optionsgesprächen.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 10488,
+  "judge_output_tokens": 1474,
+  "judge_kosten_usd": 0.035716,
+  "judge_s": 16.745
+}

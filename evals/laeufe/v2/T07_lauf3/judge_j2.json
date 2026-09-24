@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf erklärt zwar die Existenz zweier Konten und den Zusammenführungsprozess, lässt aber die zentrale Aussage weg, dass vor der Zusammenführung eines der beiden Pro-Abos gekündigt und ausgelaufen sein muss, da nur ein Konto Pro haben darf. Stattdessen wird suggeriert, dass die Zusammenführung direkt zu einer einzigen Pro-Zahlung führt, was der Kernaussage widerspricht.",
+  "entwurf_ok": false,
+  "keine_spekulation_begruendung": "Die Aussage, das Support-Team werde sich 'in den nächsten 1–2 Arbeitstagen' melden, ist eine konkrete Fristzusage, die durch nichts in der Trajektorie gedeckt ist (die Übergabe enthält keine Zeitangabe).",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 10117,
+  "judge_output_tokens": 860,
+  "judge_kosten_usd": 0.028834,
+  "judge_s": 9.605
+}

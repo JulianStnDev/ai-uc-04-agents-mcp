@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf nennt exakt die Preise aus der Soll-Kernaussage (6,99 USD/Monat, 59 USD/Jahr) und widerspricht ihr nicht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle genannten Fakten (Preise, Plattformgleichheit, Pro-Funktionen, Möglichkeit zum Upgrade und Datenerhalt) stammen direkt aus den Hilfeartikeln der Trajektorie und werden als allgemeine Informationen wiedergegeben, ohne konkrete, unbelegte Zusagen für den Einzelfall zu machen.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 4684,
+  "judge_output_tokens": 931,
+  "judge_kosten_usd": 0.018678,
+  "judge_s": 11.334
+}

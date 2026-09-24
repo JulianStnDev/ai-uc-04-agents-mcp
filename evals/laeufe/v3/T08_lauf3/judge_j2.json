@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf gibt korrekt wieder, dass das Pro-Abo gekündigt wurde und bis zum 3. Oktober 2026 (dem in der Trajektorie genannten Enddatum) weiterläuft, was der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Kündigung, Enddatum 3. Oktober 2026, weitere Nutzbarkeit bis dahin) sind direkt durch die Ergebnisse des abo_kuendigen-Aufrufs gedeckt, es werden keine zusätzlichen Ursachen oder Zusagen erfunden.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 1970,
+  "judge_output_tokens": 753,
+  "judge_kosten_usd": 0.01147,
+  "judge_s": 8.016
+}

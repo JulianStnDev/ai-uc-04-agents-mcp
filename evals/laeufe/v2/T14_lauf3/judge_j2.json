@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf erklärt, dass das andere Konto nicht verifiziert werden kann und deshalb eine Prüfung durch einen Kollegen erfolgt, was der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (anderes Konto, Sicherheitsprüfung, Weiterleitung an Kollegen) sind durch die Trajektorie gedeckt; es werden keine konkreten Fristen oder unbelegten Ursachen genannt.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 1970,
+  "judge_output_tokens": 219,
+  "judge_kosten_usd": 0.00613,
+  "judge_s": 3.289
+}

@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf vermittelt klar die Kernaussage, dass FocusFlow den Kauf nicht selbst erstatten kann und die Erstattung nur über Google Play möglich ist – das entspricht der Soll-Kernaussage.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Der Entwurf behauptet, die 14-Tage-Frist sei bereits abgelaufen, obwohl in der Trajektorie kein aktuelles Datum vorliegt, mit dem das Kaufdatum (02.03.2026) verglichen werden könnte – dies ist eine unbelegte Zeitangabe/Vermutung.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5030,
+  "judge_output_tokens": 1253,
+  "judge_kosten_usd": 0.02259,
+  "judge_s": 14.243
+}

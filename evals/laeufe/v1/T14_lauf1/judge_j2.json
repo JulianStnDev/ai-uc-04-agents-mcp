@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Die Soll-Kernaussage verlangt, dass die Anfrage wegen Nichtverifizierbarkeit des anderen Kontos an einen Mitarbeiter weitergegeben wird. Der Entwurf erwähnt weder eine Verifizierungsproblematik noch eine Weiterleitung, sondern erklärt dem Kunden direkt, wie er selbst in Google Play kündigen kann – das widerspricht der geforderten Eskalation.",
+  "entwurf_ok": false,
+  "keine_spekulation_begruendung": "Alle im Entwurf genannten Fakten (Kündigungsweg über Google Play, Ablaufdatum 01.10.2026, Fortbestand des Web-Abos) sind durch die Kundendaten bzw. den Hilfeartikel gedeckt, es werden keine unbelegten Ursachen oder Zusagen behauptet.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 7826,
+  "judge_output_tokens": 1869,
+  "judge_kosten_usd": 0.034342,
+  "judge_s": 20.861
+}

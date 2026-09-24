@@ -1,0 +1,87 @@
+{
+  "run_id": "T07_lauf2",
+  "ticket_id": "T07",
+  "prompt_version": "v3",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 33.174,
+  "sdk_start_s": 0.261,
+  "agent_s": 32.288,
+  "sdk_ende_s": 0.625,
+  "cli_duration_ms": 32290,
+  "cli_duration_api_ms": 33032,
+  "kosten_usd": 0.030026650000000002,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2802,
+    "cache_creation_input_tokens": 8699,
+    "cache_read_input_tokens": 11919,
+    "output_tokens": 2815,
+    "output_tokens_details": {
+      "thinking_tokens": 1470
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 8699
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 465,
+        "cache_read_input_tokens": 6440,
+        "cache_creation_input_tokens": 2259,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2259,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 974,
+      "outputTokens": 22,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0010840000000000001,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2802,
+      "outputTokens": 2815,
+      "cacheReadInputTokens": 11919,
+      "cacheCreationInputTokens": 8699,
+      "webSearchRequests": 0,
+      "costUSD": 0.02894265,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1470,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:** Ich habe Felix' Konto (K006) gefunden und festgestellt, dass seine aktuelle Registrierung ein Passwort-Konto mit aktivem Pro-Abo ist. Das geschilderte Problem (zwei separate Konten durch unterschiedliche Anmeldemethoden) erfordert eine manuelle Kontozusammenfügung durch unsere Support-Profis – die kann ich nicht selbst durchführen. Da unklar ist, welche Zahlungen beim zweiten Google-Konto anfallen und ob eine Erstattung nötig ist, habe ich das Ticket mit vollständigen Details an einen Menschen übergeben und einen freundlichen Antwortentwurf hinterlegt.",
+  "pflicht_hook": true,
+  "eingriffe": 0,
+  "eingriffe_details": [],
+  "pflichten_offen_am_ende": []
+}

@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält nicht die Kernaussage, dass laut den Zahlungsdaten im September nur eine einzige Abbuchung über 6,99 USD erfolgt ist; stattdessen bleibt offen, ob es sich um eine echte Doppelbuchung handelt oder nicht, und der Kunde wird lediglich vertröstet.",
+  "entwurf_ok": false,
+  "keine_spekulation_begruendung": "Der Entwurf gibt lediglich die allgemeine Möglichkeit aus dem Hilfeartikel wieder (Vormerkung vs. echte Doppelbuchung) und macht keine konkreten, nicht gedeckten Zusagen zu Fristen oder Ergebnissen, sondern verweist vage auf eine Rückmeldung des Teams.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5804,
+  "judge_output_tokens": 821,
+  "judge_kosten_usd": 0.019818,
+  "judge_s": 8.95
+}

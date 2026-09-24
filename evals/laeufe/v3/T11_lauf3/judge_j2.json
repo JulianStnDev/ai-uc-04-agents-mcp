@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf vermittelt korrekt, dass FocusFlow den Google-Play-Kauf nicht selbst erstatten kann und der Kunde sich an Google Play wenden muss, was der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Der Entwurf behauptet, die 14-Tage-Frist sei 'längst abgelaufen', obwohl in der Trajektorie kein aktuelles Datum vorliegt, das diese Schlussfolgerung stützt – das Kaufdatum 02.03.2026 allein lässt keine Aussage über den Fristablauf zu.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 4933,
+  "judge_output_tokens": 1450,
+  "judge_kosten_usd": 0.024366,
+  "judge_s": 15.562
+}

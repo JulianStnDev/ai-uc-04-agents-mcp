@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf teilt mit, dass eines der beiden Pro-Abos vorher beendet werden muss, bevor die Zusammenführung erfolgen kann – das entspricht der Kernaussage, auch wenn die genaue Formulierung 'auslaufen lassen' fehlt.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (zwei Konten, doppelte Abos, Notwendigkeit der Kündigung eines Abos, Übergabe an menschlichen Support, 5 Werktage Bearbeitungszeit) sind durch die Trajektorie bzw. den Hilfeartikel gedeckt; die Bemerkung 'das passiert häufiger' ist eine unkritische allgemeine Floskel ohne konkrete Tatsachenbehauptung zum Fall.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5789,
+  "judge_output_tokens": 1436,
+  "judge_kosten_usd": 0.025938,
+  "judge_s": 15.352
+}

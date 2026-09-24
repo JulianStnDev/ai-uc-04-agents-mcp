@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf teilt korrekt mit, dass das Abo gekündigt wurde und Pro noch bis zum 03.10.2026 läuft, was exakt dem 'wirksam_zum' aus der Kündigungsbestätigung entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Kündigung erfolgt, Enddatum, keine weitere Abbuchung, Datenerhalt, spätere Reaktivierung, E-Mail-Bestätigung) sind wörtlich durch die Trajektorie (Kündigungsaktion und Hilfeartikel) gedeckt, ohne spekulative Zusätze oder ungedeckte Fristen.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 4959,
+  "judge_output_tokens": 688,
+  "judge_kosten_usd": 0.016798,
+  "judge_s": 8.44
+}

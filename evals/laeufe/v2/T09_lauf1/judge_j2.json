@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf nennt korrekt, dass die Kündigung wirksam angenommen wurde und Pro bis zum 05.10.2026 (Ende der bezahlten Periode) aktiv bleibt, was exakt mit periode_ende aus den Kundendaten übereinstimmt und der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen sind durch die Trajektorie gedeckt: Der Kündigungsstatus 'gekuendigt' und das Datum 2026-10-05 stammen direkt aus den Kundendaten, die Umstellung auf Free ohne weitere Abbuchung ist im Hilfeartikel 'abo-kuendigen.md' beschrieben, keine spekulativen oder unbelegten Zusagen werden gemacht.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 8237,
+  "judge_output_tokens": 513,
+  "judge_kosten_usd": 0.021604,
+  "judge_s": 6.47
+}

@@ -212,3 +212,14 @@ def test_grunddaten_bleiben_unveraendert(kasten):
     _, f2 = kasten.aufrufen("erstattung_empfehlen", {"kunden_id": "K003", "zahlungs_id": "Z011", "betrag_usd": 59, "begruendung": "x"})
     assert not f1 and not f2
     assert {p.name: p.read_bytes() for p in DATA_DIR.iterdir()} == vorher
+
+
+def test_neuer_entwurf_ersetzt_alten_und_pflichten(kasten):
+    assert kasten.fehlende_pflichten() == ["kunde_nachschlagen", "antwort_entwerfen"]
+    kasten.aufrufen("kunde_nachschlagen", {"suche": ""})            # Fehler zählt nicht
+    assert "kunde_nachschlagen" in kasten.fehlende_pflichten()
+    kasten.aufrufen("kunde_nachschlagen", {"suche": "K001"})
+    a, _ = kasten.aufrufen("antwort_entwerfen", {"text": "eins"})
+    b, _ = kasten.aufrufen("antwort_entwerfen", {"text": "zwei"})
+    assert a["ersetzt"] is None and b["ersetzt"] == a["entwurfs_id"]
+    assert kasten.entwurf["text"] == "zwei" and kasten.fehlende_pflichten() == []

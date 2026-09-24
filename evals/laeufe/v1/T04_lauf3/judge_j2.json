@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage: Die Erstattung der 59$-Verlängerung wurde wegen der laufenden 14-Tage-Frist zur Freigabe weitergeleitet, was der Soll-Aussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Der Satz 'die 59$ hätten nicht abgebucht werden sollen, wenn du nicht kündigen wolltest' unterstellt einen Fehler beim Abbuchen, obwohl laut Trajektorie das Abo aktiv war und die automatische Verlängerung planmäßig erfolgte – diese Bewertung des Hergangs ist nicht durch die Daten gedeckt.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5312,
+  "judge_output_tokens": 1726,
+  "judge_kosten_usd": 0.027884,
+  "judge_s": 17.251
+}

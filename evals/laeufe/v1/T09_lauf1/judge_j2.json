@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf bestätigt klar, dass die Kündigung wirksam ist und Pro bis zum 5. Oktober 2026 (Ende der bezahlten Periode laut periode_ende) weiterläuft, was genau der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Kündigungsstatus, Laufzeit bis 5.10.2026, Erhalt der Daten, keine weiteren Abbuchungen, spätere Free-Nutzung oder erneuter Pro-Abschluss) sind direkt durch die Kundendaten bzw. den Hilfeartikel „Abo kündigen“ gedeckt, ohne Spekulation oder ungedeckte Zusagen.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5337,
+  "judge_output_tokens": 378,
+  "judge_kosten_usd": 0.014454,
+  "judge_s": 5.118
+}

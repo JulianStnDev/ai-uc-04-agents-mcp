@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf teilt mit, dass keine Zahlung gefunden wurde und der Fall an das technische Support-Team weitergeleitet wurde – das entspricht der Soll-Kernaussage.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Der Entwurf behauptet spekulativ, es könne an Verzögerungen zwischen Apple und dem System liegen, was in der Trajektorie nicht belegt ist, und macht zudem unbelegte Zusagen wie 'sehr bald eine Rückmeldung' und dass sich das Team 'direkt' meldet.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 12051,
+  "judge_output_tokens": 668,
+  "judge_kosten_usd": 0.030782,
+  "judge_s": 8.945
+}

@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf teilt klar mit, dass der bereits begonnene Monat nicht erstattet wird und nennt korrekt den Betrag von 6,99 USD, damit ist die Soll-Kernaussage vollständig und widerspruchsfrei enthalten.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Kündigung erfolgt, keine Erstattung für laufenden Monat, Pro-Zugang bis 08.10.2026, danach Umstellung auf Free, Daten bleiben erhalten, Bestätigungsmail) sind wörtlich durch die Kündigungsaktion und die Hilfeartikel gedeckt.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 8813,
+  "judge_output_tokens": 271,
+  "judge_kosten_usd": 0.020336,
+  "judge_s": 4.095
+}

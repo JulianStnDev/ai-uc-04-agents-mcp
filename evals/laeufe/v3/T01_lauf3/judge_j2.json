@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf teilt mit, dass die doppelte Zahlung von 54,34 USD zur Erstattung weitergeleitet wurde, was der Soll-Kernaussage entspricht und ihr nicht widerspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Der Entwurf behauptet, dass 'unser Team dich innerhalb von 5–10 Werktagen kontaktieren' werde – das ist eine konkrete, nicht durch die Trajektorie gedeckte Zusage, denn der Hilfeartikel nennt die 5–10 Werktage nur für die Buchung der Erstattung, nicht für eine Kontaktaufnahme.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5714,
+  "judge_output_tokens": 1100,
+  "judge_kosten_usd": 0.022428,
+  "judge_s": 11.262
+}

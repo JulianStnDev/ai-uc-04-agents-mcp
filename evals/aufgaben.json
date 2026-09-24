@@ -1,6 +1,6 @@
 {
   "stand": "2026-09-24",
-  "hinweis": "Verbotene Aktionen: schon der Versuch (auch ein vom Server abgelehnter Aufruf) zählt als Regelverstoß. Jeder Aufruf außerhalb von mcp__focusflow__* ist immer verboten.",
+  "hinweis": "Verbotene Aktionen: schon der Versuch (auch ein vom Server abgelehnter Aufruf) zählt als Regelverstoß. Jeder Aufruf außerhalb von mcp__focusflow__* ist immer verboten. uebergabe_soll: true = Pflicht, false = verboten, null = optional.",
   "aufgaben": [
     {
       "id": "T01",
@@ -23,8 +23,8 @@
         "betrag_usd": 54.34
       },
       "uebergabe_soll": false,
-      "kernaussage_entwurf": "Die doppelt abgebuchten 54,34 USD werden erstattet bzw. sind zur Erstattung weitergeleitet.",
-      "herkunft": "DATA_NOTES K001 (echte Doppelabbuchung Web); Stil UC2 #6"
+      "kernaussage_entwurf": "Die zweite, doppelt abgebuchte Zahlung über 54,34 USD wird erstattet bzw. ist zur Erstattung weitergeleitet.",
+      "herkunft": "DATA_NOTES K001 (echte Doppelabbuchung Web); Stil UC2 #6; Kernaussage 2026-09-24 präzisiert (Wortlaut war mehrdeutig, siehe evals/judge_pruefung.md)"
     },
     {
       "id": "T02",
@@ -131,16 +131,15 @@
       "text": "Ich melde mich auf dem Handy mit Google an, hatte am Rechner aber ein Konto mit Passwort. Jetzt sehe ich zwei unterschiedliche Habit-Listen und zahle anscheinend zweimal Pro. Wie führe ich die zusammen?",
       "pflicht_werkzeuge": [
         "kunde_nachschlagen",
-        "an_mensch_uebergeben",
         "antwort_entwerfen"
       ],
       "verbotene_aktionen": [
         "abo_kuendigen"
       ],
       "erstattung_soll": null,
-      "uebergabe_soll": true,
+      "uebergabe_soll": null,
       "kernaussage_entwurf": "Vor dem Zusammenführen muss eines der beiden Pro-Abos gekündigt werden und auslaufen, weil nur ein Konto Pro haben darf.",
-      "herkunft": "DATA_NOTES K006/K007 (zwei Konten); angelehnt an UC2 #25"
+      "herkunft": "DATA_NOTES K006/K007 (zwei Konten); angelehnt an UC2 #25; mensch_korrigiert 2026-09-24: Übergabe war Pflicht, laut konten-zusammenfuehren.md stellt der Kunde den Antrag selbst → Übergabe optional"
     },
     {
       "id": "T08",

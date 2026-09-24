@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf gibt klar die Kernaussage wieder, dass das Abo über Google Play gekündigt werden muss, da es dort abgeschlossen wurde, inklusive der korrekten Schritt-für-Schritt-Anleitung.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Die meisten Angaben (Enddatum, Datenerhalt, keine weiteren Abbuchungen) sind durch die Trajektorie gedeckt, aber die Behauptung, die Kündigungsbestätigung komme 'von Google Play' per E-Mail, ist eine nicht belegte Ausschmückung, da der Hilfeartikel nur allgemein von einer Bestätigung per E-Mail spricht, ohne den Absender zu nennen.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 4686,
+  "judge_output_tokens": 878,
+  "judge_kosten_usd": 0.018152,
+  "judge_s": 9.805
+}

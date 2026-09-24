@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf gibt die Kernaussage korrekt wieder: Die Kündigung des Google-Kontos wurde weitergeleitet, weil das Team erst verifizieren muss, dass der Kunde beide Konten kontrolliert – das entspricht der fehlenden Verifizierbarkeit des anderen Kontoinhabers.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Weiterleitung, Notwendigkeit der Verifizierung wegen unterschiedlicher E-Mail-Adressen) sind durch die Trajektorie gedeckt; die Formulierung 'kümmern sich schnellstmöglich' ist eine vage Floskel ohne konkrete Frist oder Zusage.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 2390,
+  "judge_output_tokens": 525,
+  "judge_kosten_usd": 0.01003,
+  "judge_s": 6.511
+}

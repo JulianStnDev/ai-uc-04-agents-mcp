@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage: Die 59$-Verlängerung wird zur Erstattung weitergeleitet, da die 14-Tage-Frist ab Periodenbeginn (15.09.) noch läuft. Nichts widerspricht dem.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen sind durch die Trajektorie gedeckt: die Erstattungsempfehlung, die 14-Tage-Frist-Begründung, die Zahlungsart Stripe, die 5–10 Werktage laut Hilfeartikel und die Umstellung auf Free nach Erstattung.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5214,
+  "judge_output_tokens": 255,
+  "judge_kosten_usd": 0.012978,
+  "judge_s": 3.684
+}

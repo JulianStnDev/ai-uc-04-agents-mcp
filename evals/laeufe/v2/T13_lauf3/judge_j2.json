@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf vermittelt, dass keine Zahlung im System gefunden wurde und das Anliegen an einen Kollegen zur weiteren Klärung weitergegeben wird, was der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Der Entwurf spekuliert mit 'könnte das Geld vom App Store abgezogen worden sein, während die Aktivierung bei uns fehlgeschlagen ist' über eine Ursache, die in der Trajektorie nicht belegt ist, und macht mit 'spätestens morgen' eine konkrete Fristzusage, die ebenfalls nicht durch die Trajektorie gedeckt ist.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5324,
+  "judge_output_tokens": 688,
+  "judge_kosten_usd": 0.017528,
+  "judge_s": 7.505
+}

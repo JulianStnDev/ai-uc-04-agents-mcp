@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf nennt exakt die Preise aus der Soll-Kernaussage (6,99 USD/Monat, 59 USD/Jahr) gemäß dem aktuelleren Artikel 'preise-und-tarife.md' und widerspricht ihr nicht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Preise, Funktionen, Aktivierung in den Einstellungen, jederzeitige Kündigung ohne Frist, Datenerhalt) sind wörtlich durch die Hilfeartikel in der Trajektorie gedeckt, es werden keine Ursachen oder Zusagen erfunden.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 4648,
+  "judge_output_tokens": 1634,
+  "judge_kosten_usd": 0.025636,
+  "judge_s": 18.995
+}

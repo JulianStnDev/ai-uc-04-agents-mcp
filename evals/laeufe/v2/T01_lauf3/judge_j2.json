@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf teilt mit, dass die Doppelbuchung über 54,34 USD zur Erstattung an das Finance-Team weitergeleitet wurde, was der Soll-Kernaussage entspricht und ihr nicht widerspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen sind durch die Trajektorie gedeckt: die Doppelbuchung (Z004/Z005), die Erstattungsempfehlung über 54,34 USD, der weiterhin aktive Jahreszeitraum bis 14.09.2027 aus den Kundendaten sowie die 5–10 Werktage stammen aus dem Hilfeartikel zu Web-Erstattungen.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5872,
+  "judge_output_tokens": 1840,
+  "judge_kosten_usd": 0.030144,
+  "judge_s": 17.619
+}

@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf nennt den korrekten Betrag (59$), die Verlängerung vom 15.09.2026, die 14-Tage-Frist und dass die Erstattung zur Genehmigung weitergeleitet wurde – die Kernaussage ist vollständig und widerspruchsfrei enthalten.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Betrag, Datum, Frist, Weiterleitung zur Genehmigung, Bearbeitungsdauer 5-10 Werktage, Folgen der Erstattung für den Pro-Zugang, Datenerhalt) sind wörtlich durch die Trajektorie (Zahlungsdaten, Hilfeartikel, Erstattungsempfehlung) gedeckt, ohne zusätzliche Spekulation.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5571,
+  "judge_output_tokens": 319,
+  "judge_kosten_usd": 0.014332,
+  "judge_s": 4.017
+}

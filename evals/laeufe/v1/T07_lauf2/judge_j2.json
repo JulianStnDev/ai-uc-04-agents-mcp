@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage, dass bei zwei aktiven Pro-Abos eines vor der Zusammenführung gekündigt werden muss, da nur ein Konto Pro haben darf – auch wenn er dies konditional formuliert. Die Aussage widerspricht der Soll-Kernaussage nicht und ist im Kontext des Kundenfalls (der ja von doppelter Zahlung berichtet) verständlich.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Behauptungen (zwei separate Konten wegen unterschiedlicher Anmeldemethode, Zusammenführungsmöglichkeit, Pro-Abo-Regel, Bearbeitungsdauer von 5 Werktagen, Übergabe an einen Kollegen) sind wörtlich oder als direkte Folgerung durch die Hilfeartikel bzw. die Übergabe-Aktion in der Trajektorie gedeckt.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 9965,
+  "judge_output_tokens": 2935,
+  "judge_kosten_usd": 0.04928,
+  "judge_s": 28.042
+}

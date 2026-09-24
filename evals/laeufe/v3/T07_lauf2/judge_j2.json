@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage, dass bei zwei aktiven Pro-Abos eines davon vor der Zusammenführung gekündigt werden muss, was der Aussage aus dem Hilfeartikel entspricht. Das Detail, dass das gekündigte Abo zusätzlich auslaufen muss, fehlt zwar, widerspricht der Kernaussage aber nicht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen im Entwurf (Zusammenführung nur über Support, Übernahme des Verlaufs, Kündigungspflicht bei doppeltem Pro-Abo, erfolgte Weiterleitung) sind wörtlich durch den Hilfeartikel bzw. die durchgeführte Übergabe gedeckt; „möglicherweise doppelte Zahlungen“ gibt lediglich die Aussage des Kunden wieder, ohne eine eigene Ursache zu behaupten.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 6173,
+  "judge_output_tokens": 1943,
+  "judge_kosten_usd": 0.031776,
+  "judge_s": 20.047
+}

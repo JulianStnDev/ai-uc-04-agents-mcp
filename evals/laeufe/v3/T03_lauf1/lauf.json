@@ -1,0 +1,87 @@
+{
+  "run_id": "T03_lauf1",
+  "ticket_id": "T03",
+  "prompt_version": "v3",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 25.803,
+  "sdk_start_s": 0.26,
+  "agent_s": 24.48,
+  "sdk_ende_s": 1.063,
+  "cli_duration_ms": 24486,
+  "cli_duration_api_ms": 25348,
+  "kosten_usd": 0.02566525,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2784,
+    "cache_creation_input_tokens": 7773,
+    "cache_read_input_tokens": 11640,
+    "output_tokens": 2191,
+    "output_tokens_details": {
+      "thinking_tokens": 1210
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 7773
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 298,
+        "cache_read_input_tokens": 6080,
+        "cache_creation_input_tokens": 1693,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1693,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 956,
+      "outputTokens": 18,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001046,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2784,
+      "outputTokens": 2191,
+      "cacheReadInputTokens": 11640,
+      "cacheCreationInputTokens": 7773,
+      "webSearchRequests": 0,
+      "costUSD": 0.02461925,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1210,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Fertig!** Ich habe die Erstattung von 59,00 USD empfohlen (Clara war noch am 6. Tag der 14-Tage-Rückgabefrist) und einen Antwort-Entwurf verfasst, der jetzt noch von einem Menschen versendet wird.",
+  "pflicht_hook": true,
+  "eingriffe": 0,
+  "eingriffe_details": [],
+  "pflichten_offen_am_ende": []
+}

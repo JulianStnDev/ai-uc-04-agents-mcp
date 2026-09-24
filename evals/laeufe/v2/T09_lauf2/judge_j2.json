@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf bestätigt klar, dass die Kündigung angenommen wurde und nennt korrekt das Datum 05.10.2026 als Ende des Pro-Zugangs, was exakt der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Kündigung angenommen, Enddatum, keine weitere Abbuchung, Umstellung auf Free) sind direkt durch die Kundendaten und den Hilfeartikel gedeckt, es werden keine Ursachen oder unbelegten Zusagen gemacht.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 4795,
+  "judge_output_tokens": 244,
+  "judge_kosten_usd": 0.01203,
+  "judge_s": 3.452
+}

@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf vermittelt korrekt die Kernaussage, dass FocusFlow App-Store-Käufe nicht selbst erstatten kann und die Erstattung direkt bei Apple beantragt werden muss.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Der Entwurf erfindet Details, die nicht in der Trajektorie stehen: die 14-Tage-Frist gilt laut Hilfeartikel für FocusFlows eigene Richtlinie, nicht nachweislich für Apples Rückgabeprozess, und die Angabe 'in der Regel 3–5 Werktage' für die Apple-Erstattung ist durch nichts in der Trajektorie belegt.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 6008,
+  "judge_output_tokens": 576,
+  "judge_kosten_usd": 0.017776,
+  "judge_s": 6.415
+}

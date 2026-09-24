@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf nennt korrekt den Betrag von 59,00 USD für das Jahresabo und erklärt, dass die Erstattung wegen der 14-Tage-Frist gewährt wird, was der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Der Entwurf behauptet, die Erstattung 'wird' innerhalb von 5–10 Werktagen gebucht, obwohl laut Trajektorie der Status noch 'wartet_auf_freigabe' ist – die Erstattung ist also noch nicht final bestätigt, sondern nur empfohlen. Damit macht der Entwurf eine konkrete Ergebniszusage, die über den tatsächlichen Bearbeitungsstand hinausgeht.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5338,
+  "judge_output_tokens": 1358,
+  "judge_kosten_usd": 0.024256,
+  "judge_s": 14.205
+}

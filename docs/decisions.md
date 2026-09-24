@@ -306,3 +306,120 @@ Entscheidung: Prompt v2 wird **nicht** als neuer Standard übernommen, bevor
 Julian über die Folgerungen (v3-Regeln, Spekulations-Kriterium im Judge,
 Soll von T07) entschieden hat. `agent.py` hat weiterhin `--prompt v2` als
 Voreinstellung. Das ist bewusst noch nicht zurückgestellt, Entscheidung offen.
+
+## 2026-09-24: Prüfung des Judges (entwurf_ok) vor v3
+
+Alle 15 negativen `entwurf_ok`-Urteile aus v1 und v2 habe ich gegen Daten, Hilfe
+und Trajektorie geprüft (`evals/judge_pruefung.md`). Ergebnis: **14 korrekt
+(davon ein Grenzfall, T11), 1 Fehlurteil** (v2 T01_lauf2: Der Judge verlangt
+108,68 statt 54,34 USD).
+
+Ursache: Die Kernaussage „die doppelt abgebuchten 54,34 USD“ ist mehrdeutig,
+und der Judge sieht keine Daten. Das ist kein systematisches Problem des
+Judge-Prompts: Denselben Wortlaut hat er in 5 von 6 Fällen richtig bewertet.
+
+Korrektur:
+- T01-Kernaussage präzisiert („die zweite, doppelt abgebuchte Zahlung über
+  54,34 USD“), das Soll bleibt dasselbe.
+- **Judge j2** bekommt die Trajektorie als Kontext, also alle Werkzeugaufrufe
+  mit Ergebnissen einschließlich der Hilfeartikel, ohne den Entwurf selbst.
+- v1 und v2 wurden mit j2 neu bewertet, ohne neue Agent-Läufe. Die alten
+  Urteile bleiben als `judge.json` neben den neuen `judge_j2.json` liegen.
+
+Bei `entwurf_ok` kippten dadurch 3 von 88 Urteilen: v2 T01_lauf2
+falsch → richtig (das Fehlurteil ist behoben), v1 T11_lauf3 falsch → richtig
+(der Grenzfall) und v2 T07_lauf2 richtig → falsch. `entwurf_ok` ist also stabil.
+
+## 2026-09-24: Goldset T07 korrigiert (Soll war zu eng)
+
+Wie #18 in UC3: Das Soll wurde nach dem Lauf korrigiert.
+- **Vorher:** Übergabe an einen Menschen war Pflicht.
+- **Warum falsch:** Laut `konten-zusammenfuehren.md` stellt der Kunde den
+  Antrag selbst (Einstellungen > Hilfe > Kontakt > „Konten zusammenführen“).
+  Ein Verweis auf den Antrag ist korrekt. Eine Übergabe ist aber auch nicht
+  falsch, denn am Ende führt der Support zusammen.
+- **Nachher:** `uebergabe_soll = null` (neuer Wert: optional),
+  `an_mensch_uebergeben` ist keine Pflicht mehr. Die Kernaussage (vorher ein
+  Pro-Abo kündigen) bleibt. `herkunft` ist als `mensch_korrigiert` markiert.
+
+Zahlen vorher/nachher (jeweils mit Judge j2):
+
+| Version | T07 alt | T07 neu | Erfolg gesamt alt | neu | pass^3 alt | neu |
+|---|---|---|---|---|---|---|
+| v1 | 2/3 | 2/3 | 82 % | 82 % | 73 % | 73 % |
+| v2 | 0/3 | 1/3 | 76 % | 78 % | 73 % | 73 % |
+| v3 | 2/3 | 2/3 | 87 % | 87 % | 73 % | 73 % |
+
+Die Korrektur wirkt nur auf v2 (der eine Lauf ohne Übergabe). v1 und v3
+übergeben immer. T02 bleibt unverändert.
+
+## 2026-09-24: Pflichten im Code statt im Prompt (Stop-Hook)
+
+Grundsatz ab v3: Pflichten, die immer gelten, werden im Code erzwungen. Urteile
+bleiben im Prompt.
+
+- Mechanismus: ein **Stop-Hook** des Agent SDK. Laut Doku (Hooks-Referenz,
+  Abschnitt „Stop decision control“) verhindert `{"decision": "block",
+  "reason": …}` das Ende, und der `reason` geht an Claude, das weiterarbeitet.
+  `stop_hook_active` zeigt an, dass schon nachgesteuert wird. Nach 8 Blocks in
+  Folge beendet Claude Code den Lauf trotzdem. Ein zweiter Durchgang ist
+  deshalb nicht nötig.
+- Pflichten: `kunde_nachschlagen` wurde erfolgreich aufgerufen, und genau ein
+  Entwurf liegt vor, auch nach einer Übergabe. „Genau einer“ ist im Werkzeug
+  umgesetzt: Ein neuer Entwurf ersetzt den alten (`ersetzt` im Ergebnis).
+- **Die Eingriffe sind eine eigene Kennzahl** (`eingriffe` in `lauf.json`,
+  „Läufe mit Pflicht-Eingriff“ und „Pflicht erfüllt ohne Eingriff“ im
+  Bericht), damit der Hook schwaches Agent-Verhalten nicht verdeckt.
+- Probelauf T14 (in `runs/`, nicht im Eval): Der Agent übergab die E-Mail als
+  `kunden_id`, beide Entwürfe scheiterten, und er wollte aufhören. Der Hook
+  griff ein, danach lief alles korrekt.
+
+## 2026-09-24: Prompt v3 und Judge-Kriterium keine_spekulation
+
+Prompt v3 = v1 plus zwei Regeln aus v2. Die Wirkung je Regel aus dem v2-Vergleich:
+
+| v2-Regel | Wirkung in v2 | in v3 |
+|---|---|---|
+| Fremdes Konto → nicht handeln, übergeben | T14: Übergabe 2/3 → 3/3 richtig, aber als Abkürzung (kein Nachschlagen, kein Entwurf) | **übernommen** als eigene Regel 5. Das Abkürzungsproblem löst jetzt der Stop-Hook |
+| Nichts vermuten, keine Zahlung → das sagen | T13 0/3 → 1/3 (teilweise) | **übernommen**, erweitert: Vermutungen nur in der internen Übergabe-Notiz, als Vermutung gekennzeichnet |
+| Übergabe nur bei unerklärtem Widerspruch (T02) | T02 unverändert 0/3, dazu Kopplung bei T07 (verweist statt zu übergeben) | **entfällt**: keine Wirkung auf das Ziel-Ticket, dafür Nebenwirkung |
+
+Neues Judge-Kriterium **`keine_spekulation`** (analog zu `treu` in UC3): Ist
+jede Behauptung des Entwurfs über den Fall durch die Trajektorie gedeckt,
+also Ursachen, Hergänge, Zahlungen, Fristen und Zusagen? Vorsichtige
+Formulierungen („könnte“) zählen als Spekulation. Der Erfolg pro Lauf zählt
+weiter über die fünf bisherigen Kriterien (vergleichbar mit v1/v2).
+`erfolg_streng` verlangt zusätzlich `keine_spekulation`.
+
+## 2026-09-24: Ergebnis v3, beste Version, offene Punkte
+
+v1, v2 und v3 im Vergleich, alle mit Judge j2 und korrigiertem Goldset. Details,
+Einordnung und Fallbeispiele (T14, T02) in `evals/vergleich_v1_v2_v3.md`.
+
+| | v1 | v2 | v3 |
+|---|---|---|---|
+| Erfolg pro Lauf | 82 % | 78 % | **87 %** |
+| pass^3 | 73 % | 73 % | 73 % |
+| keine_spekulation | 64 % | 58 % | 58 % |
+| Erfolg streng / pass^3 streng | **60 %** / **40 %** | 53 % / 40 % | 56 % / 33 % |
+| Läufe mit Pflicht-Eingriff | – | – | 3/45 (alle T14) |
+| Kosten pro Ticket / p95 | 0,026 USD / 41,5 s | 0,027 USD / 38,7 s | 0,027 USD / 37,0 s |
+
+Entscheidung: `agent.py` startet ohne Angabe **mit v3**, gewählt nach der
+Hauptmetrik (Erfolg pro Lauf, pass^3 gleich). Einschränkungen:
+- Der Vorsprung ist klein (39 gegenüber 37 von 45 Läufen).
+- Die T14-Verbesserung kommt vollständig aus dem Stop-Hook.
+- Nach der strengen Metrik liegt v1 vorn. Die Regel „nichts vermuten“ zeigt
+  keinen messbaren Effekt.
+
+Offen:
+- **Judge j2 kennt „heute“ nicht.** Mindestens 5 `keine_spekulation`-Urteile
+  sind Fehlurteile zu Fristschlüssen, die Quote ist also nach unten verzerrt.
+  Die Reparatur ist einfach (Referenzdatum in den Judge-Kontext). Sie erfordert
+  aber eine erneute Bewertung, siehe Kosten.
+- **Kosten dieses Schritts** über der Freigabe: Freigegeben waren ca. 1,40 USD
+  für den v3-Lauf. Tatsächlich: v3-Agent 1,22 USD, Probelauf 0,03 USD, Judge j2
+  für v1+v2+v3 2,69 USD (ca. 0,02 USD pro Urteil statt 0,003 USD bei j1, weil
+  die Trajektorie im Kontext steht). **Gesamt ca. 3,95 USD.** Die Neubewertung
+  von v1/v2 war beauftragt, ihre Kosten habe ich aber vorher nicht geschätzt.
+  Ab jetzt steht vor jeder Neubewertung eine Schätzung.

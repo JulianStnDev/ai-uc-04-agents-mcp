@@ -12,6 +12,7 @@ Erstattung auslöst oder eine Antwort versendet.
 
 import json
 import re
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -75,6 +76,8 @@ class Werkzeugkasten:
         self.zahlungen = json.loads((data_dir / "zahlungen.json").read_text(encoding="utf-8"))["zahlungen"]
         self.artikel = _artikel_laden(corpus_dir)
         self.kuendigungen: dict[str, dict] = {}  # kunden_id -> Kündigung in diesem Lauf
+        self.entwurf: dict | None = None          # gültiger Entwurf (ein neuer ersetzt den alten)
+        self.erfolgreich: Counter = Counter()     # Werkzeug -> Anzahl erfolgreicher Aufrufe
         self._seq = 0
 
     # ---------- Einstieg: Aufruf mit Protokoll ----------
@@ -90,12 +93,23 @@ class Werkzeugkasten:
             ergebnis, fehler = {"fehler": str(e)}, True
         except TypeError as e:  # falsche/fehlende Parameter
             ergebnis, fehler = {"fehler": f"Ungültige Eingabe: {e}"}, True
+        if not fehler:
+            self.erfolgreich[werkzeug] += 1
         self._seq += 1
         self._anhaengen("trajektorie.jsonl", {
             "run_id": self.run_id, "seq": self._seq, "zeit_start": start, "zeit_ende": _jetzt(),
             "werkzeug": werkzeug, "eingabe": eingabe, "ergebnis": ergebnis, "fehler": fehler,
         })
         return ergebnis, fehler
+
+    def fehlende_pflichten(self) -> list[str]:
+        """Pflichten, die in jedem Lauf gelten und im Code erzwungen werden (Stop-Hook im Agent)."""
+        fehlt = []
+        if not self.erfolgreich["kunde_nachschlagen"]:
+            fehlt.append("kunde_nachschlagen")
+        if self.entwurf is None:
+            fehlt.append("antwort_entwerfen")
+        return fehlt
 
     def blockiert_protokollieren(self, werkzeug: str, eingabe: dict, grund: str) -> None:
         """Für Aufrufe, die schon vor dem Server abgelehnt wurden (PreToolUse-Hook im Agent)."""
@@ -222,11 +236,14 @@ class Werkzeugkasten:
         return eintrag
 
     def antwort_entwerfen(self, text: str, kunden_id: str | None = None) -> dict:
-        """Speichert nur einen Entwurf. Versendet wird nichts."""
+        """Speichert nur einen Entwurf. Versendet wird nichts. Ein neuer Entwurf ersetzt den bisherigen,
+        es gibt pro Lauf also immer höchstens einen gültigen Entwurf."""
         text = self._pflichttext(text, "text")
         if kunden_id:
             kunden_id = self._kunde(kunden_id)["kunden_id"]
         eintrag = {"entwurfs_id": f"A-{self.run_id}-{self._seq + 1}", "zeit": _jetzt(),
-                   "kunden_id": kunden_id, "text": text, "status": "entwurf"}
+                   "kunden_id": kunden_id, "text": text, "status": "entwurf",
+                   "ersetzt": self.entwurf["entwurfs_id"] if self.entwurf else None}
+        self.entwurf = eintrag
         self._anhaengen("antwortentwuerfe.jsonl", eintrag)
         return eintrag

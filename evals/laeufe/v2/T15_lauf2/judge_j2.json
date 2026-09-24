@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Die Kernaussage, dass der bereits begonnene Monat nicht erstattet wird, ist klar und korrekt enthalten, inklusive Begründung und Betrag. Nichts im Entwurf widerspricht dieser Aussage.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen sind durch die Trajektorie gedeckt: Erstattungsrichtlinie für Monatsabos, Periodenbeginn 8. September, Zahlung von 6,99 USD, sowie die tatsächlich ausgeführte Kündigung mit Wirksamkeit zum 8. Oktober und Umstellung auf Free laut Hilfeartikel.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5984,
+  "judge_output_tokens": 271,
+  "judge_kosten_usd": 0.014678,
+  "judge_s": 4.193
+}

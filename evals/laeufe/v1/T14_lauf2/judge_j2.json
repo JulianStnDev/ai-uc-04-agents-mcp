@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf gibt korrekt wieder, dass die Anfrage wegen des anderen (Google-)Kontos zur Verifizierung an das Support-Team weitergegeben wurde, was der Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Der Entwurf behauptet unbelegt, das Team könne 'schnell' verifizieren und werde danach das Abo kündigen – beides sind konkrete Zusagen zu Tempo und Ergebnis, die in der Trajektorie nicht enthalten sind.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 2379,
+  "judge_output_tokens": 616,
+  "judge_kosten_usd": 0.010918,
+  "judge_s": 7.468
+}

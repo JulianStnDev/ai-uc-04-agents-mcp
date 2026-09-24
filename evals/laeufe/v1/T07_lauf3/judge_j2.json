@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Die Kernaussage, dass eines der beiden Pro-Abos vor der Zusammenführung gekündigt werden muss und auslaufen muss, weil nur ein Konto Pro haben darf, fehlt im Entwurf vollständig. Stattdessen wird nur pauschal auf eine spätere Klärung durch den Support verwiesen.",
+  "entwurf_ok": false,
+  "keine_spekulation_begruendung": "Der Entwurf verspricht eine 'Erstattung der bisherigen Überzahlungen', obwohl der Hilfeartikel ausdrücklich festhält, dass eine automatische Erstattung des gekündigten Abos nicht erfolgt und die Trajektorie keine Erstattungszusage enthält – das ist eine unbelegte, konkrete Zusage.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5970,
+  "judge_output_tokens": 871,
+  "judge_kosten_usd": 0.02065,
+  "judge_s": 9.234
+}

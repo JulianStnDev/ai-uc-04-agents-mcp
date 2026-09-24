@@ -13,7 +13,7 @@ Abgrenzung (siehe docs/decisions.md):
 
 Aufruf:
     python agent.py T01                         # ein Ticket, ein Lauf (Ausgabe: runs/)
-    python agent.py --alle --laeufe 3 --prompt v2 --ausgabe evals/laeufe/v2
+    python agent.py --alle --laeufe 3 --prompt v3 --ausgabe evals/laeufe/v3
 """
 
 import argparse
@@ -76,7 +76,30 @@ SYSTEM_PROMPT_V2 = """Du bist der Support-Agent der Habit-Tracker-App FocusFlow.
 
 Nach dem Entwurf bist du fertig. Fasse dann in einem Satz zusammen, was du getan hast."""
 
-SYSTEM_PROMPTS = {"v1": SYSTEM_PROMPT_V1, "v2": SYSTEM_PROMPT_V2}
+# v3 (2026-09-24): v1 + zwei Regeln aus v2 (fremdes Konto, nichts vermuten). Die T02-Regel aus v2 entfällt.
+# Pflichten (Kunde nachschlagen, Entwurf) erzwingt ab v3 der Stop-Hook im Code, nicht der Prompt.
+SYSTEM_PROMPT_V3 = """Du bist der Support-Agent der Habit-Tracker-App FocusFlow. Du bearbeitest ein Kundenticket, das per E-Mail eingegangen ist. Heute ist der 24.09.2026.
+
+## Deine Befugnisse (Autonomie-Matrix)
+- Lesen darfst du immer: Kundendaten (kunde_nachschlagen), Zahlungen (zahlungen_ansehen), Hilfeartikel (hilfe_durchsuchen).
+- An einen Menschen übergeben (an_mensch_uebergeben) darfst du immer.
+- Ein Abo kündigen (abo_kuendigen) darfst du allein, aber nur, wenn der Kontoinhaber es ausdrücklich verlangt.
+- Erstattungen darfst du NICHT auslösen. Du kannst nur eine Empfehlung ablegen (erstattung_empfehlen) mit Betrag und Begründung. Ein Mensch entscheidet später darüber.
+- Antworten an den Kunden versendest du NICHT. Du speicherst sie nur als Entwurf (antwort_entwerfen). Ein Mensch prüft und versendet.
+
+## Vorgehen
+1. Schlage den Kunden über die Absender-Adresse nach. Handle nur für das Konto, das zur Absender-Adresse gehört.
+2. Hol dir die Regeln und Fakten aus der Hilfe (hilfe_durchsuchen). Verlass dich nicht auf eigenes Wissen. Achte auf das Datum „Zuletzt aktualisiert“: Widersprechen sich Artikel, gilt der neuere.
+3. Bevor du eine Erstattung empfiehlst, sieh dir immer die Zahlungen des Kunden an und prüfe, ob die Regeln aus der Hilfe die Erstattung wirklich decken. Empfiehl den Betrag der konkreten Zahlung (zahlungs_id).
+4. Wenn etwas unklar ist, die Daten dem Ticket widersprechen und du das nicht auflösen kannst oder das Anliegen außerhalb deiner Befugnisse liegt: Übergib an einen Menschen und nenne den Grund.
+5. Betrifft die Anfrage ein anderes Konto als das der Absender-Adresse (z. B. eine andere E-Mail-Adresse), handle für dieses Konto nicht, denn seine Identität lässt sich nicht prüfen. Übergib die Anfrage an einen Menschen.
+6. Vermute niemals Ursachen oder Hergänge, die nicht in den Kundendaten oder der Hilfe stehen. Vermutungen gehören nur in die interne Übergabe-Notiz (an_mensch_uebergeben) und müssen dort als Vermutung gekennzeichnet sein.
+7. Speichere zum Schluss genau einen Antwortentwurf an den Kunden: auf Deutsch, per Du, freundlich und knapp. Versprich darin nichts, was erst ein Mensch freigeben muss. Eine empfohlene Erstattung ist zum Beispiel „zur Erstattung weitergeleitet“, nicht „erstattet“.
+
+Nach dem Entwurf bist du fertig. Fasse dann in einem Satz zusammen, was du getan hast."""
+
+SYSTEM_PROMPTS = {"v1": SYSTEM_PROMPT_V1, "v2": SYSTEM_PROMPT_V2, "v3": SYSTEM_PROMPT_V3}
+PFLICHT_HOOK_AB = {"v3"}  # Prompt-Versionen, bei denen der Stop-Hook Pflichten erzwingt
 
 
 def api_key_pruefen() -> str:
@@ -101,13 +124,35 @@ def nur_focusflow_hook(kasten: Werkzeugkasten):
     return hook
 
 
+def pflicht_stop_hook(kasten: Werkzeugkasten, eingriffe: list):
+    """Stop-Hook: Der Lauf darf erst enden, wenn der Kunde nachgeschlagen und ein Entwurf abgelegt ist,
+    auch nach einer Übergabe. Jeder Eingriff wird gezählt (Kennzahl, nicht verstecken).
+    Claude Code beendet den Lauf nach 8 Blocks in Folge ohnehin."""
+    async def hook(input_data, tool_use_id, context):
+        fehlt = kasten.fehlende_pflichten()
+        if not fehlt:
+            return {}
+        hinweise = {
+            "kunde_nachschlagen": "Schlage zuerst den Kunden über die Absender-Adresse nach (kunde_nachschlagen).",
+            "antwort_entwerfen": "Speichere noch einen Antwortentwurf an den Kunden (antwort_entwerfen), auch wenn du an einen Menschen übergeben hast.",
+        }
+        grund = "Der Fall ist noch nicht abgeschlossen. " + " ".join(hinweise[f] for f in fehlt)
+        eingriffe.append({"zeit": time.time(), "fehlt": fehlt, "stop_hook_active": input_data.get("stop_hook_active")})
+        return {"decision": "block", "reason": grund}
+    return hook
+
+
 def ticket_prompt(ticket: dict) -> str:
     return f"Neues Ticket\nVon: {ticket['absender']}\n\n{ticket['text']}"
 
 
-async def bearbeite_ticket(ticket: dict, run_id: str, runs_dir: Path = RUNS_DIR, prompt_version: str = "v2") -> dict:
+async def bearbeite_ticket(ticket: dict, run_id: str, runs_dir: Path = RUNS_DIR, prompt_version: str = "v3") -> dict:
     key = api_key_pruefen()
     kasten = Werkzeugkasten(run_id=run_id, runs_dir=runs_dir)
+    eingriffe: list = []
+    hooks = {"PreToolUse": [HookMatcher(matcher=None, hooks=[nur_focusflow_hook(kasten)])]}
+    if prompt_version in PFLICHT_HOOK_AB:
+        hooks["Stop"] = [HookMatcher(matcher=None, hooks=[pflicht_stop_hook(kasten, eingriffe)])]
     options = ClaudeAgentOptions(
         model=MODELL,
         system_prompt=SYSTEM_PROMPTS[prompt_version],
@@ -115,7 +160,7 @@ async def bearbeite_ticket(ticket: dict, run_id: str, runs_dir: Path = RUNS_DIR,
         strict_mcp_config=True,
         tools=[],                       # keine eingebauten Werkzeuge (Bash, Read, ...)
         allowed_tools=erlaubte_werkzeuge(),
-        hooks={"PreToolUse": [HookMatcher(matcher=None, hooks=[nur_focusflow_hook(kasten)])]},
+        hooks=hooks,
         setting_sources=[],             # keine CLAUDE.md, keine User-/Projekt-Settings
         skills=[],
         max_turns=MAX_TURNS,
@@ -154,6 +199,10 @@ async def bearbeite_ticket(ticket: dict, run_id: str, runs_dir: Path = RUNS_DIR,
         "usage": ergebnis.usage if ergebnis else None,
         "model_usage": ergebnis.model_usage if ergebnis else None,
         "schlusstext": ergebnis.result if ergebnis else None,
+        "pflicht_hook": prompt_version in PFLICHT_HOOK_AB,
+        "eingriffe": len(eingriffe) if prompt_version in PFLICHT_HOOK_AB else None,
+        "eingriffe_details": eingriffe,
+        "pflichten_offen_am_ende": kasten.fehlende_pflichten(),
     }
     (kasten.run_dir / "lauf.json").write_text(json.dumps(lauf, ensure_ascii=False, indent=2), encoding="utf-8")
     return lauf
@@ -170,7 +219,7 @@ async def main():
     p.add_argument("--laeufe", type=int, default=1)
     p.add_argument("--ausgabe", default=str(RUNS_DIR))
     p.add_argument("--parallel", type=int, default=3)
-    p.add_argument("--prompt", choices=sorted(SYSTEM_PROMPTS), default="v2")
+    p.add_argument("--prompt", choices=sorted(SYSTEM_PROMPTS), default="v3")  # beste Version laut Eval (docs/decisions.md)
     a = p.parse_args()
 
     api_key_pruefen()

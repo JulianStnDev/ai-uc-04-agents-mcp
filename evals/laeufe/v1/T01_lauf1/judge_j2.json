@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf teilt mit, dass die doppelte Abbuchung über 54,34 USD zur Erstattung (Genehmigung) weitergeleitet wurde, was der Soll-Kernaussage ('zur Erstattung weitergeleitet') entspricht und ihr nicht widerspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Die genannte Bearbeitungszeit von 5–10 Werktagen stammt wörtlich aus dem Hilfeartikel zur Erstattungsrichtlinie und wird als allgemeine Erwartung wiedergegeben; dass das Jahresabo währenddessen aktiv bleibt, ist eine logisch zwingende Folgerung, da nur die doppelte Zahlung (nicht die reguläre Abo-Zahlung) erstattet wird.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5681,
+  "judge_output_tokens": 1398,
+  "judge_kosten_usd": 0.025342,
+  "judge_s": 22.063
+}

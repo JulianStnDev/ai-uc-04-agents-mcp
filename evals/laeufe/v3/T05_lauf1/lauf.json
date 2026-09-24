@@ -1,0 +1,87 @@
+{
+  "run_id": "T05_lauf1",
+  "ticket_id": "T05",
+  "prompt_version": "v3",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 27.263,
+  "sdk_start_s": 0.257,
+  "agent_s": 25.821,
+  "sdk_ende_s": 1.185,
+  "cli_duration_ms": 25826,
+  "cli_duration_api_ms": 27535,
+  "kosten_usd": 0.028292199999999997,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2786,
+    "cache_creation_input_tokens": 9138,
+    "cache_read_input_tokens": 14207,
+    "output_tokens": 2318,
+    "output_tokens_details": {
+      "thinking_tokens": 1444
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 9138
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 320,
+        "cache_read_input_tokens": 7484,
+        "cache_creation_input_tokens": 1654,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1654,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 958,
+      "outputTokens": 23,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001073,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2786,
+      "outputTokens": 2318,
+      "cacheReadInputTokens": 14207,
+      "cacheCreationInputTokens": 9138,
+      "webSearchRequests": 0,
+      "costUSD": 0.0272192,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1444,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Erledigt.** Ich habe Davids Jahresabo gekündigt (wirksam ab 15.08.2027) und in meinem Antwortentwurf erklärt, dass eine Erstattung nicht möglich ist, da die 14-Tage-Frist seit dem Kauf (15.08.2026) bereits abgelaufen ist.",
+  "pflicht_hook": true,
+  "eingriffe": 0,
+  "eingriffe_details": [],
+  "pflichten_offen_am_ende": []
+}

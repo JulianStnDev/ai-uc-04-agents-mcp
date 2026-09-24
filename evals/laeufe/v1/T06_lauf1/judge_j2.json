@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf gibt klar wieder, dass die Erstattung wegen des App-Store-Kaufs nicht durch FocusFlow, sondern direkt bei Apple erfolgen muss – die Kernaussage ist enthalten und wird nicht widersprochen.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Der Entwurf enthält mehrere unbelegte Behauptungen: die 14-Tage-Frist und 'problemlose' Erstattung bei Apple stammen aus der FocusFlow-eigenen Richtlinie, nicht aus Angaben über Apples Prozess, ebenso sind die konkreten UI-Schritte bei Apple ('Ich möchte diese Zahlung nicht erstatten') und die Dauer 'ein paar Tage' nicht in der Trajektorie belegt.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 4993,
+  "judge_output_tokens": 873,
+  "judge_kosten_usd": 0.018716,
+  "judge_s": 9.633
+}

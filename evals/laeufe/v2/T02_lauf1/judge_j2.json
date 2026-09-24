@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Die Zahlungsdaten zeigen für September nur eine einzige Abbuchung (Z010, 03.09.2026, 6,99 USD), es liegt also klar keine Doppelabbuchung vor. Der Entwurf vermittelt diese Kernaussage aber nicht, sondern lässt offen, ob es sich um eine Vormerkung oder eine 'echte Doppelbuchung' handeln könnte, was der Sollaussage widerspricht.",
+  "entwurf_ok": false,
+  "keine_spekulation_begruendung": "Der Entwurf spekuliert, es könnte sich um eine echte Doppelbuchung handeln, obwohl die Zahlungshistorie eindeutig nur eine Abbuchung zeigt und somit keine belegte Grundlage für diese Vermutung besteht.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 8813,
+  "judge_output_tokens": 2150,
+  "judge_kosten_usd": 0.039126,
+  "judge_s": 21.276
+}
