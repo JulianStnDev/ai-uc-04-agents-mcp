@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf bestätigt nicht, dass nur eine Abbuchung erfolgt ist, sondern lässt offen, ob eine Doppelabbuchung vorliegt und verspricht ggf. eine Erstattung – das widerspricht der Soll-Kernaussage, dass keine Doppelabbuchung vorliegt.",
+  "entwurf_ok": false,
+  "judge_input_tokens": 974,
+  "judge_output_tokens": 146,
+  "judge_kosten_usd": 0.003408,
+  "judge_s": 2.724
+}

@@ -17,7 +17,10 @@
 | Kosten Agent pro Lauf (Mittel) | 0.0275 USD |
 | Kosten pro 1000 Tickets (Agent) | 27.45 USD |
 | Kosten Judge gesamt | 0.0000 USD |
-| Latenz p50 / p95 | 27.2 s / 27.2 s |
+| Latenz gesamt p50 / p95 | 27.2 s / 27.2 s |
+|   davon SDK-Start p50 / p95 | nicht gemessen |
+|   davon Agent (init bis Ergebnis) p50 / p95 | nicht gemessen |
+|   davon SDK-Ende p50 / p95 | nicht gemessen |
 
 ## Erstattungen im Schattenmodus
 
@@ -27,6 +30,6 @@
 
 ## Pro Ticket
 
-| Ticket | Erfolg | pflicht | verboten | erstattung | übergabe | entwurf | Aufrufe Ø | Kosten Ø | Latenz Ø |
-|---|---|---|---|---|---|---|---|---|---|
-| T01 | 1/1 | 1/1 | 1/1 | 1/1 | 1/1 | 0/1 | 5.0 | 0.0275 | 27.2 s |
+| Ticket | Erfolg | pflicht | verboten | erstattung | übergabe | entwurf | Aufrufe Ø | Kosten Ø | Latenz Ø gesamt | davon Agent Ø |
+|---|---|---|---|---|---|---|---|---|---|---|
+| T01 | 1/1 | 1/1 | 1/1 | 1/1 | 1/1 | 0/1 | 5.0 | 0.0275 | 27.2 s | – |

@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf bestätigt die Abbuchung als Fakt ('Dein Abo wurde zwar abgebucht'), während die Soll-Kernaussage besagt, dass keine Zahlung zu diesem Konto gefunden wurde – das ist ein klarer Widerspruch. Zudem fehlt der Hinweis auf die fehlende Zahlung als Grund für die Weiterleitung.",
+  "entwurf_ok": false,
+  "judge_input_tokens": 1010,
+  "judge_output_tokens": 338,
+  "judge_kosten_usd": 0.0054,
+  "judge_s": 4.095
+}

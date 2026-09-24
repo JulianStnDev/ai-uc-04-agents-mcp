@@ -126,6 +126,7 @@ def main():
         aufgabe = aufgaben[lauf["ticket_id"]]
         z = {"run_id": lauf["run_id"], "ticket_id": lauf["ticket_id"], "agent_ok": lauf["subtype"] == "success",
              "kosten_usd": lauf["kosten_usd"] or 0.0, "dauer_s": lauf["dauer_s"], "num_turns": lauf["num_turns"],
+             "sdk_start_s": lauf.get("sdk_start_s"), "agent_s": lauf.get("agent_s"), "sdk_ende_s": lauf.get("sdk_ende_s"),
              **bewerte_deterministisch(aufgabe, lese_jsonl(run_dir / "trajektorie.jsonl"))}
         if z["entwurf"] is None:
             z["entwurf_ok"], z["entwurf_ok_begruendung"] = False, "kein Entwurf gespeichert"
@@ -147,6 +148,23 @@ def main():
     bericht = bericht_schreiben(name, zeilen, aufgaben, judge=client is not None)
     (ROOT / "evals" / f"results_{name}.md").write_text(bericht, encoding="utf-8")
     print(bericht)
+
+
+def mittel(werte) -> str:
+    werte = [w for w in werte if w is not None]
+    return f"{statistics.mean(werte):.1f} s" if werte else "–"
+
+
+def latenz_zeilen(zeilen: list[dict]) -> list[str]:
+    """p50/p95 getrennt: gesamt, SDK-Overhead (Start + Ende der CLI) und eigentliche Agent-Zeit."""
+    reihen = [("Latenz gesamt", "dauer_s"), ("  davon SDK-Start", "sdk_start_s"),
+              ("  davon Agent (init bis Ergebnis)", "agent_s"), ("  davon SDK-Ende", "sdk_ende_s")]
+    out = []
+    for titel, key in reihen:
+        werte = [z[key] for z in zeilen if z.get(key) is not None]
+        wert = f"{statistics.median(werte):.1f} s / {p95(werte):.1f} s" if werte else "nicht gemessen"
+        out.append(f"| {titel} p50 / p95 | {wert} |")
+    return out
 
 
 def bericht_schreiben(name: str, zeilen: list[dict], aufgaben: dict, judge: bool) -> str:
@@ -172,20 +190,21 @@ def bericht_schreiben(name: str, zeilen: list[dict], aufgaben: dict, judge: bool
            f"| Kosten Agent pro Lauf (Mittel) | {statistics.mean(kosten) if kosten else 0:.4f} USD |",
            f"| Kosten pro 1000 Tickets (Agent) | {1000 * (statistics.mean(kosten) if kosten else 0):.2f} USD |",
            f"| Kosten Judge gesamt | {judge_kosten:.4f} USD |",
-           f"| Latenz p50 / p95 | {statistics.median([z['dauer_s'] for z in zeilen]) if zeilen else 0:.1f} s / {p95([z['dauer_s'] for z in zeilen]):.1f} s |",
+           *latenz_zeilen(zeilen),
            "", "## Erstattungen im Schattenmodus", "",
            "| Kategorie | Läufe |", "|---|---|",
            *[f"| {kat} | {anz} |" for kat, anz in sorted(Counter(z['erstattung_kategorie'] for z in zeilen).items())],
            "", "## Pro Ticket", "",
-           "| Ticket | Erfolg | pflicht | verboten | erstattung | übergabe | entwurf | Aufrufe Ø | Kosten Ø | Latenz Ø |",
-           "|---|---|---|---|---|---|---|---|---|---|"]
+           "| Ticket | Erfolg | pflicht | verboten | erstattung | übergabe | entwurf | Aufrufe Ø | Kosten Ø | Latenz Ø gesamt | davon Agent Ø |",
+           "|---|---|---|---|---|---|---|---|---|---|---|"]
     for tid in sorted(pro_ticket):
         zs = pro_ticket[tid]
         anteil = lambda key: f"{sum(z[key] is True for z in zs)}/{len(zs)}"
         out.append(f"| {tid} | {anteil('erfolg')} | {anteil('pflicht_ok')} | {anteil('verboten_ok')} | "
                    f"{anteil('erstattung_ok')} | {anteil('uebergabe_ok')} | {anteil('entwurf_ok')} | "
                    f"{statistics.mean(z['anzahl_aufrufe'] for z in zs):.1f} | "
-                   f"{statistics.mean(z['kosten_usd'] for z in zs):.4f} | {statistics.mean(z['dauer_s'] for z in zs):.1f} s |")
+                   f"{statistics.mean(z['kosten_usd'] for z in zs):.4f} | {statistics.mean(z['dauer_s'] for z in zs):.1f} s | "
+                   f"{mittel(z['agent_s'] for z in zs)} |")
     fehler = [z for z in zeilen if not z["erfolg"]]
     if fehler:
         out += ["", "## Fehlgeschlagene Läufe", ""]

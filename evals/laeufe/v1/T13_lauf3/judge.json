@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf leitet das Anliegen zwar weiter, nennt aber als Grund eine mögliche Sync-Verzögerung zwischen Apple und dem System statt der tatsächlichen Ursache, dass keine Zahlung zum Konto gefunden wurde – damit widerspricht er der Soll-Kernaussage.",
+  "entwurf_ok": false,
+  "judge_input_tokens": 1108,
+  "judge_output_tokens": 402,
+  "judge_kosten_usd": 0.006236,
+  "judge_s": 4.898
+}

@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf leitet den Fall zwar weiter, nennt aber als Grund eine App Store-Synchronisationsverzögerung statt der tatsächlichen Ursache, dass keine Zahlung zum Konto gefunden wurde – das widerspricht der Kernaussage.",
+  "entwurf_ok": false,
+  "judge_input_tokens": 1051,
+  "judge_output_tokens": 344,
+  "judge_kosten_usd": 0.005542,
+  "judge_s": 4.317
+}

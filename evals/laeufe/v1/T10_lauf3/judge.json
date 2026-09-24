@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält klar die Kernaussage, dass die Kündigung über Google Play erfolgen muss, da das Abo dort abgeschlossen wurde, inklusive konkreter Schritt-für-Schritt-Anleitung.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 953,
+  "judge_output_tokens": 114,
+  "judge_kosten_usd": 0.003046,
+  "judge_s": 2.341
+}

@@ -25,7 +25,7 @@ import time
 from pathlib import Path
 
 from claude_agent_sdk import (
-    AssistantMessage, ClaudeAgentOptions, HookMatcher, ResultMessage, query,
+    AssistantMessage, ClaudeAgentOptions, HookMatcher, ResultMessage, SystemMessage, query,
 )
 from dotenv import load_dotenv
 
@@ -101,18 +101,30 @@ async def bearbeite_ticket(ticket: dict, run_id: str, runs_dir: Path = RUNS_DIR)
         cwd=str(kasten.run_dir),
         env={"ANTHROPIC_API_KEY": key},
     )
+    # Latenz getrennt: SDK-Start (bis init-Nachricht der CLI), Agent (init bis Ergebnis), SDK-Ende (bis Prozessende)
     start = time.perf_counter()
+    t_init = t_ergebnis = None
     ergebnis, modelle = None, set()
     async for msg in query(prompt=ticket_prompt(ticket), options=options):
-        if isinstance(msg, AssistantMessage):
+        if isinstance(msg, SystemMessage) and msg.subtype == "init" and t_init is None:
+            t_init = time.perf_counter()
+        elif isinstance(msg, AssistantMessage):
             modelle.add(msg.model)
         elif isinstance(msg, ResultMessage):
-            ergebnis = msg
-    dauer_s = time.perf_counter() - start
+            ergebnis, t_ergebnis = msg, time.perf_counter()
+    ende = time.perf_counter()
+    dauer_s = ende - start
+    t_init = t_init or start
+    t_ergebnis = t_ergebnis or ende
 
     lauf = {
         "run_id": run_id, "ticket_id": ticket["id"], "modell": MODELL, "modelle_gesehen": sorted(modelle),
         "dauer_s": round(dauer_s, 3),
+        "sdk_start_s": round(t_init - start, 3),
+        "agent_s": round(t_ergebnis - t_init, 3),
+        "sdk_ende_s": round(ende - t_ergebnis, 3),
+        "cli_duration_ms": ergebnis.duration_ms if ergebnis else None,
+        "cli_duration_api_ms": ergebnis.duration_api_ms if ergebnis else None,
         "kosten_usd": ergebnis.total_cost_usd if ergebnis else None,
         "num_turns": ergebnis.num_turns if ergebnis else None,
         "subtype": ergebnis.subtype if ergebnis else "kein_ergebnis",

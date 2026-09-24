@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf nennt korrekt 6,99 USD pro Monat und 59 USD pro Jahr, was genau der Soll-Kernaussage entspricht; zusätzliche Details widersprechen dem nicht.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 944,
+  "judge_output_tokens": 106,
+  "judge_kosten_usd": 0.002948,
+  "judge_s": 2.251
+}

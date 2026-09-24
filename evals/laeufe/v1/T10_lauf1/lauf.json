@@ -1,0 +1,82 @@
+{
+  "run_id": "T10_lauf1",
+  "ticket_id": "T10",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 18.859,
+  "sdk_start_s": 0.249,
+  "agent_s": 17.585,
+  "sdk_ende_s": 1.025,
+  "cli_duration_ms": 17589,
+  "cli_duration_api_ms": 18560,
+  "kosten_usd": 0.0198556,
+  "num_turns": 4,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2574,
+    "cache_creation_input_tokens": 6590,
+    "cache_read_input_tokens": 5211,
+    "output_tokens": 1505,
+    "output_tokens_details": {
+      "thinking_tokens": 741
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 6590
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 279,
+        "cache_read_input_tokens": 5211,
+        "cache_creation_input_tokens": 1379,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1379,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 928,
+      "outputTokens": 14,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.000998,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2574,
+      "outputTokens": 1505,
+      "cacheReadInputTokens": 5211,
+      "cacheCreationInputTokens": 6590,
+      "webSearchRequests": 0,
+      "costUSD": 0.018857600000000002,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 741,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:**\n\nIch habe das Google Play Abo von Jonas Meyer gefunden, konnte es aber nicht selbst kündigen – Store-Abos müssen direkt über Google Play gekündigt werden. Ich habe einen hilfreichen Antwortentwurf erstellt, der ihm die genauen Schritte erklärt und was danach passiert."
+}

@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält klar die Kernaussage, dass keine Erstattung möglich ist, da die 14-Tage-Frist bereits verstrichen ist, zusätzlich zur Bestätigung der Kündigung.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 965,
+  "judge_output_tokens": 108,
+  "judge_kosten_usd": 0.00301,
+  "judge_s": 2.493
+}

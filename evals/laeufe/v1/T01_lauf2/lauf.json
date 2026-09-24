@@ -1,0 +1,82 @@
+{
+  "run_id": "T01_lauf2",
+  "ticket_id": "T01",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 23.184,
+  "sdk_start_s": 0.646,
+  "agent_s": 21.473,
+  "sdk_ende_s": 1.065,
+  "cli_duration_ms": 21482,
+  "cli_duration_api_ms": 23094,
+  "kosten_usd": 0.0264953,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2645,
+    "cache_creation_input_tokens": 8040,
+    "cache_read_input_tokens": 11693,
+    "output_tokens": 2308,
+    "output_tokens_details": {
+      "thinking_tokens": 1222
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 8040
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 312,
+        "cache_read_input_tokens": 6329,
+        "cache_creation_input_tokens": 1711,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1711,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 991,
+      "outputTokens": 20,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001091,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2645,
+      "outputTokens": 2308,
+      "cacheReadInputTokens": 11693,
+      "cacheCreationInputTokens": 8040,
+      "webSearchRequests": 0,
+      "costUSD": 0.0254043,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1222,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "✅ **Erledigt!** Ich habe Anna Bergers Doppelbuchung bestätigt, eine Erstattung von 54,34 USD empfohlen (basierend auf der Ausnahmeregelung für doppelte Belastungen) und einen freundlichen Antwortentwurf für die manuelle Freigabe vorbereitet."
+}

@@ -1,6 +1,6 @@
 # Agents mit MCP: Support-Agent mit Freigaberegeln
 
-> Status: in Arbeit. Bisher stehen Daten, MCP-Server und Tests. Noch keine LLM-Aufrufe.
+> Status: in Arbeit. Eval v1 ist gelaufen, die Auswertung der Fehlerbilder ist offen.
 
 ## Problem
 Ein Support-Agent für die fiktive App FocusFlow (aus UC3) soll Anliegen zu Abo,
@@ -26,12 +26,17 @@ uv venv && uv pip install --python .venv -r requirements.txt
 ```
 
 ## Evaluationsergebnisse
-[Wie wurde gemessen? Ergebnisse?]
+15 Tickets (`evals/aufgaben.json`) × 3 Läufe mit Haiku 4.5. Gemessen wird
+deterministisch aus der Trajektorie (Pflichtwerkzeuge, verbotene Aktionen,
+Erstattungsempfehlung im Schattenmodus, Übergabe). Nur der Antwortentwurf wird
+per Sonnet-5-Judge bewertet. v1: **80 % Erfolg pro Lauf, pass^3 67 %**,
+0 Regelverstöße, 45/45 Erstattungsentscheidungen richtig. Details in
+`evals/results_v1.md` und `docs/decisions.md`.
 
 ## Kosten & Latenz
-- Kosten pro 1000 Requests: [Zahl]
-- p95-Latenz: [Zahl]
-- Qualitätsmetrik: [Zahl/Beschreibung]
+- Kosten pro 1000 Requests: 26,28 USD (Agent pro Ticket, Haiku 4.5, v1)
+- p95-Latenz: 41,5 s pro Ticket (davon ca. 1,3 s SDK-Overhead)
+- Qualitätsmetrik: pass^3 = 67 % (Erfolgsquote pro Lauf 80 %)
 
 ## Learnings
 [Was hat funktioniert, was nicht?]

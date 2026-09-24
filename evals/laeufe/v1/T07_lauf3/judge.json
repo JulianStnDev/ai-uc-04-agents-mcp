@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf erklärt nur, dass der Support sich um die Doppelzahlung kümmert und eine Erstattung bespricht, nennt aber nicht die Kernaussage, dass vor dem Zusammenführen eines der beiden Pro-Abos gekündigt werden muss, da nur ein Konto Pro haben darf.",
+  "entwurf_ok": false,
+  "judge_input_tokens": 1160,
+  "judge_output_tokens": 411,
+  "judge_kosten_usd": 0.00643,
+  "judge_s": 6.244
+}

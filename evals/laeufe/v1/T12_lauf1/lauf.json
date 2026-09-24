@@ -1,0 +1,82 @@
+{
+  "run_id": "T12_lauf1",
+  "ticket_id": "T12",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 15.438,
+  "sdk_start_s": 0.246,
+  "agent_s": 13.909,
+  "sdk_ende_s": 1.283,
+  "cli_duration_ms": 13914,
+  "cli_duration_api_ms": 14614,
+  "kosten_usd": 0.01854495,
+  "num_turns": 4,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2563,
+    "cache_creation_input_tokens": 6231,
+    "cache_read_input_tokens": 5162,
+    "output_tokens": 1336,
+    "output_tokens_details": {
+      "thinking_tokens": 692
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 6231
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 236,
+        "cache_read_input_tokens": 5162,
+        "cache_creation_input_tokens": 1069,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1069,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 917,
+      "outputTokens": 16,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.000997,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2563,
+      "outputTokens": 1336,
+      "cacheReadInputTokens": 5162,
+      "cacheCreationInputTokens": 6231,
+      "webSearchRequests": 0,
+      "costUSD": 0.01754795,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 692,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "✅ **Fertig!** Ich habe Gretas Anfrage beantwortet: Den aktuellen Pro-Preis (6,99 USD/Monat oder 59 USD/Jahr) als Entwurf gespeichert – die neuesten Preise von 02.07.2026. Ein Mensch kann den Entwurf jetzt prüfen und versendet."
+}

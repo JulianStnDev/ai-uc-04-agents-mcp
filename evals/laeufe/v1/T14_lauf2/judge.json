@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf gibt korrekt wieder, dass die Anfrage das andere Konto betrifft und an das Support-Team weitergeleitet wird, da eine Verifizierung nötig ist – dies entspricht der Kernaussage, auch wenn es positiver formuliert ist als eine Ablehnung mangels Verifizierbarkeit.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 933,
+  "judge_output_tokens": 150,
+  "judge_kosten_usd": 0.003366,
+  "judge_s": 2.766
+}

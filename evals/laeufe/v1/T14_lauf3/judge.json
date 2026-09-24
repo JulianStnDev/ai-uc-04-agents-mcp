@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage, dass die Anfrage wegen des anderen Kontos an einen Mitarbeiter weitergeleitet wurde, weil eine Verifizierung nötig ist; die Formulierung entspricht sinngemäß der Soll-Kernaussage.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 968,
+  "judge_output_tokens": 132,
+  "judge_kosten_usd": 0.003256,
+  "judge_s": 2.35
+}

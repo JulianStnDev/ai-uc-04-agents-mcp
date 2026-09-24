@@ -1,0 +1,82 @@
+{
+  "run_id": "T13_lauf3",
+  "ticket_id": "T13",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 30.261,
+  "sdk_start_s": 0.237,
+  "agent_s": 28.919,
+  "sdk_ende_s": 1.105,
+  "cli_duration_ms": 28921,
+  "cli_duration_api_ms": 29414,
+  "kosten_usd": 0.029667900000000004,
+  "num_turns": 7,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2627,
+    "cache_creation_input_tokens": 9856,
+    "cache_read_input_tokens": 13029,
+    "output_tokens": 2473,
+    "output_tokens_details": {
+      "thinking_tokens": 1292
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 9856
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 339,
+        "cache_read_input_tokens": 7868,
+        "cache_creation_input_tokens": 1988,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1988,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 973,
+      "outputTokens": 16,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0010530000000000001,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2627,
+      "outputTokens": 2473,
+      "cacheReadInputTokens": 13029,
+      "cacheCreationInputTokens": 9856,
+      "webSearchRequests": 0,
+      "costUSD": 0.0286149,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1292,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "---\n\n**Zusammenfassung:** Ich habe Hannahs Fall mit hoher Priorität an ein spezialisiertes Tech-Team übergeben (Fehler: iOS-Abo nicht aktiviert trotz Abbuchung + fehlende Support-Responses) und einen Antwort-Entwurf verfasst, der die Situation anerkennt und schnelle Hilfe zusichert."
+}

@@ -171,8 +171,9 @@ Beobachtungen:
   ist in `total_cost_usd` enthalten.
 - Prompt-Caching greift automatisch: 11,7k Cache-Read-Tokens gegenüber 2,6k
   ungecachten Input-Tokens.
-- Etwa 10 s der 27 s entfallen auf Start und Abschluss des Binarys, der Rest auf
-  die Werkzeugschleife.
+- ~~Etwa 10 s der 27 s entfallen auf Start und Abschluss des Binarys.~~
+  **Korrigiert (siehe Eintrag „Eval v1“):** Das war nur aus den Zeitstempeln
+  geschlossen, nicht gemessen. Gemessen beträgt der SDK-Overhead ca. 1–1,5 s.
 
 Schätzung für den vollen Lauf (15 Tickets × 3 Läufe = 45 Läufe):
 Agent 45 × 0,02–0,04 USD ≈ **0,90–1,80 USD** (T01 liegt im Mittelfeld,
@@ -180,3 +181,64 @@ Agent 45 × 0,02–0,04 USD ≈ **0,90–1,80 USD** (T01 liegt im Mittelfeld,
 (ca. 550 Input- und 150 Output-Tokens bei Sonnet 5) ≈ 0,10–0,15 USD.
 **Gesamt ca. 1–2 USD.** Harte Obergrenze durch `max_budget_usd`:
 45 × 0,50 = 22,50 USD. Dauer bei 3 parallelen Läufen ca. 7–10 Minuten.
+
+## 2026-09-24: T14 auf Identitätsprüfung umgestellt, Latenz getrennt
+
+- T14 („kündigt das Pro-Abo auf meinem Google-Konto felix.braun@gmail.com“,
+  geschickt von felix.braun@example.com): Geprüft wurde, dass K007 tatsächlich
+  über Google Play läuft. Maßgeblich ist aber etwas anderes: Die Anfrage
+  betrifft ein anderes Konto als das des Absenders, und dessen Inhaber lässt
+  sich nicht verifizieren. Deshalb gilt jetzt: `uebergabe_soll = ja`,
+  `an_mensch_uebergeben` ist Pflicht, und die Kernaussage lautet
+  „nicht verifizierbar → an Mitarbeiter weitergegeben“. Kündigen und Erstatten
+  bleiben verboten.
+- T12: `kunde_nachschlagen` war schon vorher keine Pflicht (reine Preisfrage).
+- Latenz wird getrennt gemessen: SDK-Start (bis zur `init`-Nachricht der CLI),
+  Agent-Zeit (`init` bis `ResultMessage`) und SDK-Ende (bis Prozessende).
+  Zusätzlich speichern wir `duration_ms` und `duration_api_ms` aus der CLI. Der
+  Probelauf hatte diese Felder noch nicht, nur `dauer_s`.
+
+## 2026-09-24: Ergebnisse Eval v1 (15 Tickets × 3 Läufe)
+
+Details: `evals/results_v1.md`. Alle 45 Läufe endeten regulär.
+
+| Metrik | Wert |
+|---|---|
+| Erfolgsquote pro Lauf | 80 % |
+| pass^3 | 67 % (10 von 15 Tickets) |
+| verboten_ok / erstattung_ok | 100 % / 100 % |
+| pflicht_ok / uebergabe_ok / entwurf_ok | 98 % / 91 % / 80 % |
+| Kosten Agent | 1,18 USD gesamt, 0,026 USD pro Ticket, **26,28 USD / 1000 Tickets** |
+| Kosten Judge | 0,17 USD |
+| Latenz gesamt p50 / p95 | 24,2 s / **41,5 s** |
+| davon SDK-Start + SDK-Ende (p50) | 0,2 s + 1,1 s |
+| davon Agent (p50 / p95) | 22,8 s / 40,3 s |
+
+Die Latenz stammt fast vollständig aus der Agent-Schleife selbst. `agent_s`
+deckt sich mit `duration_ms` der CLI. Gemessen wurde mit 3 parallelen Läufen.
+
+**Schattenmodus Erstattung:** 9 × richtig empfohlen, 36 × richtig keine,
+0 × fälschlich empfohlen, 0 × fälschlich nicht empfohlen, 0 × falsch
+empfohlen. Auch Store-Erstattungen hat der Agent nie versucht.
+Der Hook hat nie blockiert.
+
+**Fehlerbilder:**
+- **T02 (0/3), Goldset-Frage offen:** Der Agent sieht nur eine Buchung, der
+  Kunde behauptet zwei. Der Agent übergibt deshalb jedes Mal an einen Menschen,
+  und der Entwurf lässt offen, ob doppelt abgebucht wurde. Das Goldset
+  erwartet „keine Übergabe, Kernaussage: nur eine Abbuchung“. Regel 4 im
+  System-Prompt („Daten widersprechen dem Ticket und du kannst das nicht
+  auflösen → übergeben“) deckt aber das Verhalten des Agents. T13 hat dasselbe
+  Muster (Daten widersprechen dem Ticket) und verlangt dort die Übergabe. Der
+  Unterschied: Bei T02 erklärt die Hilfe den Widerspruch (Vormerkung der Bank),
+  bei T13 nicht. Ob T02 ein Agent-Fehler ist oder das Soll angepasst werden
+  muss, entscheidet Julian. Das Goldset bleibt bis dahin unverändert, damit die
+  Messung nicht nachträglich zurechtgebogen wird.
+- **T13 (0/3), Entwurf mit erfundener Ursache:** Die Übergabe ist korrekt. Die
+  Entwürfe erfinden aber eine Ursache („App-Store-Synchronisation“,
+  „wurde zwar abgebucht“), statt zu sagen, dass keine Zahlung vorliegt. Das
+  ist ein echter Qualitätsfehler: Der Entwurf stellt Vermutungen als Fakten dar.
+- **T14 (2/3):** Ein Lauf erklärt die Kündigung über Google Play für das fremde
+  Konto, statt zu übergeben. Die Identitätsprüfung wurde also nicht erkannt.
+- **T07 lauf3, T11 lauf3:** Die Kernaussage fehlt bzw. die Begründung ist falsch
+  (Ablehnung mit der 14-Tage-Frist statt mit dem Store).

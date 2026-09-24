@@ -1,0 +1,82 @@
+{
+  "run_id": "T11_lauf2",
+  "ticket_id": "T11",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 24.705,
+  "sdk_start_s": 0.255,
+  "agent_s": 23.189,
+  "sdk_ende_s": 1.26,
+  "cli_duration_ms": 23194,
+  "cli_duration_api_ms": 24309,
+  "kosten_usd": 0.026467949999999997,
+  "num_turns": 5,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2598,
+    "cache_creation_input_tokens": 7613,
+    "cache_read_input_tokens": 11247,
+    "output_tokens": 2436,
+    "output_tokens_details": {
+      "thinking_tokens": 1441
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 7613
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 311,
+        "cache_read_input_tokens": 6032,
+        "cache_creation_input_tokens": 1581,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1581,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 944,
+      "outputTokens": 21,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001049,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2598,
+      "outputTokens": 2436,
+      "cacheReadInputTokens": 11247,
+      "cacheCreationInputTokens": 7613,
+      "webSearchRequests": 0,
+      "costUSD": 0.02541895,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1441,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Fertig.** Ich habe Sofias Anfrage bearbeitet: Die 14-Tage-Erstattungsfrist für das Jahresabo ist längst vorbei (204 Tage), und das Abo wurde über Google Play gekauft – daher kann FocusFlow technisch nicht erstatten. Ein Antwortentwurf wurde gespeichert, der Sofia freundlich auf Google Play verweist."
+}

@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage, dass das Abo gekündigt ist und Pro noch bis zum 03.10.2026 läuft, ohne dieser zu widersprechen.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 814,
+  "judge_output_tokens": 96,
+  "judge_kosten_usd": 0.002588,
+  "judge_s": 2.079
+}

@@ -1,0 +1,82 @@
+{
+  "run_id": "T05_lauf3",
+  "ticket_id": "T05",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 29.877,
+  "sdk_start_s": 0.242,
+  "agent_s": 28.596,
+  "sdk_ende_s": 1.04,
+  "cli_duration_ms": 28601,
+  "cli_duration_api_ms": 29330,
+  "kosten_usd": 0.029253800000000003,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2612,
+    "cache_creation_input_tokens": 9196,
+    "cache_read_input_tokens": 14238,
+    "output_tokens": 2531,
+    "output_tokens_details": {
+      "thinking_tokens": 1464
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 9196
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 343,
+        "cache_read_input_tokens": 7509,
+        "cache_creation_input_tokens": 1687,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1687,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 958,
+      "outputTokens": 22,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001068,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2612,
+      "outputTokens": 2531,
+      "cacheReadInputTokens": 14238,
+      "cacheCreationInputTokens": 9196,
+      "webSearchRequests": 0,
+      "costUSD": 0.028185800000000004,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1464,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "✅ **Ticket abgeschlossen.**\n\nIch habe das Jahresabo von David Schulz (K004) zum Ende der aktuellen Periode (15.08.2027) gekündigt und einen Antwortentwurf verfasst, der erklärt, warum die angeforderte anteilige Erstattung nicht möglich ist: Die 14-Tage-Frist (laut Erstattungsrichtlinie) ist bereits überschritten (40 Tage seit Kauf am 15.08.2026). Der Entwurf wartet auf menschliche Freigabe und Versand."
+}

@@ -1,0 +1,82 @@
+{
+  "run_id": "T09_lauf3",
+  "ticket_id": "T09",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 21.641,
+  "sdk_start_s": 0.246,
+  "agent_s": 20.325,
+  "sdk_ende_s": 1.07,
+  "cli_duration_ms": 20330,
+  "cli_duration_api_ms": 21613,
+  "kosten_usd": 0.02089945,
+  "num_turns": 4,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2597,
+    "cache_creation_input_tokens": 6599,
+    "cache_read_input_tokens": 5277,
+    "output_tokens": 1697,
+    "output_tokens_details": {
+      "thinking_tokens": 881
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 6599
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 392,
+        "cache_read_input_tokens": 5277,
+        "cache_creation_input_tokens": 1322,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1322,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 951,
+      "outputTokens": 18,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001041,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2597,
+      "outputTokens": 1697,
+      "cacheReadInputTokens": 5277,
+      "cacheCreationInputTokens": 6599,
+      "webSearchRequests": 0,
+      "costUSD": 0.01985845,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 881,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:**\n\nIch habe Noras Anfrage bearbeitet: Ihre Kündigung wurde tatsächlich angenommen (Status im System: gekündigt). Der Grund, warum sie noch \"Pro\" sieht, ist normal – laut FocusFlow-Richtlinie läuft der Pro-Zugang bis zum Ende der bezahlten Periode (05.10.2026), erst dann wird das Konto auf Free umgestellt. Ich habe einen freundlichen Antwortentwurf als Entwurf gespeichert, der diese Situation klärt."
+}

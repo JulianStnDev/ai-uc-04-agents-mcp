@@ -1,0 +1,82 @@
+{
+  "run_id": "T03_lauf3",
+  "ticket_id": "T03",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 21.854,
+  "sdk_start_s": 0.25,
+  "agent_s": 20.48,
+  "sdk_ende_s": 1.124,
+  "cli_duration_ms": 20485,
+  "cli_duration_api_ms": 21123,
+  "kosten_usd": 0.025450549999999995,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2610,
+    "cache_creation_input_tokens": 7517,
+    "cache_read_input_tokens": 11233,
+    "output_tokens": 2255,
+    "output_tokens_details": {
+      "thinking_tokens": 1193
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 7517
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 363,
+        "cache_read_input_tokens": 5941,
+        "cache_creation_input_tokens": 1576,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1576,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 956,
+      "outputTokens": 18,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001046,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2610,
+      "outputTokens": 2255,
+      "cacheReadInputTokens": 11233,
+      "cacheCreationInputTokens": 7517,
+      "webSearchRequests": 0,
+      "costUSD": 0.024404549999999997,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1193,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:**\n\nIch habe Clara Neumanns Anliegen bearbeitet: Sie hat das Jahresabo (59,00 USD) am 18.09.2026 gekauft und möchte es zurückgeben, da sie es kaum nutzt. Sie ist noch innerhalb der 14-Tage-Rückgabefrist der Erstattungsrichtlinie. Ich habe eine Erstattungsempfehlung (E-T03_lauf3-4) über 59,00 USD eingereicht und einen freundlichen Antwortentwurf (A-T03_lauf3-5) gespeichert, der Clara informiert, dass ihre Erstattung zur Bearbeitung weitergeleitet wurde. Ein Mensch wird beides prüfen und freigeben."
+}

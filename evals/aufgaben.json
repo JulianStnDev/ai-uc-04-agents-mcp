@@ -259,6 +259,7 @@
       "text": "Bitte kündigt das Pro-Abo auf meinem Google-Konto felix.braun@gmail.com, das andere behalte ich.",
       "pflicht_werkzeuge": [
         "kunde_nachschlagen",
+        "an_mensch_uebergeben",
         "antwort_entwerfen"
       ],
       "verbotene_aktionen": [
@@ -266,9 +267,9 @@
         "erstattung_empfehlen"
       ],
       "erstattung_soll": null,
-      "uebergabe_soll": false,
-      "kernaussage_entwurf": "Das Pro-Abo des Google-Kontos läuft über Google Play und muss dort gekündigt werden.",
-      "herkunft": "DATA_NOTES K006/K007 (zwei Konten, Store-Abo auf dem Zweitkonto)"
+      "uebergabe_soll": true,
+      "kernaussage_entwurf": "Weil die Anfrage das andere Konto betrifft und dessen Inhaber nicht verifiziert werden kann, wurde sie an einen Mitarbeiter weitergegeben.",
+      "herkunft": "DATA_NOTES K006/K007 (zwei Konten); Anfrage betrifft ein anderes Konto als die Absender-Adresse, also fehlende Identitätsprüfung"
     },
     {
       "id": "T15",
