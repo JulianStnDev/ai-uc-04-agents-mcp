@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage sinngemäß: Nur ein Konto darf Pro haben, daher muss vor der Zusammenführung eines der Abos geprüft und ggf. gekündigt werden. Damit wird die Hauptaussage korrekt vermittelt, auch wenn die endgültige Klärung an den weiteren Support delegiert wird.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 1254,
+  "judge_output_tokens": 158,
+  "judge_kosten_usd": 0.004088,
+  "judge_s": 2.501
+}

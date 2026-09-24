@@ -1,0 +1,82 @@
+{
+  "run_id": "T04_lauf2",
+  "ticket_id": "T04",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 21.144,
+  "sdk_start_s": 0.228,
+  "agent_s": 19.796,
+  "sdk_ende_s": 1.121,
+  "cli_duration_ms": 19800,
+  "cli_duration_api_ms": 20889,
+  "kosten_usd": 0.02429795,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2613,
+    "cache_creation_input_tokens": 7483,
+    "cache_read_input_tokens": 10972,
+    "output_tokens": 2028,
+    "output_tokens_details": {
+      "thinking_tokens": 934
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 7483
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 301,
+        "cache_read_input_tokens": 5797,
+        "cache_creation_input_tokens": 1686,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1686,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 959,
+      "outputTokens": 27,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001094,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2613,
+      "outputTokens": 2028,
+      "cacheReadInputTokens": 10972,
+      "cacheCreationInputTokens": 7483,
+      "webSearchRequests": 0,
+      "costUSD": 0.02320395,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 934,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:**\nIch habe deine Erstattung von 59 USD empfohlen (Zahlungs-ID Z026 vom 15.09.2026) und einen Antwortentwurf gespeichert – die Anfrage wurde innerhalb der 14-Tage-Frist gestellt und ist berechtigt zur vollständigen Erstattung gemäß Richtlinie. Ein Mensch wird die Empfehlung prüfen und freigeben."
+}

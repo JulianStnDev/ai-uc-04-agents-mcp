@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage klar: Das Abo ist gekündigt und Pro läuft noch bis zum 03.10.2026 weiter, was exakt dem wirksam_zum-Datum aus der Trajektorie entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Kündigung bestätigt, Enddatum 03.10.2026, keine weitere Abbuchung, Umstellung auf Free, Datenerhalt, jederzeit wieder upgraden) sind wörtlich durch die Trajektorie (Kündigungsergebnis und Hilfeartikel) gedeckt.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 4824,
+  "judge_output_tokens": 262,
+  "judge_kosten_usd": 0.012268,
+  "judge_s": 3.655
+}

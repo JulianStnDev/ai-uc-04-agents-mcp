@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage vollständig: Die 59$-Verlängerung wird innerhalb der 14-Tage-Frist erstattet bzw. zur Erstattung weitergeleitet, ohne dem zu widersprechen.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 1124,
+  "judge_output_tokens": 117,
+  "judge_kosten_usd": 0.003418,
+  "judge_s": 2.607
+}

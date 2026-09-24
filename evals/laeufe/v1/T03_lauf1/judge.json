@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage vollständig: 59 USD für das Jahresabo werden erstattet, da der Kauf innerhalb von 14 Tagen (hier 6 Tage) erfolgte, und die Erstattung wurde bereits weitergeleitet.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 1055,
+  "judge_output_tokens": 127,
+  "judge_kosten_usd": 0.00338,
+  "judge_s": 2.628
+}

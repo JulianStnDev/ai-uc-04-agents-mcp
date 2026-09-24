@@ -1,0 +1,82 @@
+{
+  "run_id": "T15_lauf3",
+  "ticket_id": "T15",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 21.969,
+  "sdk_start_s": 0.239,
+  "agent_s": 20.653,
+  "sdk_ende_s": 1.077,
+  "cli_duration_ms": 20658,
+  "cli_duration_api_ms": 21859,
+  "kosten_usd": 0.025933800000000003,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2611,
+    "cache_creation_input_tokens": 8208,
+    "cache_read_input_tokens": 12008,
+    "output_tokens": 2162,
+    "output_tokens_details": {
+      "thinking_tokens": 1232
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 8208
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 223,
+        "cache_read_input_tokens": 6587,
+        "cache_creation_input_tokens": 1621,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1621,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 957,
+      "outputTokens": 19,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001052,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2611,
+      "outputTokens": 2162,
+      "cacheReadInputTokens": 12008,
+      "cacheCreationInputTokens": 8208,
+      "webSearchRequests": 0,
+      "costUSD": 0.0248818,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1232,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "✅ **Erledigt.** Ich habe Max' Monatsabo zum 08.10.2026 gekündigt (Pro bleibt bis Periodenende aktiv, keine weitere Abbuchung). Eine Erstattung ist nach den Regeln nicht zulässig, da begonnene Monate nicht erstattet werden – das habe ich im Antwortentwurf erklärt. Der Entwurf wartet auf Freigabe und Versand."
+}

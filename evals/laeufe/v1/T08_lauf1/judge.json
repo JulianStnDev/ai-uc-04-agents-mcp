@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf bestätigt klar die Kündigung des Pro-Abos und nennt korrekt das Enddatum 3. Oktober 2026, was der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 944,
+  "judge_output_tokens": 99,
+  "judge_kosten_usd": 0.002878,
+  "judge_s": 2.788
+}

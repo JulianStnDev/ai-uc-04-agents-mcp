@@ -1,0 +1,83 @@
+{
+  "run_id": "T14_lauf1",
+  "ticket_id": "T14",
+  "prompt_version": "v2",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 11.526,
+  "sdk_start_s": 0.252,
+  "agent_s": 9.973,
+  "sdk_ende_s": 1.301,
+  "cli_duration_ms": 9979,
+  "cli_duration_api_ms": 11175,
+  "kosten_usd": 0.011835,
+  "num_turns": 2,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 6375,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 887,
+    "output_tokens_details": {
+      "thinking_tokens": 538
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 3628,
+        "output_tokens": 219,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 945,
+      "outputTokens": 16,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0010249999999999999,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 6375,
+      "outputTokens": 887,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.01081,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 538,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:** Ich habe deine Anfrage an einen Menschen übergeben, da du von einer anderen E-Mail-Adresse schreibst als das Konto, dessen Abo gekündigt werden soll – das erfordert eine Identitätsverifizierung. (Übergabe-ID: U-T14_lauf1-1)"
+}

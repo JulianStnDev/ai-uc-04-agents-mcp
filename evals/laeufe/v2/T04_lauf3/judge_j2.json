@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf nennt korrekt den Betrag von 59 USD für die Verlängerung vom 15.09.2026, bestätigt die Erstattung innerhalb der 14-Tage-Frist und entspricht damit der Soll-Kernaussage.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Betrag, Datum, 14-Tage-Frist, Bearbeitungsdauer 5–10 Werktage, Folgen der Erstattung) sind wörtlich durch die Trajektorie bzw. den Hilfeartikel gedeckt; es werden keine ungedeckten Ursachen oder Fristen behauptet.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5477,
+  "judge_output_tokens": 1461,
+  "judge_kosten_usd": 0.025564,
+  "judge_s": 15.168
+}

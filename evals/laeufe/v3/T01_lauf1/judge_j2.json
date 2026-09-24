@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf bestätigt die doppelte Abbuchung von 54,34 $ und teilt mit, dass die Erstattung dieses Betrags zur Genehmigung eingeleitet wurde – das entspricht der Soll-Kernaussage einer weitergeleiteten Erstattung der zweiten Zahlung.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen sind durch die Trajektorie gedeckt: Der Hinweis auf das bekannte Tarifwechsel-Problem und die 5–10 Werktage stammen wörtlich aus den Hilfeartikeln, der Status 'zur Genehmigung eingeleitet' entspricht 'wartet_auf_freigabe', und dass der Pro-Zugang unberührt bleibt, steht sowohl im Artikel zu doppelten Abbuchungen als auch in der Begründung der Erstattungsempfehlung.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5907,
+  "judge_output_tokens": 1327,
+  "judge_kosten_usd": 0.025084,
+  "judge_s": 18.314
+}

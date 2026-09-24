@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf vermittelt korrekt, dass die Anfrage das andere Konto betrifft, die Identität nicht verifiziert werden kann und ein Mitarbeiter sich darum kümmert, was der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Die Formulierung 'um die Kündigung abzuschließen' suggeriert ein konkretes Ergebnis der Weiterleitung, das in der Trajektorie nicht zugesichert wurde – dort wurde nur die Übergabe zur Identitätsprüfung dokumentiert, nicht die Zusage einer erfolgreichen Kündigung.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 2145,
+  "judge_output_tokens": 701,
+  "judge_kosten_usd": 0.0113,
+  "judge_s": 8.293
+}

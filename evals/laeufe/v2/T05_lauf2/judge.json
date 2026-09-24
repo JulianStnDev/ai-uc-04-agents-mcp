@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält klar die Kernaussage, dass keine (anteilige) Erstattung möglich ist, da die 14-Tage-Frist abgelaufen ist, und widerspricht ihr an keiner Stelle.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 1224,
+  "judge_output_tokens": 109,
+  "judge_kosten_usd": 0.003538,
+  "judge_s": 2.115
+}

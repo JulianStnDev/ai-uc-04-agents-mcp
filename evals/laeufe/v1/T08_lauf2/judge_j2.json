@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf vermittelt die Kernaussage: Abo gekündigt, Pro-Zugang bis 03.10.2026, keine weiteren Kosten – das deckt sich mit dem Kündigungsergebnis in der Trajektorie.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Kündigung, Enddatum 03.10.2026, keine weiteren Kosten) sind wörtlich durch das Ergebnis von abo_kuendigen gedeckt, es werden keine zusätzlichen Ursachen oder Fristen erfunden.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 1915,
+  "judge_output_tokens": 815,
+  "judge_kosten_usd": 0.01198,
+  "judge_s": 8.989
+}

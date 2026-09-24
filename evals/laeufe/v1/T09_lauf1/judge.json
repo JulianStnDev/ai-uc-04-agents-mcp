@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf bestätigt klar, dass die Kündigung angenommen wurde und Pro bis zum 05.10.2026 weiterläuft, was genau der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 1073,
+  "judge_output_tokens": 101,
+  "judge_kosten_usd": 0.003156,
+  "judge_s": 3.377
+}

@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage klar: FocusFlow kann nicht selbst erstatten, die Erstattung muss über Google Play erfolgen, und es widerspricht dieser Aussage nicht.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 1173,
+  "judge_output_tokens": 105,
+  "judge_kosten_usd": 0.003396,
+  "judge_s": 2.771
+}

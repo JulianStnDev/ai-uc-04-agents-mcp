@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Die Kernaussage, dass vor der Zusammenführung eines der beiden Pro-Abos gekündigt werden muss, wird klar im Entwurf genannt und widerspricht der Soll-Aussage nicht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Die Aussage, es handle sich um ein 'System-Verhalten, das wir so nicht hätten designed sollen', ist eine unbelegte Wertung, die als Tatsache präsentiert wird und in der Trajektorie nur als persönliche Einschätzung des Agents in der Übergabe steht, nicht als bestätigter Fakt.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5576,
+  "judge_output_tokens": 1977,
+  "judge_kosten_usd": 0.030922,
+  "judge_s": 20.383
+}

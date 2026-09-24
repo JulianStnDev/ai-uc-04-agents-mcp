@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf bestätigt die doppelte Abbuchung und teilt mit, dass die Erstattung der 54,34 USD an das Finance-Team weitergeleitet wurde – dies entspricht der Soll-Kernaussage.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 1100,
+  "judge_output_tokens": 112,
+  "judge_kosten_usd": 0.00332,
+  "judge_s": 2.093
+}

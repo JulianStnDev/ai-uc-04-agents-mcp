@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage: Die 59 USD werden erstattet bzw. zur Freigabe weitergeleitet, weil der Kauf innerhalb der 14-Tage-Frist liegt – das entspricht exakt der Soll-Kernaussage.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Die Aussage, dass Clara beim nächsten Pro-Kauf wieder eine 7-tägige Testphase erhält, ist eine unbelegte Zusage: Laut Hilfeartikel gilt die Testphase nur 'beim ersten Abschluss von Pro', Clara hatte aber bereits ein Abo, sodass diese konkrete Zusage nicht durch die Trajektorie gedeckt ist.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5387,
+  "judge_output_tokens": 1660,
+  "judge_kosten_usd": 0.027374,
+  "judge_s": 16.179
+}

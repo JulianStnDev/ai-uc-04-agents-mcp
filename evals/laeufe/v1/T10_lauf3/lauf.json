@@ -1,0 +1,82 @@
+{
+  "run_id": "T10_lauf3",
+  "ticket_id": "T10",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 16.858,
+  "sdk_start_s": 0.236,
+  "agent_s": 15.506,
+  "sdk_ende_s": 1.116,
+  "cli_duration_ms": 15511,
+  "cli_duration_api_ms": 16294,
+  "kosten_usd": 0.01951725,
+  "num_turns": 4,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2574,
+    "cache_creation_input_tokens": 6353,
+    "cache_read_input_tokens": 5340,
+    "output_tokens": 1490,
+    "output_tokens_details": {
+      "thinking_tokens": 910
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 6353
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 329,
+        "cache_read_input_tokens": 5340,
+        "cache_creation_input_tokens": 1013,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1013,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 928,
+      "outputTokens": 18,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001018,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2574,
+      "outputTokens": 1490,
+      "cacheReadInputTokens": 5340,
+      "cacheCreationInputTokens": 6353,
+      "webSearchRequests": 0,
+      "costUSD": 0.018499250000000002,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 910,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Erledigt:** Ich habe Jonas Meyers Konto gefunden (Pro-Abo monatlich über Google Play, läuft bis 21.10.2026) und einen Antwortantwort mit der genauen Kündigungsanleitung für Android erstellt – diese Abos können nur der Kunde selbst über Google Play kündigen."
+}

@@ -1,0 +1,83 @@
+{
+  "run_id": "T12_lauf1",
+  "ticket_id": "T12",
+  "prompt_version": "v2",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 17.241,
+  "sdk_start_s": 0.25,
+  "agent_s": 15.839,
+  "sdk_ende_s": 1.153,
+  "cli_duration_ms": 15846,
+  "cli_duration_api_ms": 16470,
+  "kosten_usd": 0.0194795,
+  "num_turns": 4,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2735,
+    "cache_creation_input_tokens": 6498,
+    "cache_read_input_tokens": 5300,
+    "output_tokens": 1423,
+    "output_tokens_details": {
+      "thinking_tokens": 885
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 6498
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 241,
+        "cache_read_input_tokens": 5300,
+        "cache_creation_input_tokens": 1198,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1198,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 917,
+      "outputTokens": 12,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.000977,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2735,
+      "outputTokens": 1423,
+      "cacheReadInputTokens": 5300,
+      "cacheCreationInputTokens": 6498,
+      "webSearchRequests": 0,
+      "costUSD": 0.018502499999999998,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 885,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "Ich habe Gretas Kundendaten nachgeschlagen, die aktuelle Preisübersicht aus der Hilfe geholt und einen freundlichen Antwortentwurf mit den Pro-Preisen (6,99 USD/Monat oder 59 USD/Jahr), den Unterschieden zu Free und der Info zum Abschluss über Google Play gespeichert."
+}

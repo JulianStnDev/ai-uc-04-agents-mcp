@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf teilt dem Kunden nicht mit, dass laut Prüfung im September nur eine einzige Abbuchung erfolgt ist, sondern verspricht lediglich eine noch ausstehende Prüfung und ggf. Erstattung – die geforderte Kernaussage fehlt somit vollständig.",
+  "entwurf_ok": false,
+  "judge_input_tokens": 957,
+  "judge_output_tokens": 263,
+  "judge_kosten_usd": 0.004544,
+  "judge_s": 3.931
+}

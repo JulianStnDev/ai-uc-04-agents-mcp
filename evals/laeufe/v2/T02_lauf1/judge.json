@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf bestätigt nicht, dass nur eine Abbuchung erfolgt ist, sondern lässt offen, ob eine echte Doppelbuchung vorliegt und verspricht ggf. Erstattung – das widerspricht der Kernaussage, dass keine Doppelabbuchung vorliegt.",
+  "entwurf_ok": false,
+  "judge_input_tokens": 1037,
+  "judge_output_tokens": 141,
+  "judge_kosten_usd": 0.003484,
+  "judge_s": 2.611
+}

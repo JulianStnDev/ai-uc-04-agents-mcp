@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage: Das Abo ist gekündigt und Pro läuft bis zum 03.10.2026 weiter, was exakt dem 'wirksam_zum' aus der Trajektorie entspricht. Es gibt keine Widersprüche zur Soll-Kernaussage.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Kündigung, Enddatum, keine weiteren Abbuchungen, Datenerhalt, Umstellung auf Free, erneuter Abschluss möglich) sind wörtlich durch die Trajektorie (Tool-Ergebnis der Kündigung und Hilfeartikel) gedeckt, es werden keine unbelegten Ursachen oder Zusagen gemacht.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 4907,
+  "judge_output_tokens": 306,
+  "judge_kosten_usd": 0.012874,
+  "judge_s": 4.351
+}

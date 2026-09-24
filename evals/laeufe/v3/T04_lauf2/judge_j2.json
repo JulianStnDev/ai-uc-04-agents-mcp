@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf nennt korrekt den Betrag 59 USD, bezieht sich auf die Verlängerung vom 15.09. und bestätigt, dass die Erstattung innerhalb der 14-Tage-Frist liegt und zur Prüfung/Erstattung weitergeleitet wurde – das entspricht der Soll-Kernaussage.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Betrag, Datum, 14-Tage-Frist, Weiterleitung, Bearbeitungsdauer 5–10 Werktage, Folgen für Pro-Zugang/Free-Umstellung) stammen wörtlich aus der Trajektorie bzw. dem Hilfeartikel und stellen keine erfundenen Ursachen oder unbelegten Zusagen dar.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 7372,
+  "judge_output_tokens": 869,
+  "judge_kosten_usd": 0.023434,
+  "judge_s": 9.826
+}

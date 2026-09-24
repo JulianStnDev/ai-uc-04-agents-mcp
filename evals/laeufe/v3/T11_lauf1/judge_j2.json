@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf vermittelt korrekt, dass FocusFlow den Kauf nicht selbst erstatten kann und verweist auf Google Play als einzigen Weg für eine Erstattung, was der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Der Entwurf behauptet konkret '6+ Monate' seit dem Kauf, obwohl kein aktuelles Datum in der Trajektorie vorliegt, und spekuliert zudem mit 'eventuell bieten die dir noch Optionen' über mögliche Kulanzregelungen von Google, die nirgends belegt sind.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5955,
+  "judge_output_tokens": 927,
+  "judge_kosten_usd": 0.02118,
+  "judge_s": 11.571
+}

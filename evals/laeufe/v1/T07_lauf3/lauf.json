@@ -1,0 +1,82 @@
+{
+  "run_id": "T07_lauf3",
+  "ticket_id": "T07",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 31.728,
+  "sdk_start_s": 0.238,
+  "agent_s": 30.975,
+  "sdk_ende_s": 0.515,
+  "cli_duration_ms": 30977,
+  "cli_duration_api_ms": 31819,
+  "kosten_usd": 0.03159515,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2628,
+    "cache_creation_input_tokens": 8853,
+    "cache_read_input_tokens": 11669,
+    "output_tokens": 3130,
+    "output_tokens_details": {
+      "thinking_tokens": 1873
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 8853
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 405,
+        "cache_read_input_tokens": 6358,
+        "cache_creation_input_tokens": 2495,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2495,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 974,
+      "outputTokens": 22,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0010840000000000001,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2628,
+      "outputTokens": 3130,
+      "cacheReadInputTokens": 11669,
+      "cacheCreationInputTokens": 8853,
+      "webSearchRequests": 0,
+      "costUSD": 0.03051115,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1873,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:** Ich habe Felixs Fall mit hoher Priorität an unser Support-Team übergeben, da er zwei separate Konten mit aktiven Pro-Abos hat und seit April doppelt zahlt – das erfordert manuelle Klärung der Doppelzahlungen vor einer Zusammenführung. Ein Antwortentwurf ist als Entwurf bereit (U-T07_lauf3-4, A-T07_lauf3-5)."
+}

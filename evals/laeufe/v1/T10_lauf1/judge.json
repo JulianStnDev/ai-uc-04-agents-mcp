@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage klar: Das Abo muss in Google Play gekündigt werden, da es dort abgeschlossen wurde, inklusive korrekter Schritt-für-Schritt-Anleitung ohne Widersprüche.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 1082,
+  "judge_output_tokens": 119,
+  "judge_kosten_usd": 0.003354,
+  "judge_s": 2.192
+}

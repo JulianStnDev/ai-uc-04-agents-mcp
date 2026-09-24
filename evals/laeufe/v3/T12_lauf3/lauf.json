@@ -1,0 +1,87 @@
+{
+  "run_id": "T12_lauf3",
+  "ticket_id": "T12",
+  "prompt_version": "v3",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 18.263,
+  "sdk_start_s": 0.302,
+  "agent_s": 16.683,
+  "sdk_ende_s": 1.278,
+  "cli_duration_ms": 16690,
+  "cli_duration_api_ms": 17844,
+  "kosten_usd": 0.0190892,
+  "num_turns": 4,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2737,
+    "cache_creation_input_tokens": 6438,
+    "cache_read_input_tokens": 5327,
+    "output_tokens": 1359,
+    "output_tokens_details": {
+      "thinking_tokens": 699
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 6438
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 246,
+        "cache_read_input_tokens": 5327,
+        "cache_creation_input_tokens": 1111,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1111,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 917,
+      "outputTokens": 12,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.000977,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2737,
+      "outputTokens": 1359,
+      "cacheReadInputTokens": 5327,
+      "cacheCreationInputTokens": 6438,
+      "webSearchRequests": 0,
+      "costUSD": 0.018112200000000002,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 699,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "Fertig! Ich habe Gretas Anfrage bearbeitet, den Kunden validiert, die aktuellen Pro-Preise aus der Hilfe geholt und einen Antwort-Entwurf mit den Kosten (6,99 USD/Monat oder 59 USD/Jahr) und wichtigen Features gespeichert.",
+  "pflicht_hook": true,
+  "eingriffe": 0,
+  "eingriffe_details": [],
+  "pflichten_offen_am_ende": []
+}

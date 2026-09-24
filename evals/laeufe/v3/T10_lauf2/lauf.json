@@ -1,0 +1,87 @@
+{
+  "run_id": "T10_lauf2",
+  "ticket_id": "T10",
+  "prompt_version": "v3",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 24.039,
+  "sdk_start_s": 0.301,
+  "agent_s": 22.556,
+  "sdk_ende_s": 1.182,
+  "cli_duration_ms": 22563,
+  "cli_duration_api_ms": 23200,
+  "kosten_usd": 0.022476850000000003,
+  "num_turns": 4,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2748,
+    "cache_creation_input_tokens": 6991,
+    "cache_read_input_tokens": 5571,
+    "output_tokens": 1884,
+    "output_tokens_details": {
+      "thinking_tokens": 1057
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 6991
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 242,
+        "cache_read_input_tokens": 5571,
+        "cache_creation_input_tokens": 1420,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1420,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 928,
+      "outputTokens": 17,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001013,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2748,
+      "outputTokens": 1884,
+      "cacheReadInputTokens": 5571,
+      "cacheCreationInputTokens": 6991,
+      "webSearchRequests": 0,
+      "costUSD": 0.021463850000000003,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1057,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Fertig!** Ich habe Jonas' Anfrage bearbeitet: Da sein Pro-Abo über Google Play Store läuft, kann er es nur selbst kündigen – ich habe ihm die genauen Schritte erklärt und einen freundlichen Antwortentwurf vorbereitet, den ein Mensch jetzt noch prüfen und versenden kann.",
+  "pflicht_hook": true,
+  "eingriffe": 0,
+  "eingriffe_details": [],
+  "pflichten_offen_am_ende": []
+}

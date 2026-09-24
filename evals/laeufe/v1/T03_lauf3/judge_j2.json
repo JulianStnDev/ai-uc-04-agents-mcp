@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf teilt Clara mit, dass die 59 USD für das Jahresabo innerhalb der 14-Tage-Frist erstattet werden und die Erstattung bereits weitergeleitet wurde – das entspricht genau der Soll-Kernaussage.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen sind durch die Trajektorie gedeckt: die 14-Tage-Frist und der Betrag stammen aus der Erstattungsempfehlung, die Bearbeitungsdauer von 5–10 Werktagen sowie die Folgen der Erstattung (Downgrade auf Free, Datenerhalt) sind wörtlich aus dem Hilfeartikel für Web-Abos übernommen, was hier zutrifft.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5217,
+  "judge_output_tokens": 1200,
+  "judge_kosten_usd": 0.022434,
+  "judge_s": 13.233
+}

@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf nennt exakt die Preise 6,99 USD/Monat und 59 USD/Jahr, die der Soll-Kernaussage entsprechen und aus dem aktuelleren Hilfeartikel (Stand 02.07.2026) stammen.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle genannten Fakten (Preise, Rabatt, Funktionsumfang, Ort zum Abschließen) sind wörtlich aus dem Hilfeartikel 'preise-und-tarife.md' übernommen, es werden keine zusätzlichen Ursachen, Fristen oder Zusagen erfunden.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 4631,
+  "judge_output_tokens": 751,
+  "judge_kosten_usd": 0.016772,
+  "judge_s": 9.057
+}

@@ -1,0 +1,83 @@
+{
+  "run_id": "T09_lauf2",
+  "ticket_id": "T09",
+  "prompt_version": "v2",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 17.839,
+  "sdk_start_s": 0.241,
+  "agent_s": 16.461,
+  "sdk_ende_s": 1.137,
+  "cli_duration_ms": 16466,
+  "cli_duration_api_ms": 17712,
+  "kosten_usd": 0.020493949999999997,
+  "num_turns": 4,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2769,
+    "cache_creation_input_tokens": 6689,
+    "cache_read_input_tokens": 5477,
+    "output_tokens": 1557,
+    "output_tokens_details": {
+      "thinking_tokens": 858
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 6689
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 265,
+        "cache_read_input_tokens": 5477,
+        "cache_creation_input_tokens": 1212,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1212,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 951,
+      "outputTokens": 16,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001031,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2769,
+      "outputTokens": 1557,
+      "cacheReadInputTokens": 5477,
+      "cacheCreationInputTokens": 6689,
+      "webSearchRequests": 0,
+      "costUSD": 0.01946295,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 858,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Fertig!** Ich habe Noras Kündigung bestätigt (aktiv seit ca. 2 Wochen, Status: gekuendigt), erklärt, dass Pro korrekt noch bis 5. Oktober läuft, und einen Antwortentwurf gespeichert."
+}

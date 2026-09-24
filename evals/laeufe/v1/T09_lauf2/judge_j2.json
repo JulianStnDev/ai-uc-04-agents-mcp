@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf bestätigt klar, dass die Kündigung wirksam ist und dass Pro nur bis zum Ende der bezahlten Periode (05.10.2026) läuft – das entspricht genau der Soll-Kernaussage und widerspricht ihr nicht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Die meisten Aussagen sind durch Kundendaten und den Hilfeartikel gedeckt, aber die Formulierung 'in den letzten anderthalb Wochen' setzt ein aktuelles Datum voraus, das nirgends in der Trajektorie angegeben ist, und ist damit eine unbelegte konkrete Zeitangabe.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5288,
+  "judge_output_tokens": 1190,
+  "judge_kosten_usd": 0.022476,
+  "judge_s": 13.884
+}

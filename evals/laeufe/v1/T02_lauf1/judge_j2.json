@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf teilt Ben nicht klar mit, dass laut FocusFlow-System im September nur eine Abbuchung über 6,99 USD verzeichnet ist – die Kernaussage fehlt, stattdessen wird nur allgemein auf Vormerkung oder echte Doppelbuchung verwiesen.",
+  "entwurf_ok": false,
+  "keine_spekulation_begruendung": "Die Aussage, das Team werde sich 'in den nächsten Stunden' melden, ist eine konkrete zeitliche Zusage, die in der Trajektorie nicht enthalten ist und somit spekulativ ist.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5774,
+  "judge_output_tokens": 732,
+  "judge_kosten_usd": 0.018868,
+  "judge_s": 8.187
+}

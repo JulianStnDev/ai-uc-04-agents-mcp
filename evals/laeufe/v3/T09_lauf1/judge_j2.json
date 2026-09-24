@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf bestätigt klar, dass die Kündigung wirksam ist und Pro bis zum 05.10.2026 weiterläuft, was exakt der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Kündigung angenommen, Status 'gekündigt', Laufzeit bis Periodenende 05.10.2026, Datenerhalt, erneuter Abschluss möglich) sind direkt durch die Kundendaten und den Hilfeartikel gedeckt.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 4840,
+  "judge_output_tokens": 228,
+  "judge_kosten_usd": 0.01196,
+  "judge_s": 3.396
+}

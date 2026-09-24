@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält klar die Kernaussage, dass das Abo über Google Play gekündigt werden muss, da es dort abgeschlossen wurde.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Google Play Kündigungsweg, Enddatum 21.10.2026 aus periode_ende, Datenerhalt, Bestätigungsmail/Spam-Hinweis) sind wörtlich durch die Kundendaten bzw. den Hilfeartikel gedeckt.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 4730,
+  "judge_output_tokens": 217,
+  "judge_kosten_usd": 0.01163,
+  "judge_s": 3.207
+}

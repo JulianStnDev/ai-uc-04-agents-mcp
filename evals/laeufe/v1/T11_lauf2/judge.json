@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf vermittelt klar, dass FocusFlow nicht erstatten kann und die Erstattung nur über Google Play möglich ist, was der Kernaussage entspricht; die zusätzliche Nennung der 14-Tage-Frist widerspricht dem nicht.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 1172,
+  "judge_output_tokens": 127,
+  "judge_kosten_usd": 0.003614,
+  "judge_s": 2.495
+}

@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf nennt klar, dass eine (anteilige) Erstattung wegen Ablaufs der 14-Tage-Frist nicht möglich ist, was genau der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Kündigung durchgeführt, Enddatum 15.08.2027, Kaufdatum 15.08., 14-Tage-Frist überschritten) sind direkt durch die Trajektorie (Zahlungsdatum, Kündigungsergebnis, Hilfeartikel) gedeckt, ohne zusätzliche Spekulation.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 6836,
+  "judge_output_tokens": 427,
+  "judge_kosten_usd": 0.017942,
+  "judge_s": 5.777
+}

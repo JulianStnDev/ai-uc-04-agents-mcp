@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält im Kern beide Teile der Soll-Aussage: FocusFlow erstattet nicht selbst, und die Erstattung muss über Google Play beantragt werden. Die Begründung über die 14-Tage-Frist ist zwar sachlich nicht der eigentliche Grund (Store-Käufe sind laut Artikel unabhängig von der Frist ausgeschlossen), widerspricht aber nicht direkt der Kernaussage, da am Ende korrekt auf Google Play verwiesen wird.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Der Entwurf erfindet konkrete Fristen für Google Play ('üblicherweise bis 48 Stunden nach Kauf, je nach Fall auch bis 15 Tage'), die in der Trajektorie nirgends stehen – dort wird nur allgemein auf die Richtlinien des jeweiligen Stores verwiesen, ohne Zahlen zu nennen. Zudem wird die 14-Tage-Frist als Ablehnungsgrund genannt, obwohl laut Artikel bei Store-Käufen ohnehin keine eigene Erstattung möglich ist, unabhängig von der Frist.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 4770,
+  "judge_output_tokens": 1574,
+  "judge_kosten_usd": 0.02528,
+  "judge_s": 15.985
+}

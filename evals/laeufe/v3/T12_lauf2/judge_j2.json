@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf gibt exakt die Preise 6,99 USD pro Monat und 59 USD pro Jahr aus dem aktuelleren Artikel wieder, was der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle genannten Fakten (Preise, Ersparnis, Feature-Liste, Verfügbarkeit auf allen Plattformen, Aktivierung in den Einstellungen) sind wörtlich aus dem Hilfeartikel 'preise-und-tarife.md' gedeckt, keine erfundenen Details.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 4708,
+  "judge_output_tokens": 243,
+  "judge_kosten_usd": 0.011846,
+  "judge_s": 3.971
+}

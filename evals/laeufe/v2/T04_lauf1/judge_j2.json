@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage, dass die 59-USD-Verlängerung erstattet wird, weil die Anfrage innerhalb der 14-Tage-Frist erfolgt ist, und dass die Erstattung zur Freigabe eingereicht wurde – das entspricht der geforderten Kernaussage.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Abbuchungsdatum, Frist, Weiterleitung zur Erstattung, Rückbuchungsdauer laut Hilfeartikel, Downgrade auf Free nach Erstattung) sind wörtlich durch die Trajektorie (Zahlungsdaten, Hilfeartikel, Erstattungsempfehlung) gedeckt, ohne dass Ursachen oder unbestätigte Zusagen hinzugefügt werden.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5447,
+  "judge_output_tokens": 1553,
+  "judge_kosten_usd": 0.026424,
+  "judge_s": 16.88
+}

@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf bestätigt nicht, dass im September nur eine Abbuchung erfolgt ist, sondern lässt die Frage offen und verweist auf weitere Prüfung durch das Support-Team – die Kernaussage fehlt somit vollständig.",
+  "entwurf_ok": false,
+  "judge_input_tokens": 1033,
+  "judge_output_tokens": 120,
+  "judge_kosten_usd": 0.003266,
+  "judge_s": 1.833
+}

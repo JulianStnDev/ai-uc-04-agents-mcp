@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage klar: Erstattung ist wegen Ablaufs der 14-Tage-Frist nicht möglich. Zusätzlich werden korrekt Kündigungsdetails aus der Trajektorie ergänzt, ohne der Kernaussage zu widersprechen.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Kündigungsdatum 15.08.2027, keine weitere Abbuchung, 14-Tage-Frist, Umstellung auf Free, Datenerhalt) sind wörtlich durch die Trajektorie (Kündigungsergebnis und Erstattungsrichtlinie) gedeckt, es werden keine Ursachen oder Zusagen erfunden.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 6984,
+  "judge_output_tokens": 300,
+  "judge_kosten_usd": 0.016968,
+  "judge_s": 4.011
+}

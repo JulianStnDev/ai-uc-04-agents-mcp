@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf nennt fälschlich eine FocusFlow-eigene 14-Tage-Erstattungsfrist als Grund für die Ablehnung, was der Kernaussage widerspricht, dass FocusFlow grundsätzlich nicht erstatten kann und die Erstattung nur über Google Play läuft – der Verweis auf Google Play ist zwar enthalten, aber die falsche Begründung verfälscht die Kernaussage.",
+  "entwurf_ok": false,
+  "judge_input_tokens": 1053,
+  "judge_output_tokens": 769,
+  "judge_kosten_usd": 0.009796,
+  "judge_s": 8.209
+}

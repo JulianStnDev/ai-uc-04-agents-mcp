@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf teilt zwar mit, dass der Fall an ein Team weitergeleitet wurde, nennt aber nicht den in der Trajektorie festgehaltenen Grund – dass zu diesem Konto keine Zahlung gefunden wurde. Stattdessen wird eine andere, nicht belegte Erklärung (Sync-Fehler mit Apple) präsentiert, wodurch die Soll-Kernaussage nicht vermittelt wird.",
+  "entwurf_ok": false,
+  "keine_spekulation_begruendung": "Der Entwurf behauptet als Erklärung 'Sync-Verzögerungen zwischen Apple und unserem System' bzw. 'technischer Fehler', obwohl dies in der Trajektorie nur als vage Vermutung des Agents im Übergabegrund steht, nicht als festgestellte Tatsache. Zudem wird eine konkrete Frist ('1–2 Werktagen') zugesagt, die in der Trajektorie nicht vorkommt.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 8138,
+  "judge_output_tokens": 969,
+  "judge_kosten_usd": 0.025966,
+  "judge_s": 10.163
+}

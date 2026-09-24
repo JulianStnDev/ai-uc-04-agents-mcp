@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf gibt korrekt wieder, dass keine Erstattung möglich ist, da die 14-Tage-Frist seit dem Kauf am 15.08.2026 abgelaufen ist – das entspricht genau der Soll-Kernaussage.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Kündigung sofort ausgeführt, Pro-Zugang bis 15.08.2027, danach Umstellung auf Free, keine weitere Abbuchung, 14-Tage-Frist überschritten) sind wörtlich durch die Trajektorie (Kundendaten, Zahlung, Kündigungsaktion, Hilfeartikel) gedeckt.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 6922,
+  "judge_output_tokens": 651,
+  "judge_kosten_usd": 0.020354,
+  "judge_s": 7.356
+}

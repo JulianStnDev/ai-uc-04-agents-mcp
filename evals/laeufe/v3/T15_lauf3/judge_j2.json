@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf gibt klar wieder, dass bereits begonnene Monate grundsätzlich nicht erstattet werden, auch nicht bei Nichtnutzung, was exakt der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Kündigung zum 08.10.2026, keine Erstattung für laufenden Monat, danach Free-Zugriff) sind durch die Trajektorie (abo_kuendigen-Ergebnis und Erstattungsrichtlinie) direkt gedeckt oder logisch zwingend gefolgert.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5958,
+  "judge_output_tokens": 824,
+  "judge_kosten_usd": 0.020156,
+  "judge_s": 9.806
+}

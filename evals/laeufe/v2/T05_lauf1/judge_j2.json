@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält klar die Kernaussage, dass keine anteilige Erstattung möglich ist, da die 14-Tage-Frist seit dem Kauf am 15.08.2026 abgelaufen ist – dies deckt sich mit der Erstattungsrichtlinie und dem tatsächlichen Kaufdatum aus der Zahlungsübersicht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Angaben (Kündigung erfolgt, Periodenende 15.08.2027, Kaufdatum 15.08.2026, 14-Tage-Frist, Umstellung auf Free) sind wörtlich durch die Trajektorie gedeckt, es werden keine unbelegten Ursachen, Fristen oder Zusagen erfunden.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 7006,
+  "judge_output_tokens": 606,
+  "judge_kosten_usd": 0.020072,
+  "judge_s": 7.118
+}

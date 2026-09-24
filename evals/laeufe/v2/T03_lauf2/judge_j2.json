@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage korrekt: Die 59 USD für das Jahresabo werden erstattet bzw. sind zur Erstattung weitergeleitet, da der Kauf innerhalb der 14-Tage-Frist lag. Es gibt keinen Widerspruch zur Soll-Kernaussage.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Die Aussage, dass Clara bei einem späteren erneuten Pro-Abschluss wieder die 7-tägige Testphase bekommt, ist nicht durch die Trajektorie gedeckt – der Hilfeartikel spricht explizit nur vom 'ersten Abschluss' von Pro, und Clara hatte bereits ein Pro-Abo, wodurch diese Zusage spekulativ und potenziell falsch ist.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5266,
+  "judge_output_tokens": 1519,
+  "judge_kosten_usd": 0.025722,
+  "judge_s": 15.575
+}

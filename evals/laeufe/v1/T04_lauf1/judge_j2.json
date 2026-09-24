@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf teilt korrekt mit, dass die 59-USD-Verlängerung vom 15.09. innerhalb der 14-Tage-Frist liegt und zur Erstattung weitergeleitet wurde, was der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Der Entwurf erfindet mit der Aussage 'in den nächsten 1–2 Tagen überprüfen' eine konkrete Frist für die interne Prüfung, die in der Trajektorie nirgends genannt wird (dort steht nur 'wartet_auf_freigabe').",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 7326,
+  "judge_output_tokens": 593,
+  "judge_kosten_usd": 0.020582,
+  "judge_s": 6.783
+}

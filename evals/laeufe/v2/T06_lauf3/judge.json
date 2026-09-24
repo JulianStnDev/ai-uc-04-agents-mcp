@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält klar die Kernaussage, dass FocusFlow App-Store-Käufe nicht selbst erstatten kann und der Kunde sich direkt an Apple wenden muss, inklusive konkretem Link und Hinweis zur Erstattungsfrist.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 1048,
+  "judge_output_tokens": 127,
+  "judge_kosten_usd": 0.003366,
+  "judge_s": 2.224
+}

@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf teilt mit, dass keine Zahlungen im System verzeichnet sind und der Fall an ein Team weitergeleitet wurde, was der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Der Entwurf behauptet als Fakt, der Kunde zahle über den App Store, und spekuliert über Synchronisierungsprobleme bzw. technische Probleme als Ursache – dies sind in der Trajektorie nur Vermutungen des Agents ohne belegte Zahlungsdaten. Zudem wird konkret zugesagt, die Abbuchung bei Apple werde verifiziert, was nicht durch die Trajektorie gedeckt ist.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 8052,
+  "judge_output_tokens": 1305,
+  "judge_kosten_usd": 0.029154,
+  "judge_s": 13.577
+}

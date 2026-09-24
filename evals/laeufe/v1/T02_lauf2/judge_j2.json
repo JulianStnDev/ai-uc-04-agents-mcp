@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Die Soll-Kernaussage, dass im September nachweislich nur eine Abbuchung über 6,99 USD erfolgt ist, wird im Entwurf nicht vermittelt; stattdessen bleibt offen, ob eine echte Doppelbuchung vorliegt, und der Fall wird zur Klärung weitergeleitet, was der klaren Aussage widerspricht.",
+  "entwurf_ok": false,
+  "keine_spekulation_begruendung": "Die Zusage 'erstatten wir dir den doppelten Betrag sofort' ist eine konkrete, nicht durch die Trajektorie gedeckte Festlegung auf Zeitpunkt und Ergebnis, da laut Daten nur eine Zahlung vorliegt und der Fall erst zur Klärung übergeben wurde.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5749,
+  "judge_output_tokens": 1206,
+  "judge_kosten_usd": 0.023558,
+  "judge_s": 12.853
+}

@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf nennt nicht den eigentlichen Grund der Weiterleitung – dass zum Konto keine Zahlung gefunden werden konnte – sondern spricht stattdessen vage von einem 'technischen Problem'. Damit fehlt die Hauptaussage der Soll-Kernaussage.",
+  "entwurf_ok": false,
+  "keine_spekulation_begruendung": "Die Aussage, das Fehlen der Aktivierung 'deutet auf ein technisches Problem hin', ist eine Vermutung über die Ursache, die in der Trajektorie nur als interne, unbestätigte Vermutung des Agents auftaucht und nicht als Tatsache belegt ist.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 7492,
+  "judge_output_tokens": 844,
+  "judge_kosten_usd": 0.023424,
+  "judge_s": 10.497
+}

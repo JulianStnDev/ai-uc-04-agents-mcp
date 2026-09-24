@@ -1,0 +1,83 @@
+{
+  "run_id": "T03_lauf3",
+  "ticket_id": "T03",
+  "prompt_version": "v2",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 25.381,
+  "sdk_start_s": 0.232,
+  "agent_s": 23.88,
+  "sdk_ende_s": 1.269,
+  "cli_duration_ms": 23885,
+  "cli_duration_api_ms": 24700,
+  "kosten_usd": 0.0249863,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2782,
+    "cache_creation_input_tokens": 7664,
+    "cache_read_input_tokens": 11833,
+    "output_tokens": 2079,
+    "output_tokens_details": {
+      "thinking_tokens": 1220
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 7664
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 355,
+        "cache_read_input_tokens": 6224,
+        "cache_creation_input_tokens": 1440,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1440,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 956,
+      "outputTokens": 18,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001046,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2782,
+      "outputTokens": 2079,
+      "cacheReadInputTokens": 11833,
+      "cacheCreationInputTokens": 7664,
+      "webSearchRequests": 0,
+      "costUSD": 0.0239403,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1220,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "Erledigt! ✅ Ich habe Claras Erstattung (59,00 USD für das Jahresabo vom 18.09.) zur Freigabe empfohlen – sie ist klar berechtigt, da sie innerhalb der 14-Tage-Frist liegt – und einen Antwortentwurf für sie vorbereitet, der erklärt, dass die Erstattung unterwegs ist und ihr Pro-Zugang danach endet."
+}

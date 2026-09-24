@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält klar die Kernaussage, dass die Erstattung wegen App-Store-Kauf direkt bei Apple beantragt werden muss und FocusFlow dies nicht selbst übernehmen kann; die zusätzlichen Details widersprechen dem nicht.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 1139,
+  "judge_output_tokens": 129,
+  "judge_kosten_usd": 0.003568,
+  "judge_s": 2.472
+}

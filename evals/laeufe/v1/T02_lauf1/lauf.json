@@ -1,0 +1,82 @@
+{
+  "run_id": "T02_lauf1",
+  "ticket_id": "T02",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 32.19,
+  "sdk_start_s": 0.251,
+  "agent_s": 31.41,
+  "sdk_ende_s": 0.529,
+  "cli_duration_ms": 31410,
+  "cli_duration_api_ms": 32636,
+  "kosten_usd": 0.03183785,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2590,
+    "cache_creation_input_tokens": 8827,
+    "cache_read_input_tokens": 11531,
+    "output_tokens": 3205,
+    "output_tokens_details": {
+      "thinking_tokens": 2188
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 8827
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 363,
+        "cache_read_input_tokens": 6261,
+        "cache_creation_input_tokens": 2566,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2566,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 936,
+      "outputTokens": 20,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001036,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2590,
+      "outputTokens": 3205,
+      "cacheReadInputTokens": 11531,
+      "cacheCreationInputTokens": 8827,
+      "webSearchRequests": 0,
+      "costUSD": 0.030801850000000002,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 2188,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:**\n\nIch habe Ben Hoffmanns Fall an einen Menschen mit hoher Priorität übergeben, da die Zahlungsrecords im System nur eine Buchung für September zeigen, aber der Kunde zwei meldet. Das Team wird prüfen, ob es eine Vormerkung oder echte Doppelbuchung ist und ggf. erstatten. Ein Antwortentwurf wurde gespeichert."
+}

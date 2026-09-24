@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf bestätigt korrekt, dass die Kündigung angenommen wurde und Pro bis zum Ende der bezahlten Periode (5. Oktober, laut Trajektorie 05.10.2026) weiterläuft, was der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Kündigung angenommen, Laufzeit bis Periodenende, danach Umstellung auf Free, keine weiteren Abbuchungen, Grund für weiterhin sichtbares Pro) sind direkt durch die Kundendaten bzw. den Hilfeartikel gedeckt, ohne spekulative Zusätze.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 4862,
+  "judge_output_tokens": 872,
+  "judge_kosten_usd": 0.018444,
+  "judge_s": 9.655
+}

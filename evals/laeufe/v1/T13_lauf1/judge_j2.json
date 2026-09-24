@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf erwähnt zwar die Übergabe an ein Team, nennt aber nicht den entscheidenden Grund (keine Zahlung zum Konto auffindbar) und behauptet stattdessen fälschlich, die Abbuchung sei bestätigt – das widerspricht der Kernaussage, die ja gerade besagt, dass keine Zahlung gefunden wurde.",
+  "entwurf_ok": false,
+  "keine_spekulation_begruendung": "Die Aussage 'Dein Abo wurde zwar abgebucht' ist durch die Trajektorie nicht gedeckt, da die Zahlungsabfrage keine Zahlung ergab, und die konkrete Zusage 'Jemand aus unserem Team wird sich noch heute bei dir melden' ist eine Frist, die in der Trajektorie nicht vorkommt.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5223,
+  "judge_output_tokens": 882,
+  "judge_kosten_usd": 0.019266,
+  "judge_s": 9.557
+}

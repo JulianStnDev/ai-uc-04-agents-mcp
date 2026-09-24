@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf nennt korrekt die 59,00 USD Erstattung für das Jahresabo und begründet dies mit der 14-Tage-Frist, was der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (14-Tage-Frist, 59 USD, Weiterleitung zur Freigabe, sofortiges Ende des Pro-Zugangs, Umstellung auf Free, Datenerhalt, 5–10 Werktage Rückzahlung) sind wörtlich durch die Trajektorie (Hilfeartikel und Erstattungsempfehlung) gedeckt.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 5320,
+  "judge_output_tokens": 455,
+  "judge_kosten_usd": 0.01519,
+  "judge_s": 5.56
+}

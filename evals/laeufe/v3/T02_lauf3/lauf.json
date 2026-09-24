@@ -1,0 +1,87 @@
+{
+  "run_id": "T02_lauf3",
+  "ticket_id": "T02",
+  "prompt_version": "v3",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 30.859,
+  "sdk_start_s": 0.276,
+  "agent_s": 29.282,
+  "sdk_ende_s": 1.301,
+  "cli_duration_ms": 29318,
+  "cli_duration_api_ms": 29954,
+  "kosten_usd": 0.028522849999999995,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2764,
+    "cache_creation_input_tokens": 8391,
+    "cache_read_input_tokens": 11641,
+    "output_tokens": 2612,
+    "output_tokens_details": {
+      "thinking_tokens": 1523
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 8391
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 416,
+        "cache_read_input_tokens": 6141,
+        "cache_creation_input_tokens": 2250,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2250,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 936,
+      "outputTokens": 22,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001046,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2764,
+      "outputTokens": 2612,
+      "cacheReadInputTokens": 11641,
+      "cacheCreationInputTokens": 8391,
+      "webSearchRequests": 0,
+      "costUSD": 0.027476849999999997,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1523,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:**  \nIch habe Ben Hoffmanns Beschwerde über die doppelte Abbuchung an einen Menschen mit hoher Priorität übergeben (die zweite Buchung lässt sich in den Daten nicht verifizieren und erfordert eine manuelle Stripe-Prüfung) und einen informativen Antwort-Entwurf gespeichert, der ihn beruhigt und die Erstattungsgarantie bei echten Doppelabbuchungen erklärt.",
+  "pflicht_hook": true,
+  "eingriffe": 0,
+  "eingriffe_details": [],
+  "pflichten_offen_am_ende": []
+}

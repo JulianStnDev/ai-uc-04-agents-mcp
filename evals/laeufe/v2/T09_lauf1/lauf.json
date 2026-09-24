@@ -1,0 +1,83 @@
+{
+  "run_id": "T09_lauf1",
+  "ticket_id": "T09",
+  "prompt_version": "v2",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 21.769,
+  "sdk_start_s": 0.255,
+  "agent_s": 20.338,
+  "sdk_ende_s": 1.177,
+  "cli_duration_ms": 20343,
+  "cli_duration_api_ms": 21415,
+  "kosten_usd": 0.02811565,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2777,
+    "cache_creation_input_tokens": 9863,
+    "cache_read_input_tokens": 13989,
+    "output_tokens": 2116,
+    "output_tokens_details": {
+      "thinking_tokens": 1199
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 9863
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 364,
+        "cache_read_input_tokens": 8467,
+        "cache_creation_input_tokens": 1396,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1396,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 951,
+      "outputTokens": 16,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001031,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2777,
+      "outputTokens": 2116,
+      "cacheReadInputTokens": 13989,
+      "cacheCreationInputTokens": 9863,
+      "webSearchRequests": 0,
+      "costUSD": 0.027084650000000002,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1199,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:** Norella Kundin Kündigung wurde angenommen (Status: gekuendigt) – ihr Pro-Abo läuft wie vorgesehen bis 05.10.2026 weiter, weil die Periode bezahlt ist. Ich habe einen Antwort-Entwurf erstellt, der das erklärt und die Kundin beruhigt."
+}

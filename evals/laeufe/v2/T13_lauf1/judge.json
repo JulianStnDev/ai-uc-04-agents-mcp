@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf behauptet, die Zahlung sei bei Apple erfolgt und nur die Aktivierung sei fehlgeschlagen, während die Soll-Kernaussage besagt, dass zu diesem Konto keine Zahlung zu finden ist – das ist ein klarer inhaltlicher Widerspruch.",
+  "entwurf_ok": false,
+  "judge_input_tokens": 1202,
+  "judge_output_tokens": 272,
+  "judge_kosten_usd": 0.005124,
+  "judge_s": 4.262
+}

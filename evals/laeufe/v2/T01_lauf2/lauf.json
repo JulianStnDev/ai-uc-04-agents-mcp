@@ -1,0 +1,83 @@
+{
+  "run_id": "T01_lauf2",
+  "ticket_id": "T01",
+  "prompt_version": "v2",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 22.176,
+  "sdk_start_s": 0.658,
+  "agent_s": 20.432,
+  "sdk_ende_s": 1.087,
+  "cli_duration_ms": 20447,
+  "cli_duration_api_ms": 21989,
+  "kosten_usd": 0.02589925,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2817,
+    "cache_creation_input_tokens": 8001,
+    "cache_read_input_tokens": 11950,
+    "output_tokens": 2160,
+    "output_tokens_details": {
+      "thinking_tokens": 1233
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 8001
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 318,
+        "cache_read_input_tokens": 6465,
+        "cache_creation_input_tokens": 1536,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1536,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 991,
+      "outputTokens": 19,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001086,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2817,
+      "outputTokens": 2160,
+      "cacheReadInputTokens": 11950,
+      "cacheCreationInputTokens": 8001,
+      "webSearchRequests": 0,
+      "costUSD": 0.024813250000000002,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1233,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:**\n\nIch habe die Doppelabbuchung in Annas Zahlungshistorie bestätigt (Z004 und Z005 je 54,34 USD am 14.09.2026), eine Erstattung von 54,34 USD empfohlen (Empfehlungs-ID: E-T01_lauf2-4) und einen Antwortentwurf erstellt, der zur Prüfung und zum Versand bereit ist."
+}

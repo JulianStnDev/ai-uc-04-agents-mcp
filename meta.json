@@ -1,10 +1,10 @@
 {
   "title": "Agents mit MCP: Support-Agent mit Freigaberegeln",
-  "status": "active",
+  "status": "done",
   "tags": [
     "agents",
     "mcp",
     "evals"
   ],
-  "summary": "FocusFlow-Support-Agent mit eigenem MCP-Server und Autonomie-Matrix: Lesen und Kündigen allein, Erstattung nur als Empfehlung im Schattenmodus, Antworten nur als Entwurf"
+  "summary": "Support-Agent mit eigenem MCP-Server und Autonomie-Matrix: Erstattungen im Schattenmodus, Pflichten per Stop-Hook im Code; pass^3 73 %, 27 USD pro 1000 Tickets"
 }

@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf vermittelt korrekt die Kernaussage, dass FocusFlow App-Store-Käufe nicht selbst erstatten kann und die Kundin sich an Apple wenden muss.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Der Entwurf behauptet, Apple erstatte bei Käufen innerhalb von 14 Tagen normalerweise den vollen Betrag und die Kundin sei 'zeitlich noch gut im Plan' – das ist eine unbelegte Vermutung, da der Hilfeartikel nur FocusFlows eigene 14-Tage-Regel nennt und explizit sagt, dass für Store-Käufe die Richtlinien des jeweiligen Stores gelten, nicht die von FocusFlow.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 4908,
+  "judge_output_tokens": 697,
+  "judge_kosten_usd": 0.016786,
+  "judge_s": 7.879
+}

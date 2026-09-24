@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf vermittelt korrekt die Kernaussage, dass FocusFlow den Kauf nicht selbst erstatten kann und die Erstattung nur über Google Play möglich ist, was durch die Trajektorie (Hilfeartikel und Zahlungsdaten) gedeckt ist.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Der Entwurf erfindet konkrete Schritte für den Google-Play-Erstattungsprozess (\"Google Play Store > dein Konto > Käufe und Abos > Abos\"), die so nicht im Hilfeartikel oder sonst in der Trajektorie stehen, was eine unbelegte Behauptung darstellt.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5031,
+  "judge_output_tokens": 994,
+  "judge_kosten_usd": 0.020002,
+  "judge_s": 11.128
+}

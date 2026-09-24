@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Die Kernaussage, dass im September nur eine Abbuchung über 6,99 USD erfolgt ist, wird zwar genannt, aber durch die Spekulation über eine mögliche zweite 'Vormerkung' wird der Eindruck erweckt, es könnte doch eine zweite Belastung vorliegen – das widerspricht der klaren Aussage, dass keine Doppelabbuchung vorliegt.",
+  "entwurf_ok": false,
+  "keine_spekulation_begruendung": "Der Entwurf behauptet, die vom Kunden genannte zweite Belastung könnte eine Vormerkung seiner Bank sein, obwohl die Trajektorie keine zweite Buchung im System zeigt und dies eine unbegründete, spekulative Erklärung für einen nicht belegten Sachverhalt ist.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 6004,
+  "judge_output_tokens": 1254,
+  "judge_kosten_usd": 0.024548,
+  "judge_s": 13.541
+}

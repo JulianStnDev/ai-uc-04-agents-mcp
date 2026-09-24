@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält klar die Aussage, dass der bereits begonnene Abrechnungsmonat nicht erstattet wird, und widerspricht dieser nicht; zusätzlich wird korrekt die Kündigung bestätigt.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 981,
+  "judge_output_tokens": 114,
+  "judge_kosten_usd": 0.003102,
+  "judge_s": 2.781
+}

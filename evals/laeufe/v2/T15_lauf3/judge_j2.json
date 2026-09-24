@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält klar die Kernaussage, dass der bereits begonnene Monat (September, laufend bis 8.10.) laut Richtlinie nicht erstattet wird, ohne dem zu widersprechen.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen sind durch die Trajektorie gedeckt: die Kündigungsdetails stammen direkt aus dem abo_kuendigen-Ergebnis, die Erstattungsregel und der Datenerhalt aus den Hilfeartikeln, keine Ursachen oder Zusagen werden erfunden.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 7554,
+  "judge_output_tokens": 543,
+  "judge_kosten_usd": 0.020538,
+  "judge_s": 6.747
+}

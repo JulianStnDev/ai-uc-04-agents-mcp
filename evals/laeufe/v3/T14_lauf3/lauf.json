@@ -1,0 +1,95 @@
+{
+  "run_id": "T14_lauf3",
+  "ticket_id": "T14",
+  "prompt_version": "v3",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 25.533,
+  "sdk_start_s": 0.265,
+  "agent_s": 24.128,
+  "sdk_ende_s": 1.14,
+  "cli_duration_ms": 24133,
+  "cli_duration_api_ms": 25173,
+  "kosten_usd": 0.025202500000000003,
+  "num_turns": 5,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 6344,
+    "cache_creation_input_tokens": 5246,
+    "cache_read_input_tokens": 9160,
+    "output_tokens": 2073,
+    "output_tokens_details": {
+      "thinking_tokens": 1232
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 5246
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 394,
+        "cache_read_input_tokens": 4737,
+        "cache_creation_input_tokens": 509,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 509,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 945,
+      "outputTokens": 15,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.00102,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 6344,
+      "outputTokens": 2073,
+      "cacheReadInputTokens": 9160,
+      "cacheCreationInputTokens": 5246,
+      "webSearchRequests": 0,
+      "costUSD": 0.024182500000000003,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1232,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "Perfekt. Ich habe den Kunden nachgeschlagen:\n\n**Kundendaten (felix.braun@example.com):**\n- Kunden-ID: K006\n- Abo: Pro monatlich (Stripe/Web), aktiv bis 12.10.2026\n\n**Handlung:** Die Anfrage betrifft dennoch ein anderes Konto (felix.braun@gmail.com / Google), daher habe ich sie korrekt an einen Menschen übergeben (Übergabe-ID: U-T14_lauf3-1) und einen Antwortentwurf gespeichert. Ein Team-Mitglied wird die Identität für das andere Konto verifizieren und die Kündigung bearbeiten.",
+  "pflicht_hook": true,
+  "eingriffe": 1,
+  "eingriffe_details": [
+    {
+      "zeit": 1790271430.568026,
+      "fehlt": [
+        "kunde_nachschlagen"
+      ],
+      "stop_hook_active": false
+    }
+  ],
+  "pflichten_offen_am_ende": []
+}

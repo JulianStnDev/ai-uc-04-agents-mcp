@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf nennt korrekt 6,99 USD pro Monat bzw. 59 USD pro Jahr, exakt wie in der Soll-Kernaussage gefordert (basierend auf dem aktuelleren Artikel 'preise-und-tarife.md').",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle genannten Details (Preis, Ersparnis ca. 30%, gleicher Preis auf allen Plattformen, Funktionsumfang wie unbegrenzte Habits, Statistiken, Timer-Einstellungen, Upgrade-Weg über Einstellungen) stammen wörtlich aus dem aktuellen Hilfeartikel und sind somit vollständig gedeckt.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 4770,
+  "judge_output_tokens": 686,
+  "judge_kosten_usd": 0.0164,
+  "judge_s": 8.188
+}

@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage, dass eines der beiden Pro-Abos vor der Zusammenführung gekündigt werden muss und ablaufen soll, weil nur ein Konto Pro haben darf – dies widerspricht der Soll-Aussage nicht, auch wenn es konditional formuliert ist.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Die Erklärung zur Entstehung der zwei Konten stammt wörtlich aus dem Hilfeartikel 'anmelden-mit-google.md' und passt exakt zur vom Kunden beschriebenen Situation (Google auf Handy, Passwort am PC), ist also eine zulässige, durch die Trajektorie gedeckte Folgerung; die restlichen Angaben (Ablauf, Fristen, Kündigungspflicht bei doppeltem Pro-Abo) entsprechen wörtlich dem Hilfeartikel.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 6566,
+  "judge_output_tokens": 2910,
+  "judge_kosten_usd": 0.042232,
+  "judge_s": 30.907
+}

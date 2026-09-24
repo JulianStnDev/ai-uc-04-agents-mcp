@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf bestätigt zwar zunächst nur eine Abbuchung, relativiert dies aber sofort durch Spekulationen über eine mögliche zweite, noch nicht synchronisierte Buchung und verspricht im Zweifel eine Erstattung – das widerspricht der klaren Kernaussage, dass keine Doppelabbuchung vorliegt.",
+  "entwurf_ok": false,
+  "judge_input_tokens": 1018,
+  "judge_output_tokens": 384,
+  "judge_kosten_usd": 0.005876,
+  "judge_s": 5.109
+}

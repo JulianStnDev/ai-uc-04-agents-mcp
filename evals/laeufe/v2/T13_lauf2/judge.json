@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf leitet das Anliegen zwar weiter, erklärt aber die fehlende Zahlung fälschlich mit der Apple-App-Store-Abwicklung statt zu vermitteln, dass zum Konto keine Zahlung auffindbar ist – die Kernaussage wird also verzerrt dargestellt.",
+  "entwurf_ok": false,
+  "judge_input_tokens": 1265,
+  "judge_output_tokens": 310,
+  "judge_kosten_usd": 0.00563,
+  "judge_s": 4.93
+}

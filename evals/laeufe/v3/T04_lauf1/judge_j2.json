@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf teilt klar mit, dass die Verlängerung über 59 USD innerhalb der 14-Tage-Frist liegt und eine Erstattung zur Freigabe eingeleitet wurde, was der Soll-Kernaussage entspricht und ihr nicht widerspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (Zahlungsdatum, 9-Tage-Abstand, 14-Tage-Frist, Erstattungsstatus, Folgen für Pro-Zugang und Bearbeitungsdauer von 5–10 Werktagen) sind direkt durch die Trajektorie bzw. den Hilfeartikel gedeckt, ohne spekulative Ursachenzuschreibung oder ungedeckte Zusagen.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 7214,
+  "judge_output_tokens": 885,
+  "judge_kosten_usd": 0.023278,
+  "judge_s": 10.029
+}

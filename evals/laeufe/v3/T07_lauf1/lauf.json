@@ -1,0 +1,87 @@
+{
+  "run_id": "T07_lauf1",
+  "ticket_id": "T07",
+  "prompt_version": "v3",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 36.952,
+  "sdk_start_s": 0.425,
+  "agent_s": 35.888,
+  "sdk_ende_s": 0.64,
+  "cli_duration_ms": 35895,
+  "cli_duration_api_ms": 36523,
+  "kosten_usd": 0.0343146,
+  "num_turns": 5,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2794,
+    "cache_creation_input_tokens": 9172,
+    "cache_read_input_tokens": 5466,
+    "output_tokens": 3690,
+    "output_tokens_details": {
+      "thinking_tokens": 2408
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 9172
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 369,
+        "cache_read_input_tokens": 5466,
+        "cache_creation_input_tokens": 3706,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3706,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 974,
+      "outputTokens": 17,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001059,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2794,
+      "outputTokens": 3690,
+      "cacheReadInputTokens": 5466,
+      "cacheCreationInputTokens": 9172,
+      "webSearchRequests": 0,
+      "costUSD": 0.033255599999999996,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 2408,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:** Ich habe Felix Brauns Anliegen an den Support-Mitarbeiterstab übergeben (Übergabe U-T07_lauf1-3) mit der Empfehlung, eine Kulanzerstattung für das doppelt gezahlte Pro-Abo zu prüfen, bevor er die Zusammenführung durchführt. Ein freundlicher Antwort-Entwurf wurde gespeichert.",
+  "pflicht_hook": true,
+  "eingriffe": 0,
+  "eingriffe_details": [],
+  "pflichten_offen_am_ende": []
+}

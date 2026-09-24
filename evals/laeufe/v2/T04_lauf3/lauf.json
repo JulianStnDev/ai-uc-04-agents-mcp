@@ -1,0 +1,83 @@
+{
+  "run_id": "T04_lauf3",
+  "ticket_id": "T04",
+  "prompt_version": "v2",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 26.217,
+  "sdk_start_s": 0.239,
+  "agent_s": 24.8,
+  "sdk_ende_s": 1.178,
+  "cli_duration_ms": 24805,
+  "cli_duration_api_ms": 26188,
+  "kosten_usd": 0.029018899999999997,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2793,
+    "cache_creation_input_tokens": 8216,
+    "cache_read_input_tokens": 18869,
+    "output_tokens": 2595,
+    "output_tokens_details": {
+      "thinking_tokens": 1330
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 8216
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 355,
+        "cache_read_input_tokens": 7258,
+        "cache_creation_input_tokens": 958,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 958,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 959,
+      "outputTokens": 27,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001094,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2793,
+      "outputTokens": 2595,
+      "cacheReadInputTokens": 18869,
+      "cacheCreationInputTokens": 8216,
+      "webSearchRequests": 0,
+      "costUSD": 0.0279249,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1330,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:**\n\nIch habe Lena Schmidts Anliegen geprüft und eine Erstattung der 59 USD empfohlen – die Anfrage kommt 9 Tage nach der automatischen Verlängerung am 15.09.2026 und liegt damit innerhalb der erlaubten 14-Tage-Frist. Ein freundlicher Antwortentwurf wurde gespeichert und wartet auf Versand durch einen Menschen."
+}

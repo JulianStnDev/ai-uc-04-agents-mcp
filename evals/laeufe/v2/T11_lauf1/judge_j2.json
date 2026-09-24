@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf vermittelt klar, dass FocusFlow den Kauf nicht selbst erstatten kann und verweist stattdessen auf Google Play – das entspricht der Soll-Kernaussage, auch wenn zusätzlich (korrekt) die 14-Tage-Frist erwähnt wird.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Die Behauptung, manche Geräte/Regionen erlaubten bei Google Play Rückgaben bis zu 30 Tage nach Kauf, ist eine unbelegte Spekulation, die in der Trajektorie nirgends steht.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 4861,
+  "judge_output_tokens": 978,
+  "judge_kosten_usd": 0.019502,
+  "judge_s": 10.805
+}

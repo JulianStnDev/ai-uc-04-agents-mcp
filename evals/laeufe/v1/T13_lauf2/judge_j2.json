@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Die Kernaussage – dass die Weiterleitung erfolgt, weil zu diesem Konto keine Zahlung zu finden ist – fehlt im Entwurf. Stattdessen wird eine andere, unbelegte Ursache (App Store-Synchronisationsproblem) genannt, was der eigentlichen Begründung widerspricht bzw. sie verschleiert.",
+  "entwurf_ok": false,
+  "keine_spekulation_begruendung": "Der Entwurf behauptet, das Problem 'könne gelegentlich bei der App Store-Synchronisation passieren' – dies ist eine spekulative Ursachenzuschreibung, die in der Trajektorie nicht als Tatsache, sondern höchstens als Vermutung des Agents in der internen Übergabe steht, und wird dem Kunden fälschlich als plausible Erklärung präsentiert.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5314,
+  "judge_output_tokens": 1310,
+  "judge_kosten_usd": 0.023728,
+  "judge_s": 13.064
+}

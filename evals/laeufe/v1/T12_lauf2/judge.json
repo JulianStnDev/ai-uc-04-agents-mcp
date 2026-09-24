@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die geforderte Kernaussage (6,99 USD/Monat bzw. 59 USD/Jahr) korrekt und widerspruchsfrei, ergänzt um erlaubte Zusatzinformationen.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 943,
+  "judge_output_tokens": 112,
+  "judge_kosten_usd": 0.003006,
+  "judge_s": 2.252
+}

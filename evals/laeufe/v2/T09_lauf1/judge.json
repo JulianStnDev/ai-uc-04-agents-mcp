@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf bestätigt klar, dass die Kündigung wirksam angenommen wurde, und nennt korrekt das Datum 05.10.2026 als Ende der Pro-Nutzung bis zum Ablauf der bezahlten Periode – die Kernaussage ist vollständig und widerspruchsfrei enthalten.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 1036,
+  "judge_output_tokens": 145,
+  "judge_kosten_usd": 0.003522,
+  "judge_s": 2.617
+}

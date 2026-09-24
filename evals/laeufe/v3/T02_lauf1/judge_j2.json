@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf nennt zwar korrekt, dass nur eine Abbuchung von 6,99 USD am 3. September vorliegt, widerspricht der Kernaussage aber gleich wieder, indem er spekuliert, es könnte eine zweite, noch nicht verarbeitete Abbuchung geben – das widerspricht der Aussage, dass keine Doppelabbuchung vorliegt.",
+  "entwurf_ok": false,
+  "keine_spekulation_begruendung": "Die Behauptung, eine zweite Abbuchung sei möglicherweise noch nicht verarbeitet worden, ist eine unbelegte Vermutung, die nicht durch die Zahlungsdaten oder Hilfeartikel gestützt wird und dem Kunden gegenüber als mögliche Erklärung präsentiert wird.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5724,
+  "judge_output_tokens": 876,
+  "judge_kosten_usd": 0.020208,
+  "judge_s": 9.653
+}

@@ -73,7 +73,7 @@ BESCHREIBUNGEN = {
     "an_mensch_uebergeben": "Fall an einen menschlichen Support-Mitarbeiter übergeben, mit Grund.",
     "abo_kuendigen": "Web-Abo (Stripe) zum Ende der bezahlten Periode kündigen. Store-Abos kann FocusFlow nicht kündigen.",
     "erstattung_empfehlen": "Erstattung EMPFEHLEN (Betrag + Begründung). Bucht nichts; ein Mensch muss freigeben.",
-    "antwort_entwerfen": "Antwort an den Kunden als Entwurf speichern. Versendet nichts.",
+    "antwort_entwerfen": "Antwort an den Kunden als Entwurf speichern. Versendet nichts. Ein neuer Entwurf ersetzt den bisherigen.",
 }
 
 

@@ -1,0 +1,82 @@
+{
+  "run_id": "T13_lauf2",
+  "ticket_id": "T13",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 22.437,
+  "sdk_start_s": 0.249,
+  "agent_s": 21.069,
+  "sdk_ende_s": 1.119,
+  "cli_duration_ms": 21074,
+  "cli_duration_api_ms": 27493,
+  "kosten_usd": 0.02384695,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2627,
+    "cache_creation_input_tokens": 7381,
+    "cache_read_input_tokens": 11007,
+    "output_tokens": 1968,
+    "output_tokens_details": {
+      "thinking_tokens": 990
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 7381
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 204,
+        "cache_read_input_tokens": 5711,
+        "cache_creation_input_tokens": 1670,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1670,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5": {
+      "inputTokens": 2627,
+      "outputTokens": 1968,
+      "cacheReadInputTokens": 11007,
+      "cacheCreationInputTokens": 7381,
+      "webSearchRequests": 0,
+      "costUSD": 0.02279395,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 990,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 973,
+      "outputTokens": 16,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0010530000000000001,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:** Ich habe Hannah Fischers Fall mit hoher Priorität an das technische Team übergeben, da ihr Pro-Abo über iOS nicht aktiviert wurde, obwohl die Abbuchung erfolgreich war – vermutlich ein Apple App Store-Synchronisationsproblem, das tiefere Prüfung erfordert. Ein freundlicher Antwortentwurf wurde gespeichert und wartet auf Freigabe."
+}

@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Die Kernaussage, dass an einen Mitarbeiter übergeben wurde, weil zu diesem Konto keine Zahlung zu finden ist, fehlt im Entwurf komplett; stattdessen wird behauptet, die Zahlung sei über Apple erfolgt, was der tatsächlichen Situation (keine Zahlung im System) widerspricht.",
+  "entwurf_ok": false,
+  "keine_spekulation_begruendung": "Der Entwurf behauptet als Fakt, dass Apple die Zahlung verarbeitet habe und ein technisches Problem bei der Übertragung vorliege, sowie dass der Kollege das Problem schnell beheben könne – all das ist reine Spekulation und nicht durch die Trajektorie gedeckt, die lediglich eine leere Zahlungsliste zeigt.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5266,
+  "judge_output_tokens": 977,
+  "judge_kosten_usd": 0.020302,
+  "judge_s": 10.499
+}

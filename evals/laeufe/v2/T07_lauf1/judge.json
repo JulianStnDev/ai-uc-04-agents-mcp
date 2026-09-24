@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage korrekt: Vor der Zusammenführung muss eines der beiden Pro-Abos gekündigt und ausgelaufen sein, da nur ein Konto Pro haben darf. Dies wird explizit im Abschnitt 'Wichtig, weil du zweimal zahlst' erläutert.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 1323,
+  "judge_output_tokens": 149,
+  "judge_kosten_usd": 0.004136,
+  "judge_s": 2.806
+}

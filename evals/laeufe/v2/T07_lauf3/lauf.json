@@ -1,0 +1,83 @@
+{
+  "run_id": "T07_lauf3",
+  "ticket_id": "T07",
+  "prompt_version": "v2",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 50.846,
+  "sdk_start_s": 0.244,
+  "agent_s": 49.988,
+  "sdk_ende_s": 0.614,
+  "cli_duration_ms": 49993,
+  "cli_duration_api_ms": 50652,
+  "kosten_usd": 0.04502,
+  "num_turns": 8,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2808,
+    "cache_creation_input_tokens": 13356,
+    "cache_read_input_tokens": 31030,
+    "output_tokens": 4263,
+    "output_tokens_details": {
+      "thinking_tokens": 2689
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 13356
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 333,
+        "cache_read_input_tokens": 12384,
+        "cache_creation_input_tokens": 972,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 972,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 974,
+      "outputTokens": 25,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0010990000000000002,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2808,
+      "outputTokens": 4263,
+      "cacheReadInputTokens": 31030,
+      "cacheCreationInputTokens": 13356,
+      "webSearchRequests": 0,
+      "costUSD": 0.043921,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 2689,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:** Ich habe Felix' zwei separate FocusFlow-Konten (eine mit E-Mail/Passwort, eine mit Google – unterschiedliche E-Mail-Adressen) identifiziert, erkannt, dass er doppelt Pro zahlt, und sein Ticket wegen des speziellen Zusammenführungsprozesses mit hoher Priorität an einen Menschen übergeben, da die Identität für das zweite Konto nicht verifiziert werden kann."
+}

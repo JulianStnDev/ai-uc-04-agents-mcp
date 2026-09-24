@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf teilt klar mit, dass die doppelte Zahlung über 54,34 USD zur Erstattung weitergeleitet wurde, was der Soll-Kernaussage entspricht, und widerspricht ihr nirgends.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (doppelte Abbuchung, bekanntes Problem mit Fix in Arbeit, Weiterleitung zur Erstattung, 5–10 Werktage laut Erstattungsrichtlinie, weiterhin aktives Pro-Abo) sind durch die Trajektorie bzw. die Hilfeartikel gedeckt, ohne Ursachen oder Ergebnisse zu erfinden.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 7712,
+  "judge_output_tokens": 1620,
+  "judge_kosten_usd": 0.031624,
+  "judge_s": 16.251
+}

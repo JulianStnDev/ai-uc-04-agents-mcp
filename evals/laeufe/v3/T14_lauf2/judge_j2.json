@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf vermittelt korrekt, dass die Anfrage wegen fehlender Identitätsverifikation des Google-Kontos an ein Team weitergeleitet wird, was der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Aussagen (unterschiedliche Konten, Notwendigkeit der Identitätsverifikation, Weiterleitung an einen Mitarbeiter) sind direkt durch die Trajektorie gedeckt, ohne zusätzliche Spekulation oder konkrete Fristen.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 2651,
+  "judge_output_tokens": 239,
+  "judge_kosten_usd": 0.007692,
+  "judge_s": 3.498
+}

@@ -1,0 +1,82 @@
+{
+  "run_id": "T13_lauf1",
+  "ticket_id": "T13",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 29.659,
+  "sdk_start_s": 0.239,
+  "agent_s": 28.176,
+  "sdk_ende_s": 1.243,
+  "cli_duration_ms": 28181,
+  "cli_duration_api_ms": 37181,
+  "kosten_usd": 0.022675749999999998,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2627,
+    "cache_creation_input_tokens": 7069,
+    "cache_read_input_tokens": 10895,
+    "output_tokens": 1814,
+    "output_tokens_details": {
+      "thinking_tokens": 932
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 7069
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 323,
+        "cache_read_input_tokens": 5643,
+        "cache_creation_input_tokens": 1426,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1426,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 973,
+      "outputTokens": 16,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0010530000000000001,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2627,
+      "outputTokens": 1814,
+      "cacheReadInputTokens": 10895,
+      "cacheCreationInputTokens": 7069,
+      "webSearchRequests": 0,
+      "costUSD": 0.02162275,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 932,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Ergebnis:** Ich habe Hannahs Ticket mit hoher Priorität an das Team übergeben (U-T13_lauf1-4), da ihr Pro-Abo nicht aktiviert wurde, obwohl die Zahlung durchging – ein technisches Problem, das kein Zahlungsdatensatz in unserem System auslöste. Ein Antwortentwurf wartet auf Freigabe."
+}

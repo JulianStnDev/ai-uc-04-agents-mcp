@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Die Kernaussage der Erstattung ist enthalten, aber der Entwurf leitet nur einmal 54,34$ zur Erstattung weiter, obwohl die doppelte Abbuchung insgesamt 108,68$ betrifft – das widerspricht der Soll-Kernaussage, die die vollständige Erstattung der doppelten Abbuchung verlangt.",
+  "entwurf_ok": false,
+  "judge_input_tokens": 1037,
+  "judge_output_tokens": 159,
+  "judge_kosten_usd": 0.003664,
+  "judge_s": 2.744
+}

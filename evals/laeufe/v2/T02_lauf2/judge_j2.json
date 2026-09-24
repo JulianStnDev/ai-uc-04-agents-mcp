@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Die Kernaussage – im September gab es nur eine Abbuchung über 6,99 USD und keine Doppelbuchung – wird klar kommuniziert ('nur eine Buchung...', 'Eine zweite Abbuchung ist dort nicht registriert').",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Der Entwurf spekuliert mit drei möglichen Erklärungen (pending Buchung, zweites Konto, Anzeigefehler der Bank), die in der Trajektorie nirgends belegt sind – dies sind unbelegte Vermutungen über den Hergang des Falls.",
+  "keine_spekulation": false,
+  "judge_version": "j2",
+  "judge_input_tokens": 5781,
+  "judge_output_tokens": 929,
+  "judge_kosten_usd": 0.020852,
+  "judge_s": 10.032
+}

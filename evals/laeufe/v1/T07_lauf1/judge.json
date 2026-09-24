@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf erwähnt explizit, dass eines der beiden Pro-Abos vorher beendet werden muss, was der geforderten Kernaussage entspricht und ihr nicht widerspricht.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 1109,
+  "judge_output_tokens": 100,
+  "judge_kosten_usd": 0.003218,
+  "judge_s": 2.492
+}

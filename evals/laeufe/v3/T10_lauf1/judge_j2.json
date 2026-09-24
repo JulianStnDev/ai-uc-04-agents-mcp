@@ -1,0 +1,11 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf nennt korrekt Google Play als Kündigungsort, da das Abo laut Kundendaten dort abgeschlossen wurde, und widerspricht der Kernaussage nicht.",
+  "entwurf_ok": true,
+  "keine_spekulation_begruendung": "Alle Angaben (Kündigungsweg, Enddatum 21.10.2026 laut periode_ende, Umstellung auf Free, keine weiteren Abbuchungen, E-Mail-Bestätigung) sind wörtlich durch die Kundendaten bzw. den Hilfeartikel gedeckt.",
+  "keine_spekulation": true,
+  "judge_version": "j2",
+  "judge_input_tokens": 4765,
+  "judge_output_tokens": 396,
+  "judge_kosten_usd": 0.01349,
+  "judge_s": 5.047
+}
