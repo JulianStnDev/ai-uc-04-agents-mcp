@@ -1,6 +1,10 @@
 {
-  "title": "",
-  "status": "planned",
-  "tags": [],
-  "summary": ""
+  "title": "Agents mit MCP: Support-Agent mit Freigaberegeln",
+  "status": "active",
+  "tags": [
+    "agents",
+    "mcp",
+    "evals"
+  ],
+  "summary": "FocusFlow-Support-Agent mit eigenem MCP-Server und Autonomie-Matrix: Lesen und Kündigen allein, Erstattung nur als Empfehlung im Schattenmodus, Antworten nur als Entwurf"
 }
