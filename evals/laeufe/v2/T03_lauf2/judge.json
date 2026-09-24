@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage, dass die 59 USD für das Jahresabo erstattet werden, weil der Kauf innerhalb der 14-Tage-Frist liegt, und die Anfrage wurde zur Erstattung weitergeleitet – dies entspricht der Soll-Kernaussage.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 1064,
+  "judge_output_tokens": 140,
+  "judge_kosten_usd": 0.003528,
+  "judge_s": 2.7
+}

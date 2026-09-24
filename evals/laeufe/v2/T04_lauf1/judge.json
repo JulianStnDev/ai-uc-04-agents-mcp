@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf bestätigt klar, dass die 59 USD innerhalb der 14-Tage-Frist erstattet werden, was der Soll-Kernaussage entspricht; zusätzliche Details widersprechen ihr nicht.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 1178,
+  "judge_output_tokens": 112,
+  "judge_kosten_usd": 0.003476,
+  "judge_s": 2.312
+}

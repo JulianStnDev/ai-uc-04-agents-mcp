@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf nennt den Betrag von 59,00 USD, bestätigt die Erstattung innerhalb der 14-Tage-Frist und gibt an, dass sie zur Freigabe weitergeleitet wurde – dies erfüllt die Soll-Kernaussage vollständig, ohne ihr zu widersprechen.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 1147,
+  "judge_output_tokens": 145,
+  "judge_kosten_usd": 0.003744,
+  "judge_s": 2.195
+}

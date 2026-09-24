@@ -1,0 +1,83 @@
+{
+  "run_id": "T08_lauf3",
+  "ticket_id": "T08",
+  "prompt_version": "v2",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 18.553,
+  "sdk_start_s": 0.236,
+  "agent_s": 17.147,
+  "sdk_ende_s": 1.17,
+  "cli_duration_ms": 17151,
+  "cli_duration_api_ms": 18429,
+  "kosten_usd": 0.020509649999999997,
+  "num_turns": 5,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2756,
+    "cache_creation_input_tokens": 6861,
+    "cache_read_input_tokens": 5444,
+    "output_tokens": 1523,
+    "output_tokens_details": {
+      "thinking_tokens": 909
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 6861
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 296,
+        "cache_read_input_tokens": 5444,
+        "cache_creation_input_tokens": 1417,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1417,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 938,
+      "outputTokens": 16,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001018,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2756,
+      "outputTokens": 1523,
+      "cacheReadInputTokens": 5444,
+      "cacheCreationInputTokens": 6861,
+      "webSearchRequests": 0,
+      "costUSD": 0.01949165,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 909,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "Erledigt! Ich habe das Pro-Abo von Ben Hoffmann (K002) gekündigt – es läuft bis zum 3. Oktober 2026 weiter, danach erfolgt die Umstellung auf Free ohne weitere Abbuchung. Der Bestätigungsentwurf wurde gespeichert und ist bereit zum Versand."
+}

@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält klar die Aussage, dass der bereits begonnene Monat nicht erstattet wird, und widerspricht dieser Kernaussage nicht.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 1053,
+  "judge_output_tokens": 89,
+  "judge_kosten_usd": 0.002996,
+  "judge_s": 2.025
+}

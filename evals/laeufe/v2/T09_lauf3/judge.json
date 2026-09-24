@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf bestätigt klar, dass die Kündigung wirksam ist und Pro bis zum 05.10.2026 aktiv bleibt, was genau der Soll-Kernaussage entspricht.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 984,
+  "judge_output_tokens": 102,
+  "judge_kosten_usd": 0.002988,
+  "judge_s": 1.891
+}

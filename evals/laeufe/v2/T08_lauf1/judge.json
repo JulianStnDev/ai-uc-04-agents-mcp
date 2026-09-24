@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält beide Kernaussagen: Die Kündigung wurde durchgeführt und Pro läuft noch bis zum 03.10.2026, ohne diesen Aussagen zu widersprechen.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 874,
+  "judge_output_tokens": 105,
+  "judge_kosten_usd": 0.002798,
+  "judge_s": 2.096
+}

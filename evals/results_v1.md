@@ -29,6 +29,16 @@
 | richtig_empfohlen | 9 |
 | richtig_keine | 36 |
 
+### Obergrenzen der Fehlerquote (Datengrundlage Autonomie-Entscheidung)
+
+| Fehlerart | Grundgesamtheit | Fehler / Läufe | Obergrenze 95 % (Läufe) | Fehler / Tickets | Obergrenze 95 % (Tickets) |
+|---|---|---|---|---|---|
+| fälschlich empfohlen (inkl. abgelehnter Versuche) | Soll: keine | 0 / 36 | ≤ 8% | 0 / 12 | ≤ 25% |
+| fälschlich nicht empfohlen | Soll: Erstattung | 0 / 9 | ≤ 33% | 0 / 3 | ≤ 100% |
+| falsch empfohlen (falsche Zahlung/Betrag) | Soll: Erstattung | 0 / 9 | ≤ 33% | 0 / 3 | ≤ 100% |
+
+Lesart: Bei 0 Fehlern in n Fällen liegt die wahre Fehlerquote mit 95 % Sicherheit bei höchstens 3/n (Dreierregel), bei k > 0 Fehlern gilt die exakte Clopper-Pearson-Grenze. Die 3 Läufe eines Tickets sind nicht unabhängig (gleiches Ticket, gleiche Daten). Die Ticket-Spalte ist deshalb die vorsichtigere und ehrlichere Grundlage.
+
 ## Pro Ticket
 
 | Ticket | Erfolg | pflicht | verboten | erstattung | übergabe | entwurf | Aufrufe Ø | Kosten Ø | Latenz Ø gesamt | davon Agent Ø |

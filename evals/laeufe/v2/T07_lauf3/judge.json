@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf erklärt zwar die Ursache der doppelten Konten und die doppelte Zahlung, erwähnt aber nicht, dass vor dem Zusammenführen eines der beiden Pro-Abos gekündigt werden muss, weil nur ein Konto Pro haben darf – im Gegenteil, es wird suggeriert, dass der Support einfach zusammenführt und dann nur noch einmal gezahlt wird, ohne den nötigen Kündigungsschritt zu erwähnen.",
+  "entwurf_ok": false,
+  "judge_input_tokens": 1271,
+  "judge_output_tokens": 206,
+  "judge_kosten_usd": 0.004602,
+  "judge_s": 3.596
+}

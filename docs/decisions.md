@@ -242,3 +242,67 @@ Der Hook hat nie blockiert.
   Konto, statt zu übergeben. Die Identitätsprüfung wurde also nicht erkannt.
 - **T07 lauf3, T11 lauf3:** Die Kernaussage fehlt bzw. die Begründung ist falsch
   (Ablehnung mit der 14-Tage-Frist statt mit dem Store).
+
+## 2026-09-24: T02 – Spezifikationskonflikt zwischen System-Prompt und Goldset
+
+Kontext: In v1 übergab der Agent T02 („doppelt abgebucht“, es gibt aber nur
+eine Buchung) jedes Mal an einen Menschen. Damit folgte er dem System-Prompt
+(v1, Regel 4: „Daten widersprechen dem Ticket und du kannst das nicht
+auflösen → übergeben“). Das Goldset verlangt dagegen „selbst klären, keine
+Übergabe“. Es war also ein **Spezifikationskonflikt**, kein reiner Agent-Fehler.
+
+Entscheidung: Das Goldset bleibt unverändert. T02 zählt in v1 als Fehler.
+Angepasst wird stattdessen der Prompt (v2).
+
+Begründung: Die Hilfe erklärt den Widerspruch. Eine zweite Buchung ist meist
+eine Vormerkung der Bank, die nach 3–5 Werktagen verschwindet. Eine Übergabe
+kostet dann nur Support-Zeit, ohne dass ein Mensch mehr weiß als der Agent.
+Übergeben wird erst, wenn weder Kundendaten noch Hilfe den Widerspruch erklären
+(wie bei T13).
+
+## 2026-09-24: Prompt v2
+
+Nur der System-Prompt ändert sich, alles andere bleibt identisch (Modell,
+Budget, Werkzeuge, Goldset, Judge). v1 bleibt als `SYSTEM_PROMPT_V1` im Code,
+und `lauf.json` speichert ab v2 die `prompt_version`. Neu sind drei Regeln:
+1. Übergabe nur, wenn weder Kundendaten noch Hilfe den Widerspruch erklären.
+   Erklärt die Hilfe ihn, klärt der Agent selbst.
+2. Niemals Ursachen oder Hergänge vermuten, die nicht in Daten oder Hilfe
+   stehen. Gibt es keine Zahlung, sagt der Entwurf genau das.
+3. Anfragen zu einem anderen als dem eigenen Konto: nicht handeln, an einen
+   Menschen übergeben (Identität nicht prüfbar).
+
+Auswertung neu: Für den Schattenmodus weist `score.py` die Obergrenze der
+Fehlerquote aus (95 %; bei 0 Fehlern die Dreierregel 3/n, sonst
+Clopper-Pearson). Getrennt wird nach „fälschlich empfohlen“ (inklusive
+abgelehnter Versuche), „fälschlich nicht empfohlen“ und „falsch empfohlen“, und
+zwar jeweils auf Lauf- und auf Ticket-Ebene. Die Ticket-Ebene ist die
+ehrlichere Basis, weil die 3 Läufe eines Tickets nicht unabhängig sind.
+
+## 2026-09-24: Ergebnis v2 – Prompt-Fix wirkt nicht netto, Kopplungseffekte
+
+v2 (nur der System-Prompt geändert): 76 % Erfolg pro Lauf (v1: 80 %), pass^3
+unverändert 67 %, Kosten 0,027 USD pro Ticket, p95 38,7 s. Besser wurden T11
+und T13, schlechter T01, T07 und T14. Details, Einordnung und zwei
+ausgeschriebene Fallbeispiele (T13, T14) in `evals/vergleich_v1_v2.md`.
+
+Kernbefunde:
+- **Kopplung T14:** Die neue Handlungsanweisung in Regel 1 („übergib“) wirkt
+  als Abkürzung. Der Agent übergibt sofort und überspringt Nachschlagen und
+  Entwurf. Die Entscheidung ist richtig, der Prozess falsch.
+- **Kopplung T07:** Regel 4 („erklärt die Hilfe es, übergib nicht“) führt in
+  einem Lauf dazu, dass der Agent auf den Selbstantrag verweist, statt zu
+  übergeben. Das Soll von T07 ist dabei selbst angreifbar.
+- **Regel 5 (nichts vermuten) greift kaum:** In T13 und T02 wird weiter
+  spekuliert, nur vorsichtiger formuliert. Der Judge misst das nicht, weil
+  er nur die Kernaussage prüft.
+- **Judge-Fehlurteil** bei T01 lauf2 (verlangt 108,68 statt 54,34 USD).
+  Auch `entwurf_ok` hat also Messrauschen.
+- **Erstattungen:** in v1 und v2 0 Fehler jeder Art, aber auf nur 3
+  verschiedenen Soll-Erstattungs-Tickets. Nach der Dreierregel reicht das
+  nicht für eine Autonomie-Freigabe (≥ 30 unabhängige Fälle für ≤ 10 %).
+
+Entscheidung: Prompt v2 wird **nicht** als neuer Standard übernommen, bevor
+Julian über die Folgerungen (v3-Regeln, Spekulations-Kriterium im Judge,
+Soll von T07) entschieden hat. `agent.py` hat weiterhin `--prompt v2` als
+Voreinstellung. Das ist bewusst noch nicht zurückgestellt, Entscheidung offen.

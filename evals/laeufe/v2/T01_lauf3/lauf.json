@@ -1,0 +1,83 @@
+{
+  "run_id": "T01_lauf3",
+  "ticket_id": "T01",
+  "prompt_version": "v2",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 21.083,
+  "sdk_start_s": 0.653,
+  "agent_s": 19.246,
+  "sdk_ende_s": 1.184,
+  "cli_duration_ms": 19259,
+  "cli_duration_api_ms": 20604,
+  "kosten_usd": 0.025217000000000003,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2817,
+    "cache_creation_input_tokens": 7990,
+    "cache_read_input_tokens": 12115,
+    "output_tokens": 2023,
+    "output_tokens_details": {
+      "thinking_tokens": 1177
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 7990
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 357,
+        "cache_read_input_tokens": 6516,
+        "cache_creation_input_tokens": 1474,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1474,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 991,
+      "outputTokens": 19,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001086,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2817,
+      "outputTokens": 2023,
+      "cacheReadInputTokens": 12115,
+      "cacheCreationInputTokens": 7990,
+      "webSearchRequests": 0,
+      "costUSD": 0.024131,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1177,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:**\n\nIch habe Anna Bergers Kundenkonto verifiziert (K001), die Doppelbuchung von 54,34 USD am 14.09. beim Wechsel auf Jahresabo bestätigt und empfohlen, den doppelten Betrag zu erstatten – gemäß der Richtlinie für doppelte Belastungen. Der Antwortentwurf wartet auf Freigabe durch einen Menschen."
+}

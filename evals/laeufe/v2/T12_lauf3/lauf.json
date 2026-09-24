@@ -1,0 +1,83 @@
+{
+  "run_id": "T12_lauf3",
+  "ticket_id": "T12",
+  "prompt_version": "v2",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 16.576,
+  "sdk_start_s": 0.248,
+  "agent_s": 15.14,
+  "sdk_ende_s": 1.187,
+  "cli_duration_ms": 15145,
+  "cli_duration_api_ms": 15806,
+  "kosten_usd": 0.018301599999999998,
+  "num_turns": 4,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2735,
+    "cache_creation_input_tokens": 6314,
+    "cache_read_input_tokens": 5271,
+    "output_tokens": 1236,
+    "output_tokens_details": {
+      "thinking_tokens": 641
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 6314
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 222,
+        "cache_read_input_tokens": 5271,
+        "cache_creation_input_tokens": 1043,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1043,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 917,
+      "outputTokens": 10,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.000967,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2735,
+      "outputTokens": 1236,
+      "cacheReadInputTokens": 5271,
+      "cacheCreationInputTokens": 6314,
+      "webSearchRequests": 0,
+      "costUSD": 0.0173346,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 641,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "✅ **Fertig:** Ich habe die Kundin Greta Koch (K008) nachgeschlagen und einen Antwortentwurf mit den aktuellen Preisen für FocusFlow Pro (6,99 USD/Monat oder 59 USD/Jahr) gespeichert – ein Mensch prüft und versendet ihn."
+}

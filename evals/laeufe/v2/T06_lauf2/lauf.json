@@ -1,0 +1,83 @@
+{
+  "run_id": "T06_lauf2",
+  "ticket_id": "T06",
+  "prompt_version": "v2",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 32.1,
+  "sdk_start_s": 0.239,
+  "agent_s": 31.344,
+  "sdk_ende_s": 0.517,
+  "cli_duration_ms": 31348,
+  "cli_duration_api_ms": 32385,
+  "kosten_usd": 0.02993755,
+  "num_turns": 5,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2776,
+    "cache_creation_input_tokens": 8685,
+    "cache_read_input_tokens": 13453,
+    "output_tokens": 2784,
+    "output_tokens_details": {
+      "thinking_tokens": 1781
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 8685
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 505,
+        "cache_read_input_tokens": 7144,
+        "cache_creation_input_tokens": 1541,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1541,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 950,
+      "outputTokens": 18,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.00104,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2776,
+      "outputTokens": 2784,
+      "cacheReadInputTokens": 13453,
+      "cacheCreationInputTokens": 8685,
+      "webSearchRequests": 0,
+      "costUSD": 0.02889755,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1781,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:**\n\nIch habe das Ticket bearbeitet: Die Kundin Emma Wagner (K005) hat ihr 59-USD-Jahresabo am 20.09.2026 über den Apple App Store gekauft. Das liegt innerhalb der 14-Tage-Frist für Rückgaben. **Allerdings:** Laut FocusFlow-Richtlinie können App-Store-Käufe nicht von uns erstattet werden – die Kundin muss die Rückgabe direkt bei Apple über reportaproblem.apple.com beantragen. Ich habe einen hilfreichen Antwort-Entwurf mit dieser Anleitung gespeichert (keine Erstattung empfohlen, da technisch nicht möglich)."
+}

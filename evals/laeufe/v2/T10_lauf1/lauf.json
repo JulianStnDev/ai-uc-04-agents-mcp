@@ -1,0 +1,83 @@
+{
+  "run_id": "T10_lauf1",
+  "ticket_id": "T10",
+  "prompt_version": "v2",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 24.419,
+  "sdk_start_s": 0.25,
+  "agent_s": 22.992,
+  "sdk_ende_s": 1.177,
+  "cli_duration_ms": 22997,
+  "cli_duration_api_ms": 23835,
+  "kosten_usd": 0.0260687,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2754,
+    "cache_creation_input_tokens": 7764,
+    "cache_read_input_tokens": 12517,
+    "output_tokens": 2269,
+    "output_tokens_details": {
+      "thinking_tokens": 1432
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 7764
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 384,
+        "cache_read_input_tokens": 6688,
+        "cache_creation_input_tokens": 1076,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1076,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 928,
+      "outputTokens": 17,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001013,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2754,
+      "outputTokens": 2269,
+      "cacheReadInputTokens": 12517,
+      "cacheCreationInputTokens": 7764,
+      "webSearchRequests": 0,
+      "costUSD": 0.0250557,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1432,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "Fertig! Ich habe einen Entwurf mit der Kündigungsanleitung gespeichert. Jonas Meyer hat ein Google Play Store-Abo, das er selbst dort kündigen muss – FocusFlow kann Store-Abos technisch nicht selbst beenden. Der Entwurf enthält die genauen Schritte und informiert ihn, dass sein Pro-Zugang bis 21.10.2026 läuft und seine Daten erhalten bleiben."
+}

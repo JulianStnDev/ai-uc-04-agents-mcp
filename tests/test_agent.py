@@ -23,8 +23,8 @@ def test_hook_erlaubt_nur_focusflow(tmp_path):
 
 
 def test_prompt_enthaelt_keine_falldetails():
-    for t in agent.lade_aufgaben():
-        prompt = agent.SYSTEM_PROMPT + agent.ticket_prompt(t)
+    for t, system in [(t, p) for t in agent.lade_aufgaben() for p in agent.SYSTEM_PROMPTS.values()]:
+        prompt = system + agent.ticket_prompt(t)
         for verboten in ["DATA_NOTES", t["kernaussage_entwurf"], t["kunde_id"], "Schattenmodus"]:
             assert verboten not in prompt
 
@@ -39,3 +39,10 @@ def test_abbruch_ohne_api_key(monkeypatch):
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
     with pytest.raises(SystemExit):
         agent.api_key_pruefen()
+
+
+def test_v2_unterscheidet_sich_nur_in_den_regeln():
+    v1, v2 = agent.SYSTEM_PROMPT_V1, agent.SYSTEM_PROMPT_V2
+    assert v1.split("## Vorgehen")[0] == v2.split("## Vorgehen")[0]  # Rolle + Matrix identisch
+    assert "Vermute niemals" in v2 and "Vermute niemals" not in v1
+    assert "anderes Konto" in v2 and "weder Kundendaten noch Hilfe" in v2

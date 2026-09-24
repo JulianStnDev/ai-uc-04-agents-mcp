@@ -1,0 +1,83 @@
+{
+  "run_id": "T14_lauf3",
+  "ticket_id": "T14",
+  "prompt_version": "v2",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 15.141,
+  "sdk_start_s": 0.344,
+  "agent_s": 13.465,
+  "sdk_ende_s": 1.332,
+  "cli_duration_ms": 13472,
+  "cli_duration_api_ms": 14609,
+  "kosten_usd": 0.018138750000000002,
+  "num_turns": 3,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 6330,
+    "cache_creation_input_tokens": 4167,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1115,
+    "output_tokens_details": {
+      "thinking_tokens": 553
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 4167
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 184,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 4167,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 4167,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 945,
+      "outputTokens": 16,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0010249999999999999,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 6330,
+      "outputTokens": 1115,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 4167,
+      "webSearchRequests": 0,
+      "costUSD": 0.01711375,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 553,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:** Das Ticket wurde an einen Menschen übergeben, weil die Kündigungsanfrage ein anderes Konto betrifft als die Absender-Adresse – die Identität muss erst verifiziert werden. Ein Antwortentwurf ist vorbereitet."
+}

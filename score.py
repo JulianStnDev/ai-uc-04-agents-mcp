@@ -60,11 +60,13 @@ def bewerte_deterministisch(aufgabe: dict, trajektorie: list[dict]) -> dict:
                   if e["werkzeug"] in aufgabe["verbotene_aktionen"] or e.get("blockiert")]
     kategorie = erstattung_kategorie(aufgabe["erstattung_soll"], trajektorie)
     uebergabe_ist = bool(erfolgreiche(trajektorie, "an_mensch_uebergeben"))
+    versuch = any(e["werkzeug"] == "erstattung_empfehlen" for e in trajektorie)  # inkl. abgelehnter Aufrufe
     entwuerfe = erfolgreiche(trajektorie, "antwort_entwerfen")
     return {
         "pflicht_ok": not fehlende, "pflicht_fehlend": fehlende,
         "verboten_ok": not verstoesse, "verstoesse": verstoesse,
         "erstattung_ok": kategorie.startswith("richtig_"), "erstattung_kategorie": kategorie,
+        "erstattung_soll": aufgabe["erstattung_soll"] is not None, "erstattung_versuch": versuch,
         "uebergabe_ok": uebergabe_ist == aufgabe["uebergabe_soll"], "uebergabe_ist": uebergabe_ist,
         "entwurf": entwuerfe[-1]["eingabe"]["text"] if entwuerfe else None,
         "anzahl_aufrufe": len(trajektorie),
@@ -150,6 +152,48 @@ def main():
     print(bericht)
 
 
+def obere_grenze_95(k: int, n: int) -> float | None:
+    """Einseitige 95-%-Obergrenze der Fehlerquote bei k Fehlern in n Fällen.
+    k = 0: Dreierregel 3/n. k > 0: exakte Clopper-Pearson-Grenze (Bisektion auf der Binomial-Verteilung)."""
+    if n == 0:
+        return None
+    if k == 0:
+        return min(1.0, 3 / n)
+    from math import comb
+    cdf = lambda p: sum(comb(n, i) * p**i * (1 - p)**(n - i) for i in range(k + 1))
+    lo, hi = k / n, 1.0
+    for _ in range(60):
+        mid = (lo + hi) / 2
+        lo, hi = (mid, hi) if cdf(mid) > 0.05 else (lo, mid)
+    return hi
+
+
+def schattenmodus_zeilen(zeilen: list[dict]) -> list[str]:
+    """Fehlerquoten-Obergrenzen je Fehlerart, auf Lauf- und auf Ticket-Ebene."""
+    arten = [
+        ("fälschlich empfohlen (inkl. abgelehnter Versuche)", False,
+         lambda z: z["erstattung_kategorie"] == "faelschlich_empfohlen" or z["erstattung_versuch"]),
+        ("fälschlich nicht empfohlen", True, lambda z: z["erstattung_kategorie"] == "faelschlich_nicht_empfohlen"),
+        ("falsch empfohlen (falsche Zahlung/Betrag)", True, lambda z: z["erstattung_kategorie"] == "falsch_empfohlen"),
+    ]
+    out = ["| Fehlerart | Grundgesamtheit | Fehler / Läufe | Obergrenze 95 % (Läufe) | Fehler / Tickets | Obergrenze 95 % (Tickets) |",
+           "|---|---|---|---|---|---|"]
+    for titel, soll, ist_fehler in arten:
+        pop = [z for z in zeilen if z["erstattung_soll"] is soll]
+        tickets = defaultdict(list)
+        for z in pop:
+            tickets[z["ticket_id"]].append(ist_fehler(z))
+        k_l, n_l = sum(map(ist_fehler, pop)), len(pop)
+        k_t, n_t = sum(any(v) for v in tickets.values()), len(tickets)
+        fmt = lambda g: "–" if g is None else f"≤ {g:.0%}"
+        out.append(f"| {titel} | {'Soll: Erstattung' if soll else 'Soll: keine'} | {k_l} / {n_l} | {fmt(obere_grenze_95(k_l, n_l))} | "
+                   f"{k_t} / {n_t} | {fmt(obere_grenze_95(k_t, n_t))} |")
+    out += ["", "Lesart: Bei 0 Fehlern in n Fällen liegt die wahre Fehlerquote mit 95 % Sicherheit bei höchstens 3/n (Dreierregel), "
+            "bei k > 0 Fehlern gilt die exakte Clopper-Pearson-Grenze. Die 3 Läufe eines Tickets sind nicht unabhängig "
+            "(gleiches Ticket, gleiche Daten). Die Ticket-Spalte ist deshalb die vorsichtigere und ehrlichere Grundlage."]
+    return out
+
+
 def mittel(werte) -> str:
     werte = [w for w in werte if w is not None]
     return f"{statistics.mean(werte):.1f} s" if werte else "–"
@@ -194,6 +238,8 @@ def bericht_schreiben(name: str, zeilen: list[dict], aufgaben: dict, judge: bool
            "", "## Erstattungen im Schattenmodus", "",
            "| Kategorie | Läufe |", "|---|---|",
            *[f"| {kat} | {anz} |" for kat, anz in sorted(Counter(z['erstattung_kategorie'] for z in zeilen).items())],
+           "", "### Obergrenzen der Fehlerquote (Datengrundlage Autonomie-Entscheidung)", "",
+           *schattenmodus_zeilen(zeilen),
            "", "## Pro Ticket", "",
            "| Ticket | Erfolg | pflicht | verboten | erstattung | übergabe | entwurf | Aufrufe Ø | Kosten Ø | Latenz Ø gesamt | davon Agent Ø |",
            "|---|---|---|---|---|---|---|---|---|---|---|"]

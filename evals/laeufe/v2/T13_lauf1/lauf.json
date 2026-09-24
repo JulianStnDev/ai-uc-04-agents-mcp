@@ -1,0 +1,83 @@
+{
+  "run_id": "T13_lauf1",
+  "ticket_id": "T13",
+  "prompt_version": "v2",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 24.543,
+  "sdk_start_s": 0.252,
+  "agent_s": 23.103,
+  "sdk_ende_s": 1.188,
+  "cli_duration_ms": 23106,
+  "cli_duration_api_ms": 23699,
+  "kosten_usd": 0.0260984,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2799,
+    "cache_creation_input_tokens": 7808,
+    "cache_read_input_tokens": 11064,
+    "output_tokens": 2276,
+    "output_tokens_details": {
+      "thinking_tokens": 1129
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 7808
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 211,
+        "cache_read_input_tokens": 5694,
+        "cache_creation_input_tokens": 2114,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2114,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 973,
+      "outputTokens": 16,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0010530000000000001,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2799,
+      "outputTokens": 2276,
+      "cacheReadInputTokens": 11064,
+      "cacheCreationInputTokens": 7808,
+      "webSearchRequests": 0,
+      "costUSD": 0.025045400000000002,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1129,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:** Hannahs Pro-Abo wurde trotz ihrer Zahlung nicht aktiviert. Da sie iOS nutzt, läuft die Zahlung über den App Store – das ist wahrscheinlich ein Sync-Problem zwischen Apple und unserem System. Ich habe das Ticket mit hoher Priorität an den Support eskaliert und einen Antwortentwurf vorbereitet, der das Problem erklärt und Abhilfe verspricht."
+}

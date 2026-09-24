@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält korrekt die Kernaussage, dass Pro 6,99 USD pro Monat oder 59 USD pro Jahr kostet, ohne dieser zu widersprechen; die zusätzlichen Details sind erlaubte Ergänzungen.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 976,
+  "judge_output_tokens": 124,
+  "judge_kosten_usd": 0.003192,
+  "judge_s": 2.278
+}

@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält klar die Kernaussage, dass der bereits begonnene Monat nicht erstattet wird, und widerspricht ihr nicht; zusätzlich wird die Kündigung bestätigt, was ebenfalls angefragt war.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 1087,
+  "judge_output_tokens": 118,
+  "judge_kosten_usd": 0.003354,
+  "judge_s": 2.206
+}

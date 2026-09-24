@@ -123,3 +123,11 @@ def test_erstattung_kategorien(soll, traj, erwartet):
 def test_p95():
     assert p95(list(range(1, 21))) == 19
     assert p95([3.0]) == 3.0 and p95([]) == 0.0
+
+
+def test_obere_grenze_dreierregel_und_clopper_pearson():
+    from score import obere_grenze_95
+    assert obere_grenze_95(0, 36) == pytest.approx(3 / 36)
+    assert obere_grenze_95(0, 2) == 1.0 and obere_grenze_95(0, 0) is None
+    # Referenzwert Clopper-Pearson einseitig 95 %: k=1, n=10 -> 0.3942
+    assert obere_grenze_95(1, 10) == pytest.approx(0.3942, abs=1e-3)

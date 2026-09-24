@@ -1,0 +1,8 @@
+{
+  "entwurf_ok_begruendung": "Der Entwurf enthält die Kernaussage vollständig: 59 USD werden erstattet, da der Kauf innerhalb der 14-Tage-Frist liegt, und die Erstattung wurde zur Bearbeitung weitergeleitet.",
+  "entwurf_ok": true,
+  "judge_input_tokens": 1058,
+  "judge_output_tokens": 116,
+  "judge_kosten_usd": 0.003276,
+  "judge_s": 2.246
+}

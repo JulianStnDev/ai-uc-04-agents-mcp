@@ -1,0 +1,83 @@
+{
+  "run_id": "T15_lauf3",
+  "ticket_id": "T15",
+  "prompt_version": "v2",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 26.982,
+  "sdk_start_s": 0.251,
+  "agent_s": 25.689,
+  "sdk_ende_s": 1.042,
+  "cli_duration_ms": 25699,
+  "cli_duration_api_ms": 26854,
+  "kosten_usd": 0.0320386,
+  "num_turns": 7,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2783,
+    "cache_creation_input_tokens": 10036,
+    "cache_read_input_tokens": 15036,
+    "output_tokens": 2829,
+    "output_tokens_details": {
+      "thinking_tokens": 1637
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 10036
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 500,
+        "cache_read_input_tokens": 8114,
+        "cache_creation_input_tokens": 1922,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1922,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 957,
+      "outputTokens": 21,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001062,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2783,
+      "outputTokens": 2829,
+      "cacheReadInputTokens": 15036,
+      "cacheCreationInputTokens": 10036,
+      "webSearchRequests": 0,
+      "costUSD": 0.0309766,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1637,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "✅ **Erledigt!**\n\nIch habe dein Abo gekündigt (wirksam zum Ende der Periode am 8. Oktober 2026) und dir einen Antwort-Entwurf vorbereitet. Der Support-Mitarbeiter wird diesen noch einmal kurz prüfen und dir dann die Bestätigung schicken.\n\n**Kurz zusammengefasst für dich:**\n- Dein Pro-Zugang läuft bis zum 8. Oktober, danach keine weiteren Abos\n- Eine Erstattung für September ist leider nicht möglich (laut Richtlinie: Monatsabos bereits begonnener Monate werden nicht erstattet)\n- All deine Daten bleiben erhalten"
+}

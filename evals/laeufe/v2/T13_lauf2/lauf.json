@@ -1,0 +1,83 @@
+{
+  "run_id": "T13_lauf2",
+  "ticket_id": "T13",
+  "prompt_version": "v2",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 29.581,
+  "sdk_start_s": 0.243,
+  "agent_s": 28.221,
+  "sdk_ende_s": 1.118,
+  "cli_duration_ms": 28225,
+  "cli_duration_api_ms": 28690,
+  "kosten_usd": 0.02882945,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2799,
+    "cache_creation_input_tokens": 8199,
+    "cache_read_input_tokens": 11087,
+    "output_tokens": 2724,
+    "output_tokens_details": {
+      "thinking_tokens": 1541
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 8199
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 337,
+        "cache_read_input_tokens": 5735,
+        "cache_creation_input_tokens": 2464,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2464,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 973,
+      "outputTokens": 16,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0010530000000000001,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2799,
+      "outputTokens": 2724,
+      "cacheReadInputTokens": 11087,
+      "cacheCreationInputTokens": 8199,
+      "webSearchRequests": 0,
+      "costUSD": 0.027776449999999998,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1541,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:** Ich habe Hannah Fischers Konto nachgeschlagen (iOS-Nutzer, Free-Status), festgestellt, dass keine Zahlungen in unserem System vorliegen (weil App Store-Abos über Apple laufen), einen erklärenden Entwurf mit Troubleshooting-Tipps vorbereitet und das Ticket mit hoher Priorität an den Support übergeben – wegen der 4-tägigen Verzögerung und fehlenden vorherigen Antworten."
+}

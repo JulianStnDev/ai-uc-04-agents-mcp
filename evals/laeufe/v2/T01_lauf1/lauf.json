@@ -1,0 +1,83 @@
+{
+  "run_id": "T01_lauf1",
+  "ticket_id": "T01",
+  "prompt_version": "v2",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 30.107,
+  "sdk_start_s": 0.662,
+  "agent_s": 28.356,
+  "sdk_ende_s": 1.089,
+  "cli_duration_ms": 28372,
+  "cli_duration_api_ms": 29755,
+  "kosten_usd": 0.032516800000000005,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2817,
+    "cache_creation_input_tokens": 9232,
+    "cache_read_input_tokens": 12838,
+    "output_tokens": 3152,
+    "output_tokens_details": {
+      "thinking_tokens": 1948
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 9232
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 275,
+        "cache_read_input_tokens": 7111,
+        "cache_creation_input_tokens": 2121,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2121,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 991,
+      "outputTokens": 25,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0011159999999999998,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2817,
+      "outputTokens": 3152,
+      "cacheReadInputTokens": 12838,
+      "cacheCreationInputTokens": 9232,
+      "webSearchRequests": 0,
+      "costUSD": 0.031400800000000006,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1948,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "✅ **Ticket bearbeitet.**\n\nIch habe bestätigt, dass Anna am 14.09.2026 beim Jahresabo-Wechsel tatsächlich doppelt belastet wurde (Z004 und Z005, je 54,34 USD). Da die Buchungen nach über einer Woche echte Abbuchungen sind (keine Vormerkung), empfehle ich gemäß Richtlinie „Doppelte Abbuchung\" die vollständige Erstattung von 54,34 USD. Der Pro-Zugang bleibt aktiv. Der Antwort-Entwurf liegt zur Freigabe bereit."
+}
