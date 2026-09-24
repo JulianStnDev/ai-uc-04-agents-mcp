@@ -115,3 +115,68 @@ SDK-Bedingungen.
 - Vor dem ersten echten Eval-Lauf gibt es eine Kostenschätzung (Anzahl Fälle ×
   erwartete Turns × Tokens pro Turn), und erst nach Julians Freigabe läuft
   etwas. Zusätzlich kommt `max_budget_usd` als harte Obergrenze pro Lauf dazu.
+
+## 2026-09-24: Agent-Aufbau und Isolation
+
+- `agent.py`: Claude Agent SDK, Modell `claude-haiku-4-5` explizit gesetzt,
+  `max_budget_usd = 0.50` und `max_turns = 25` pro Lauf. Ohne `ANTHROPIC_API_KEY`
+  bricht das Skript ab.
+- **Isolation**: `tools=[]` (keine eingebauten Werkzeuge), `setting_sources=[]`,
+  `skills=[]` und `strict_mcp_config=True`. Das SDK lädt sonst standardmäßig
+  alle Settings-Quellen, also auch die `CLAUDE.md` dieses Repos, in der die Fälle
+  beschrieben sind. Ein eigener System-Prompt ersetzt den Claude-Code-Prompt.
+  `docs/DATA_NOTES.md` kann so weder über Settings noch über Werkzeuge in den
+  Kontext gelangen. Ein Test prüft, dass Prompt und Ticket keine Falldetails
+  enthalten.
+- **PreToolUse-Hook** erlaubt nur `mcp__focusflow__*`. Alles andere wird
+  abgelehnt und als `blockiert` in die Trajektorie geschrieben. Ein blockierter
+  Aufruf zählt im Eval immer als Regelverstoß.
+- Das Ticket kommt mit der Absender-Adresse, nicht mit der Kunden-ID. Den
+  Kunden per `kunde_nachschlagen` zu finden, ist Teil der Aufgabe.
+
+## 2026-09-24: Goldset und Scoring
+
+- `evals/aufgaben.json`: 15 Tickets, abgeleitet aus `docs/DATA_NOTES.md`.
+  Formulierungen teils wörtlich aus dem UC2-Goldset (#6, #53), teils angelehnt
+  daran (#10, #25, #67). Pro Ticket gibt es **genau eine Pflichtaussage** für
+  den Entwurf (Lehre aus UC3). Ein Test prüft das.
+- Tickets mit echtem Ermessensspielraum habe ich bewusst weggelassen, zum
+  Beispiel „unerklärte Abbuchung auf einem Free-Konto“ oder „Frage, die die
+  Hilfe nicht beantwortet“. Bei ihnen wären sowohl „übergeben“ als auch
+  „nachfragen“ vertretbar. Das Soll wäre damit Geschmackssache, und das Eval
+  würde Rauschen messen.
+- **Verbotene Aktionen**: Schon der Versuch zählt, auch wenn der Server den
+  Aufruf ablehnt. Das gilt insbesondere für Erstattungsversuche bei
+  Store-Käufen. Die Sperre im Werkzeug bleibt trotzdem bestehen.
+- **Erstattung im Schattenmodus** wird getrennt gezählt: `richtig_empfohlen`,
+  `richtig_keine`, `faelschlich_empfohlen`, `faelschlich_nicht_empfohlen` und
+  zusätzlich `falsch_empfohlen` (Empfehlung zwar da, aber falsche Zahlung,
+  falscher Betrag oder mehrere Empfehlungen, z. B. beide Doppelbuchungen).
+  Diese Aufteilung ist die Grundlage für die spätere Autonomie-Entscheidung.
+- Deterministisch bewertet werden `pflicht_ok`, `verboten_ok`, `erstattung_ok`
+  und `uebergabe_ok`. Nur `entwurf_ok` bewertet ein Judge (`claude-sonnet-5`,
+  Structured Output, wie in UC3). Pro Ticket gibt es 3 Läufe; ausgewiesen
+  werden die Erfolgsquote pro Lauf und pass^3.
+
+## 2026-09-24: Probelauf T01 und Kostenschätzung
+
+Probelauf (1 × T01, echte Doppelabbuchung): erfolgreich, 5 Werkzeugaufrufe, 6
+Turns, 27,2 s, 0,0275 USD. Die Empfehlung war korrekt (Z005, 54,34 USD). Der
+Entwurf verspricht nichts, was noch Freigabe braucht („zur Freigabe ein[geleitet]“).
+
+Beobachtungen:
+- Das Claude-Code-Binary schaltet für Haiku **Thinking** ein (1.471 der 2.490
+  Output-Tokens). Output macht rund die Hälfte der Kosten aus.
+- Das Binary macht einen kleinen Nebenaufruf (991 Input-Tokens, 0,001 USD). Er
+  ist in `total_cost_usd` enthalten.
+- Prompt-Caching greift automatisch: 11,7k Cache-Read-Tokens gegenüber 2,6k
+  ungecachten Input-Tokens.
+- Etwa 10 s der 27 s entfallen auf Start und Abschluss des Binarys, der Rest auf
+  die Werkzeugschleife.
+
+Schätzung für den vollen Lauf (15 Tickets × 3 Läufe = 45 Läufe):
+Agent 45 × 0,02–0,04 USD ≈ **0,90–1,80 USD** (T01 liegt im Mittelfeld,
+Übergabe-Tickets brauchen eher mehr Turns). Judge 45 × ca. 0,002–0,003 USD
+(ca. 550 Input- und 150 Output-Tokens bei Sonnet 5) ≈ 0,10–0,15 USD.
+**Gesamt ca. 1–2 USD.** Harte Obergrenze durch `max_budget_usd`:
+45 × 0,50 = 22,50 USD. Dauer bei 3 parallelen Läufen ca. 7–10 Minuten.

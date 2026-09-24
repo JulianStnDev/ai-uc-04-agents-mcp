@@ -1,0 +1,77 @@
+{
+  "run_id": "T01_lauf1",
+  "ticket_id": "T01",
+  "modell": "claude-haiku-4-5",
+  "modelle_gesehen": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "dauer_s": 27.211,
+  "kosten_usd": 0.02745195,
+  "num_turns": 6,
+  "subtype": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 2644,
+    "cache_creation_input_tokens": 8079,
+    "cache_read_input_tokens": 11682,
+    "output_tokens": 2490,
+    "output_tokens_details": {
+      "thinking_tokens": 1471
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 8079
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 8,
+        "output_tokens": 442,
+        "cache_read_input_tokens": 6334,
+        "cache_creation_input_tokens": 1745,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1745,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 991,
+      "outputTokens": 20,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001091,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-haiku-4-5": {
+      "inputTokens": 2644,
+      "outputTokens": 2490,
+      "cacheReadInputTokens": 11682,
+      "cacheCreationInputTokens": 8079,
+      "webSearchRequests": 0,
+      "costUSD": 0.02636095,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 1471,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "schlusstext": "**Zusammenfassung:**\n\nDie doppelte Belastung ist bestätigt. Anna Berger wurde am 14.09.2026 für denselben Jahresabo-Wechsel zweimal mit je 54,34 USD belastet (Z004 und Z005). Ich habe eine Erstattung über 54,34 USD (Z005) empfohlen, die nun zur Freigabe ansteht. Ein Antwortentwurf liegt bereit und wartet auf Prüfung und Versand durch einen Menschen."
+}

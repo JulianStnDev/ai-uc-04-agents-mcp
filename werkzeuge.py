@@ -97,6 +97,16 @@ class Werkzeugkasten:
         })
         return ergebnis, fehler
 
+    def blockiert_protokollieren(self, werkzeug: str, eingabe: dict, grund: str) -> None:
+        """Für Aufrufe, die schon vor dem Server abgelehnt wurden (PreToolUse-Hook im Agent)."""
+        self._seq += 1
+        jetzt = _jetzt()
+        self._anhaengen("trajektorie.jsonl", {
+            "run_id": self.run_id, "seq": self._seq, "zeit_start": jetzt, "zeit_ende": jetzt,
+            "werkzeug": werkzeug, "eingabe": eingabe, "ergebnis": {"fehler": grund},
+            "fehler": True, "blockiert": True,
+        })
+
     def _anhaengen(self, datei: str, eintrag: dict) -> None:
         with open(self.run_dir / datei, "a", encoding="utf-8") as f:
             f.write(json.dumps(eintrag, ensure_ascii=False) + "\n")
