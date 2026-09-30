@@ -1,10 +1,14 @@
 {
-  "title": "Agents mit MCP: Support-Agent mit Freigaberegeln",
+  "title": "Agents with MCP: Support Agent with Approval Rules",
   "status": "done",
   "tags": [
     "agents",
     "mcp",
     "evals"
   ],
-  "summary": "Support-Agent mit eigenem MCP-Server und Autonomie-Matrix: Erstattungen im Schattenmodus, Pflichten per Stop-Hook im Code; pass^3 73 %, 27 USD pro 1000 Tickets"
+  "summary": "Deciding a support agent's autonomy per action with data: shadow mode for refunds, pass^k reliability and duties enforced in code.",
+  "metrics": [
+    "pass^3 = 73% (success per run 87%)",
+    "27.0 USD per 1000 requests"
+  ]
 }
