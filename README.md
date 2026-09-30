@@ -1,192 +1,194 @@
-# UC4 — Agents mit MCP: Support-Agent mit Freigaberegeln
+🇩🇪 [Deutsche Version](README_DE.md)
 
-## Kurzfassung
+# UC4 — Agents with MCP: Support Agent with Approval Rules
 
-**Die Frage:** Ein KI-Agent soll Support-Tickets einer App nicht nur beantworten, sondern auch handeln, zum Beispiel ein Abo kündigen oder eine Erstattung anstoßen. Wie viel darf er allein tun? Und wie findet man das mit Daten heraus statt aus dem Bauch? Gemessen wurde an 15 realistischen Tickets mit erfundenen Kundendaten, je Ticket 3 Durchläufe, in drei Versionen des Agents.
+## Summary
 
-**Was dabei herauskam:**
+**The question:** An AI agent is supposed to not only answer an app's support tickets but also act on them, for example cancel a subscription or initiate a refund. How much may it do on its own? And how do you find that out with data instead of gut feeling? It was measured on 15 realistic tickets with invented customer data, 3 runs per ticket, across three versions of the agent.
 
-1. **Die Autonomie wird pro Aktion festgelegt, nicht pauschal.** Lesen und an einen Menschen übergeben darf der Agent immer, ein Abo kündigen darf er allein. Erstattungen darf er nur *empfehlen*, und Antworten an Kunden speichert er nur als *Entwurf*. Erstattungen laufen im **Schattenmodus**: Der Agent empfiehlt, ein Mensch entscheidet, und gemessen wird, wie oft die Empfehlung richtig gewesen wäre. So lässt sich später mit Daten entscheiden, ob er mehr Freiheit bekommt.
-2. **Maßstab ist, ob ein Ticket immer klappt, nicht ob es einmal klappt.** Der Agent löst 87 % der einzelnen Durchläufe. Aber nur bei 73 % der Tickets klappen alle drei Durchläufe (pass^3). Für einen Kunden zählt die zweite Zahl, denn er bekommt nicht den besten von drei Versuchen.
-3. **Anweisungen im Prompt stoßen an Grenzen. Was immer gelten muss, gehört in den Code.** Neue Prompt-Regeln haben einzelne Tickets verbessert und andere verschlechtert. Eine Regel, die Vermutungen verbietet, hat messbar nichts bewirkt. Verlässlich wurde es erst, als der Code die Pflichten erzwingt („erst Kunde nachschlagen, immer einen Entwurf ablegen“). Wie oft der Code eingreifen musste, wird offen mitgezählt (7 % der Durchläufe).
-4. **Rund 40 % der Antwortentwürfe enthalten Unbelegtes,** also vermutete Ursachen, erfundene Fristen von Apple oder Google und Zusagen wie „wir melden uns noch heute“. Deshalb prüft ein Mensch jeden Entwurf vor dem Versand. Das bleibt so.
-5. **Null Fehler bei Erstattungen, aber zu wenige Fälle für mehr Autonomie.** In 135 Durchläufen hat der Agent nie falsch empfohlen und nie eine nötige Erstattung übersehen. Diese Durchläufe beruhen aber auf nur 15 verschiedenen Tickets, davon 3 mit berechtigter Erstattung. Statistisch lässt sich damit nur sagen, dass die Fehlerquote bei höchstens 25 % bzw. 100 % liegt. Für eine Freigabe bräuchte es mindestens 30 unabhängige Erstattungsfälle.
+**What came out of it:**
 
-**Kosten und Tempo:** 27 USD pro 1000 Tickets, eine Antwort dauert typisch 26 s, in 95 % der Fälle höchstens 37 s. Das ganze Projekt hat 6,68 USD an API-Kosten verursacht (mehr als geplant, siehe [Kosten](#kosten--latenz)).
+1. **Autonomy is set per action, not across the board.** The agent may always read and hand over to a human, and it may cancel a subscription on its own. It may only *recommend* refunds, and it saves replies to customers only as a *draft*. Refunds run in **shadow mode**: the agent recommends, a human decides, and we measure how often the recommendation would have been right. That way, whether it gets more freedom can later be decided with data.
+2. **The yardstick is whether a ticket always works, not whether it works once.** The agent solves 87% of individual runs. But only for 73% of tickets do all three runs work (pass^3). For a customer, the second number is what counts, because they don't get the best of three attempts.
+3. **Instructions in the prompt hit limits. Whatever must always hold belongs in the code.** New prompt rules improved some tickets and made others worse. A rule forbidding assumptions had no measurable effect. It only became reliable once the code enforced the duties ("look up the customer first, always file a draft"). How often the code had to step in is counted openly (7% of runs).
+4. **Around 40% of reply drafts contain unsupported claims,** i.e. assumed causes, invented Apple or Google deadlines, and promises like "we'll get back to you today". That is why a human checks every draft before it is sent. That stays as it is.
+5. **Zero errors on refunds, but too few cases for more autonomy.** In 135 runs the agent never recommended wrongly and never missed a necessary refund. But these runs are based on only 15 different tickets, 3 of them with a justified refund. Statistically, all this allows us to say is that the error rate is at most 25% or 100%, respectively. Granting approval would require at least 30 independent refund cases.
 
-**Wie belastbar ist das?** 15 Tickets mit je 3 Durchläufen sind eine kleine Stichprobe. Unterschiede von 2–3 Durchläufen zwischen Versionen sind Tendenzen, keine Beweise.
+**Cost and speed:** 27 USD per 1000 tickets, a reply typically takes 26 s, and at most 37 s in 95% of cases. The whole project incurred 6.68 USD in API costs (more than planned, see [Cost](#cost--latency)).
+
+**How robust is this?** 15 tickets with 3 runs each are a small sample. Differences of 2–3 runs between versions are tendencies, not proof.
 
 ---
 
 ## Problem
 
-Die fiktive Habit-Tracker-App **FocusFlow** (aus [UC3](https://github.com/JulianStnDev/ai-uc-03-context-engineering)) bekommt Support-Tickets zu Abo, Zahlungen und Konto. Ein Agent soll sie bearbeiten: den Kunden identifizieren, Zahlungen prüfen, die Regeln in der Hilfe nachlesen und dann handeln, also kündigen, eine Erstattung empfehlen, an einen Menschen übergeben oder eine Antwort entwerfen.
+The fictional habit tracker app **FocusFlow** (from [UC3](https://github.com/JulianStnDev/ai-uc-03-context-engineering)) receives support tickets about subscriptions, payments and accounts. An agent is supposed to handle them: identify the customer, check payments, look up the rules in the help center and then act, i.e. cancel, recommend a refund, hand over to a human or draft a reply.
 
-Die eigentliche Produktfrage ist nicht, *ob* der Agent das kann, sondern **welche Aktionen er ohne Menschen ausführen darf**. Falsch zu antworten lässt sich korrigieren. Eine falsche Erstattung kostet Geld, und eine versendete Nachricht ist nicht zurückholbar.
+The actual product question is not *whether* the agent can do this, but **which actions it may carry out without a human**. A wrong answer can be corrected. A wrong refund costs money, and a sent message cannot be recalled.
 
-Die Testdaten enthalten gezielt schwierige Fälle:
-- eine echte und eine nur behauptete Doppelabbuchung;
-- ein Jahresabo innerhalb der 14-Tage-Frist, eines außerhalb und eine Verlängerung;
-- Käufe über Apple und Google, die FocusFlow nicht erstatten kann;
-- einen Kunden mit zwei Konten, der für das jeweils andere Konto etwas verlangt;
-- einen Kunden, der eine Zahlung behauptet, die es nicht gibt.
+The test data deliberately contains difficult cases:
+- a real and a merely claimed double charge;
+- an annual subscription within the 14-day window, one outside it, and a renewal;
+- purchases via Apple and Google that FocusFlow cannot refund;
+- a customer with two accounts who asks for something for the respective other account;
+- a customer who claims a payment that does not exist.
 
-Details stehen in [docs/DATA_NOTES.md](docs/DATA_NOTES.md). Die Datei ist nur für Menschen und gelangt nie in den Kontext des Agents.
+Details are in [docs/DATA_NOTES.md](docs/DATA_NOTES.md). The file is for humans only and never enters the agent's context.
 
-Adressat ist, wer entscheiden muss, wie viel Handlungsfreiheit ein Support-Agent bekommt und wie man diese Entscheidung absichert.
+The audience is whoever has to decide how much freedom to act a support agent gets and how to safeguard that decision.
 
-## PM-Entscheidung
+## PM Decision
 
-**Autonomie pro Aktion nach Risiko und Umkehrbarkeit** statt „alles autonom“ oder „alles mit Freigabe“:
+**Autonomy per action based on risk and reversibility** instead of "everything autonomous" or "everything with approval":
 
-| Aktion | Werkzeug | Autonomie | Warum |
+| Action | Tool | Autonomy | Why |
 |---|---|---|---|
-| Kunde, Zahlungen, Hilfe lesen | `kunde_nachschlagen`, `zahlungen_ansehen`, `hilfe_durchsuchen` | immer | keine Außenwirkung |
-| An Mensch übergeben | `an_mensch_uebergeben` | immer | Die sichere Richtung |
-| Abo kündigen | `abo_kuendigen` | allein (nur Web-Abos, auf ausdrücklichen Wunsch) | praktisch umkehrbar: Pro läuft bis Periodenende, Neuabschluss jederzeit |
-| Erstattung | `erstattung_empfehlen` | **nur Empfehlung**, Mensch gibt frei (Schattenmodus) | bewegt Geld, Regeln mit Fallen |
-| Antwort an Kunden | `antwort_entwerfen` | **nur Entwurf** | nicht zurückholbar, Qualität erst zu messen |
+| Read customer, payments, help | `kunde_nachschlagen`, `zahlungen_ansehen`, `hilfe_durchsuchen` | always | no external effect |
+| Hand over to a human | `an_mensch_uebergeben` | always | The safe direction |
+| Cancel subscription | `abo_kuendigen` | on its own (web subscriptions only, on explicit request) | practically reversible: Pro runs until the end of the period, re-subscribing possible at any time |
+| Refund | `erstattung_empfehlen` | **recommendation only**, a human approves (shadow mode) | moves money, rules with traps |
+| Reply to customer | `antwort_entwerfen` | **draft only** | cannot be recalled, quality still to be measured |
 
-Weitere Entscheidungen, alle in [docs/decisions.md](docs/decisions.md):
-- **Durchsetzung strukturell, nicht per Prompt.** Es gibt kein Werkzeug, das Geld bewegt oder Nachrichten versendet. Ein Hook lehnt jedes Werkzeug außerhalb des eigenen MCP-Servers ab. Ab v3 erzwingt ein zweiter Hook die Pflichten.
-- **Grundsatz ab v3:** Pflichten, die immer gelten, stehen im Code. Urteile, also wann übergeben oder ob erstattet wird, stehen im Prompt.
-- **Eigener MCP-Server in-process** statt als separater Prozess. Die Werkzeuge sind damit ohne LLM testbar (83 Tests).
-- **Modell Haiku 4.5** wie in UC1–UC3, explizit gesetzt, mit Kostendeckel `max_budget_usd` pro Durchlauf.
-- **Abrechnung nur per API-Key**, nie über das Claude-Abo. Ohne Key bricht das Skript ab. Nur so sind Kosten pro Durchlauf exakt messbar.
-- **Goldset-Konflikte werden entschieden, nicht wegdefiniert.** Bei T02 widersprachen sich System-Prompt und Goldset. Entschieden wurde fürs Goldset, und T02 zählt ehrlich als Fehler. Bei T07 war das Soll zu eng und wurde mit Zahlen vorher/nachher korrigiert.
+Further decisions, all in [docs/decisions.md](docs/decisions.md):
+- **Enforcement is structural, not via prompt.** There is no tool that moves money or sends messages. A hook rejects every tool outside our own MCP server. From v3 on, a second hook enforces the duties.
+- **Principle from v3 on:** duties that always apply live in the code. Judgments, i.e. when to hand over or whether to refund, live in the prompt.
+- **Own MCP server in-process** instead of as a separate process. This makes the tools testable without an LLM (83 tests).
+- **Model Haiku 4.5** as in UC1–UC3, set explicitly, with a cost cap `max_budget_usd` per run.
+- **Billing via API key only**, never via the Claude subscription. Without a key the script aborts. Only this way are costs per run exactly measurable.
+- **Goldset conflicts are decided, not defined away.** For T02, the system prompt and the Goldset contradicted each other. The decision went in favor of the Goldset, and T02 honestly counts as a failure. For T07 the target was too narrow and was corrected, with before/after numbers.
 
-## Architekturskizze
+## Architecture Sketch
 
 ```mermaid
 flowchart LR
-    T["Ticket<br/>(Absender + Text)"] --> A
+    T["Ticket<br/>(sender + text)"] --> A
 
     subgraph A["agent.py · Claude Agent SDK · Haiku 4.5"]
-        P["System-Prompt v3<br/>Rolle, Autonomie-Matrix,<br/>Urteilsregeln"]
-        H1["PreToolUse-Hook<br/>nur mcp__focusflow__*"]
-        H2["Stop-Hook<br/>Pflichten: Kunde nachgeschlagen,<br/>genau 1 Entwurf"]
+        P["System prompt v3<br/>role, autonomy matrix,<br/>judgment rules"]
+        H1["PreToolUse hook<br/>only mcp__focusflow__*"]
+        H2["Stop hook<br/>duties: customer looked up,<br/>exactly 1 draft"]
     end
 
-    A -- "Werkzeugaufrufe" --> M
+    A -- "tool calls" --> M
 
-    subgraph M["MCP-Server focusflow (in-process)"]
-        W["7 Werkzeuge<br/>werkzeuge.py"]
+    subgraph M["MCP server focusflow (in-process)"]
+        W["7 tools<br/>werkzeuge.py"]
     end
 
-    W -- "liest" --> D[("data/<br/>15 Kunden, 43 Zahlungen")]
-    W -- "liest" --> C[("corpus/<br/>20 Hilfeartikel")]
-    W -- "schreibt" --> R[("runs/run_id/<br/>Trajektorie, Empfehlungen,<br/>Entwürfe, Übergaben")]
+    W -- "reads" --> D[("data/<br/>15 customers, 43 payments")]
+    W -- "reads" --> C[("corpus/<br/>20 help articles")]
+    W -- "writes" --> R[("runs/run_id/<br/>trajectory, recommendations,<br/>drafts, handovers")]
 
-    R --> MENSCH["Mensch<br/>gibt Erstattung frei,<br/>prüft und versendet Entwurf"]
+    R --> MENSCH["Human<br/>approves refund,<br/>reviews and sends draft"]
 
-    R --> S["score.py<br/>deterministisch aus Trajektorie<br/>+ Sonnet-5-Judge für Entwürfe"]
+    R --> S["score.py<br/>deterministic from trajectory<br/>+ Sonnet 5 judge for drafts"]
     S --> E["evals/<br/>results_*, vergleich_*"]
 ```
 
-Jeder Werkzeugaufruf, auch fehlerhafte und blockierte, landet mit Zeitstempel in `trajektorie.jsonl`. Daraus werden fast alle Eval-Kriterien deterministisch berechnet. Die Grunddaten in `data/` bleiben unverändert, jeder Durchlauf hat seinen eigenen Ausgabeordner.
+Every tool call, including failed and blocked ones, ends up with a timestamp in `trajektorie.jsonl`. Almost all eval criteria are computed deterministically from it. The base data in `data/` stays unchanged; each run has its own output folder.
 
-## Evaluationsergebnisse
+## Evaluation Results
 
-**Aufbau:** 15 Tickets ([evals/aufgaben.json](evals/aufgaben.json)) × 3 Durchläufe je Version. Pro Ticket legt das Goldset fest:
-- Pflichtwerkzeuge und verbotene Aktionen; schon der Versuch einer verbotenen Aktion zählt;
-- die Soll-Erstattung (Zahlung und Betrag) oder „keine“;
-- ob übergeben werden muss (ja, nein oder optional);
-- **genau eine** Kernaussage für den Entwurf (Lehre aus UC3).
+**Setup:** 15 tickets ([evals/aufgaben.json](evals/aufgaben.json)) × 3 runs per version. For each ticket the Goldset specifies:
+- required tools and forbidden actions; even an attempt at a forbidden action counts;
+- the target refund (payment and amount) or "none";
+- whether a handover is required (yes, no or optional);
+- **exactly one** core statement for the draft (lesson from UC3).
 
-**Kriterien:** `pflicht_ok`, `verboten_ok`, `erstattung_ok` und `uebergabe_ok` werden deterministisch aus der Trajektorie berechnet. `entwurf_ok` (Kernaussage enthalten) und `keine_spekulation` (jede Behauptung durch Daten oder Hilfe gedeckt) bewertet ein Judge (Sonnet 5), der den ganzen Durchlauf als Kontext sieht. Ein Durchlauf gilt als erfolgreich, wenn die fünf Kriterien ohne `keine_spekulation` erfüllt sind. „Streng“ verlangt zusätzlich `keine_spekulation`.
+**Criteria:** `pflicht_ok`, `verboten_ok`, `erstattung_ok` and `uebergabe_ok` are computed deterministically from the trajectory. `entwurf_ok` (core statement included) and `keine_spekulation` (every claim backed by data or the help center) are rated by a judge (Sonnet 5) that sees the whole run as context. A run counts as successful if the five criteria excluding `keine_spekulation` are met. "Strict" (label "streng" in the output) additionally requires `keine_spekulation`.
 
 | | v1 | v2 | v3 |
 |---|---|---|---|
-| Was sich ändert | Ausgangsprompt | + 3 Prompt-Regeln | v1 + 2 Regeln aus v2 + **Pflichten per Stop-Hook** |
-| Erfolg pro Durchlauf | 82 % | 78 % | **87 %** |
-| **pass^3** (alle 3 Durchläufe eines Tickets erfolgreich) | 73 % | 73 % | **73 %** |
-| pflicht_ok / verboten_ok / erstattung_ok | 98 / 100 / 100 % | 93 / 100 / 100 % | 100 / 100 / 100 % |
-| uebergabe_ok / entwurf_ok | 91 / 82 % | 93 / 82 % | 93 / 87 % |
-| keine_spekulation ¹ | 64 % | 58 % | 58 % |
-| Erfolg streng / pass^3 streng | 60 / 40 % | 53 / 40 % | 56 / 33 % |
-| Durchläufe mit Pflicht-Eingriff durch den Code | – | – | 7 % (3/45, alle T14) |
+| What changes | Baseline prompt | + 3 prompt rules | v1 + 2 rules from v2 + **duties via stop hook** |
+| Success per run | 82% | 78% | **87%** |
+| **pass^3** (all 3 runs of a ticket successful) | 73% | 73% | **73%** |
+| pflicht_ok / verboten_ok / erstattung_ok | 98 / 100 / 100% | 93 / 100 / 100% | 100 / 100 / 100% |
+| uebergabe_ok / entwurf_ok | 91 / 82% | 93 / 82% | 93 / 87% |
+| keine_spekulation ¹ | 64% | 58% | 58% |
+| Strict success / strict pass^3 | 60 / 40% | 53 / 40% | 56 / 33% |
+| Runs with a duty intervention by the code | – | – | 7% (3/45, all T14) |
 
-¹ **Der Wert ist eher zu streng.** Es gibt mindestens 5 bekannte Fehlurteile, weil der Judge (Fassung j2) das heutige Datum nicht kannte und Schlüsse wie „die 14-Tage-Frist ist abgelaufen“ deshalb als Spekulation wertete. Der Fix steckt im Judge (Fassung j3), die veröffentlichten Werte wurden aber aus Kostengründen nicht neu bewertet.
+¹ **This value is, if anything, too strict.** There are at least 5 known misjudgments, because the judge (version j2) did not know today's date and therefore rated conclusions like "the 14-day window has expired" as speculation. The fix is in the judge (version j3), but for cost reasons the published values were not re-scored.
 
-**Was die Versionen zeigen** (Details, Kopplungseffekte und ausgeschriebene Fallbeispiele in [evals/vergleich_v1_v2_v3.md](evals/vergleich_v1_v2_v3.md)):
-- **Prompt-Regeln haben Nebenwirkungen.** Die Regel „fremdes Konto → übergeben“ hat T14 in v2 zwar richtig entscheiden lassen, wirkte aber als Abkürzung: kein Nachschlagen, kein Entwurf, dadurch 0/3. Eine Regel für T02 hat T02 nicht verbessert, aber T07 verschlechtert.
-- **Der Code fängt ab, was der Prompt nicht schafft.** In v3 erzwingt der Stop-Hook bei T14 in allen drei Durchläufen das Nachschlagen, einmal auch den Entwurf. Die Verbesserung von T14 kommt vollständig daher. Das Agent-Verhalten selbst hat sich nicht geändert.
-- **Die Regel „nichts vermuten“ wirkt nicht messbar.** `keine_spekulation` bleibt bei ~60 %. Spekuliert wird vor allem über die Abläufe bei Apple und Google, über Ursachen und in konkreten Zeitzusagen.
-- **T02 (behauptete Doppelabbuchung) bleibt in allen Versionen bei 0/3.** Der Agent übergibt, statt selbst zu klären, obwohl die Hilfe den Widerspruch erklärt (Vormerkung der Bank).
+**What the versions show** (details, coupling effects and written-out case examples in [evals/vergleich_v1_v2_v3.md](evals/vergleich_v1_v2_v3.md)):
+- **Prompt rules have side effects.** The rule "fremdes Konto → übergeben" (other person's account → hand over) did make T14 decide correctly in v2, but acted as a shortcut: no lookup, no draft, hence 0/3. A rule for T02 did not improve T02 but made T07 worse.
+- **The code catches what the prompt can't.** In v3, the stop hook enforces the lookup for T14 in all three runs, and once the draft as well. The improvement on T14 comes entirely from that. The agent's behavior itself did not change.
+- **The rule "nichts vermuten" (don't assume anything) has no measurable effect.** `keine_spekulation` stays at ~60%. Speculation is mainly about the Apple and Google processes, about causes, and in concrete time commitments.
+- **T02 (claimed double charge) stays at 0/3 in all versions.** The agent hands over instead of resolving it itself, even though the help center explains the contradiction (a pending authorization by the bank).
 
-**Schattenmodus Erstattung:** 0 Fehler in 135 Durchläufen, über alle drei Fehlerarten. Obergrenze der Fehlerquote (95 %, Dreierregel) auf Ticket-Ebene: **≤ 25 %** für „fälschlich empfohlen“ (0/12 Tickets) und **≤ 100 %** für „fälschlich nicht empfohlen“ (0/3 Tickets). Die 3 Durchläufe eines Tickets sind nicht unabhängig. Deshalb zählt die Ticket-Ebene, und mehr Durchläufe derselben Tickets verbessern die Grenze nicht. **Das reicht nicht für eine Autonomie-Freigabe.**
+**Refund shadow mode:** 0 errors in 135 runs, across all three error types. Upper bound of the error rate (95%, rule of three) at ticket level: **≤ 25%** for "wrongly recommended" (0/12 tickets) and **≤ 100%** for "wrongly not recommended" (0/3 tickets). The 3 runs of a ticket are not independent. That is why the ticket level is what counts, and more runs of the same tickets don't improve the bound. **This is not enough to grant autonomy.**
 
-**Judge-Kalibrierung:** Alle 15 negativen Urteile der ersten Judge-Fassung habe ich von Hand gegen die Daten geprüft ([evals/judge_pruefung.md](evals/judge_pruefung.md)): 14 korrekt, 1 Fehlurteil (T01, mehrdeutige Kernaussage). Daraufhin bekam der Judge den ganzen Durchlauf als Kontext.
+**Judge calibration:** I checked all 15 negative verdicts of the first judge version by hand against the data ([evals/judge_pruefung.md](evals/judge_pruefung.md)): 14 correct, 1 misjudgment (T01, ambiguous core statement). As a result, the judge was given the whole run as context.
 
-## Kosten & Latenz
+## Cost & Latency
 
-Pflichtzahlen (v3, Standardversion):
-- **Kosten pro 1000 Requests: 27,0 USD** (ein Request = ein Ticket, im Mittel 4,4 Werkzeugaufrufe, Haiku 4.5)
-- **p95-Latenz: 37,0 s pro Ticket** (p50 26,4 s). Davon entfallen ca. 1,5 s auf Start und Ende des SDK, der Rest auf die Agent-Schleife.
-- **Qualitätsmetrik: pass^3 = 73 %** (Erfolg pro Durchlauf 87 %)
+Required numbers (v3, standard version):
+- **Cost per 1000 requests: 27.0 USD** (one request = one ticket, on average 4.4 tool calls, Haiku 4.5)
+- **p95 latency: 37.0 s per ticket** (p50 26.4 s). About 1.5 s of that is SDK startup and shutdown, the rest is the agent loop.
+- **Quality metric: pass^3 = 73%** (success per run 87%)
 
-Die Latenz stammt fast vollständig aus der Agent-Schleife selbst. Eine frühe Annahme von mir, ca. 10 s seien SDK-Start, war nur aus Zeitstempeln geschlossen und falsch. Die Messung hat sie widerlegt.
+The latency comes almost entirely from the agent loop itself. An early assumption of mine, that about 10 s was SDK startup, was inferred only from timestamps and was wrong. The measurement disproved it.
 
-**Gesamtkosten des Projekts: 6,68 USD**
+**Total project cost: 6.68 USD**
 
-| Schritt | Schätzung vorab | Tatsächlich |
+| Step | Estimate beforehand | Actual |
 |---|---|---|
-| v1: Probelauf + 45 Durchläufe + Judge | 1–2 USD | 1,38 USD |
-| v2: 45 Durchläufe + Judge | ca. 1,35 USD | 1,36 USD |
-| v3: Probelauf + 45 Durchläufe | ca. 1,40 USD | 1,25 USD |
-| Neubewertung v1–v3 mit Judge j2 (Durchlauf als Kontext) | **nicht geschätzt** | **2,69 USD** |
-| **Gesamt** | | **6,68 USD** |
+| v1: trial run + 45 runs + judge | 1–2 USD | 1.38 USD |
+| v2: 45 runs + judge | approx. 1.35 USD | 1.36 USD |
+| v3: trial run + 45 runs | approx. 1.40 USD | 1.25 USD |
+| Re-scoring v1–v3 with judge j2 (run as context) | **not estimated** | **2.69 USD** |
+| **Total** | | **6.68 USD** |
 
-Der Judge mit Durchlauf-Kontext kostet ca. 0,02 USD pro Urteil statt 0,003 USD, weil Hilfeartikel und Zahlungen mitgeschickt werden. Die Neubewertung war beauftragt, ihre Kosten habe ich aber nicht vorher geschätzt, und der v3-Schritt kam auf ca. 3,95 statt ca. 1,40 USD. **Neue Regel: erst schätzen, dann laufen.** Das gilt für jeden bezahlten Schritt, auch für Neubewertungen durch den Judge.
+The judge with run context costs approx. 0.02 USD per verdict instead of 0.003 USD, because help articles and payments are sent along. The re-scoring was requested, but I did not estimate its cost beforehand, and the v3 step came to approx. 3.95 instead of approx. 1.40 USD. **New rule: estimate first, then run.** This applies to every paid step, including re-scoring by the judge.
 
-## Grenzen
+## Limitations
 
-- **Erfundene Daten, 15 Tickets, 3 Durchläufe.** Unterschiede zwischen Versionen liegen oft bei 2–3 Durchläufen.
-- **Nur 3 Tickets mit berechtigter Erstattung.** Für die Autonomie-Frage ist das viel zu wenig (siehe oben).
-- **Der Judge ist selbst ein Modell.** `entwurf_ok` hat sich als stabil erwiesen (3 von 88 Urteilen kippten beim Wechsel der Fassung). `keine_spekulation` ist durch die Datumslücke nach unten verzerrt.
-- **Ein Modell, eine Temperatur.** Ob ein größeres Modell weniger spekuliert, ist nicht gemessen.
-- **Das Goldset wurde zweimal nach einem Lauf angepasst** (T01 im Wortlaut, T07 in der Sache), beide Male dokumentiert und mit Zahlen vorher/nachher.
+- **Invented data, 15 tickets, 3 runs.** Differences between versions are often 2–3 runs.
+- **Only 3 tickets with a justified refund.** For the autonomy question, that is far too few (see above).
+- **The judge is itself a model.** `entwurf_ok` proved stable (3 of 88 verdicts flipped when the version changed). `keine_spekulation` is biased downward by the date gap.
+- **One model, one temperature.** Whether a larger model speculates less has not been measured.
+- **The Goldset was adjusted twice after a run** (T01 in wording, T07 in substance), both times documented and with before/after numbers.
 
 ## Learnings
 
-1. **pass^k statt Einzelerfolg.** 87 % Erfolg pro Durchlauf klingt gut, aber jedes vierte Ticket scheitert in mindestens einem von drei Versuchen. Bei Agents, die handeln, ist die Streuung das eigentliche Risiko.
-2. **Prompt-Regeln sind gekoppelt.** Jede neue Regel hat ein Ziel-Ticket verbessert und ein anderes verschlechtert, oder sie hat gar nicht gewirkt. Ohne Vergleich je Ticket wäre das im Durchschnitt untergegangen.
-3. **Pflichten gehören in den Code, und die Eingriffe gehören in die Auswertung.** Der Stop-Hook macht den Agent verlässlich, verdeckt aber, dass der Agent selbst nicht besser geworden ist. Erst die Kennzahl „Pflicht erfüllt ohne Eingriff“ macht das sichtbar.
-4. **Bevor man den Agent verbessert, das Soll prüfen.** T02 war ein Konflikt zwischen Prompt und Goldset, T07 ein zu enges Soll, T01 eine mehrdeutige Kernaussage. Keiner der drei Fälle war ein reiner Agent-Fehler.
-5. **Ein Judge braucht denselben Kontext wie der Agent.** Ohne Daten verlangte er 108,68 statt 54,34 USD. Ohne das Datum wertete er korrekte Fristschlüsse als Spekulation. Die negativen Urteile von Hand gegenzuprüfen, hat beides aufgedeckt.
-6. **Null Fehler heißt nicht sicher.** Die Dreierregel übersetzt „0 von n“ in eine ehrliche Obergrenze. Bei 3 Erstattungs-Tickets liegt sie bei 100 %.
-7. **Messen statt schließen, schätzen statt laufen lassen.** Die Annahme zum SDK-Overhead war falsch, und die Kosten der Neubewertung waren nicht geschätzt. Beides kam erst durch Messung bzw. Abrechnung ans Licht.
+1. **pass^k instead of single-run success.** 87% success per run sounds good, but every fourth ticket fails in at least one of three attempts. For agents that act, the variance is the actual risk.
+2. **Prompt rules are coupled.** Every new rule improved a target ticket and made another one worse, or it had no effect at all. Without a per-ticket comparison, this would have been lost in the average.
+3. **Duties belong in the code, and the interventions belong in the evaluation.** The stop hook makes the agent reliable, but hides that the agent itself has not gotten better. Only the metric "Pflicht erfüllt ohne Eingriff" (duty fulfilled without intervention) makes that visible.
+4. **Before improving the agent, check the target.** T02 was a conflict between prompt and Goldset, T07 a target that was too narrow, T01 an ambiguous core statement. None of the three cases was a pure agent error.
+5. **A judge needs the same context as the agent.** Without the data, it demanded 108.68 instead of 54.34 USD. Without the date, it rated correct deadline conclusions as speculation. Cross-checking the negative verdicts by hand uncovered both.
+6. **Zero errors does not mean safe.** The rule of three translates "0 out of n" into an honest upper bound. With 3 refund tickets, it is 100%.
+7. **Measure instead of infer, estimate instead of just letting it run.** The assumption about the SDK overhead was wrong, and the cost of the re-scoring was not estimated. Both only came to light through measurement and billing, respectively.
 
-## Was ich anders machen würde
+## What I Would Do Differently
 
-- **Das Goldset auf die Autonomie-Frage zuschneiden:** mindestens 30 verschiedene Erstattungsfälle statt 3, sonst kann der Schattenmodus die Frage nicht beantworten.
-- **Kernaussagen mit Datenbezug formulieren** („die zweite Zahlung Z005 über 54,34 USD“) und das Goldset vor dem ersten Lauf gegen die Hilfe prüfen.
-- **Den Judge vor dem ersten Lauf kalibrieren:** Kontext wie beim Agent (Durchlauf und Datum), `keine_spekulation` von Anfang an, Stichprobe von Hand prüfen.
-- **Pflichten ab v1 im Code** und die Eingriffe als Kennzahl, statt sie erst per Prompt zu versuchen.
-- **Vor jedem bezahlten Schritt eine Kostenschätzung**, auch für Neubewertungen.
+- **Tailor the Goldset to the autonomy question:** at least 30 different refund cases instead of 3, otherwise shadow mode cannot answer the question.
+- **Phrase core statements with reference to the data** ("die zweite Zahlung Z005 über 54,34 USD" (the second payment Z005 of 54.34 USD)) and check the Goldset against the help center before the first run.
+- **Calibrate the judge before the first run:** context as for the agent (run and date), `keine_spekulation` from the start, check a sample by hand.
+- **Duties in the code from v1 on**, with the interventions as a metric, instead of first trying them via prompt.
+- **A cost estimate before every paid step**, including re-scoring.
 
-## Benutzung
+## Usage
 
 ```bash
 uv venv && uv pip install --python .venv -r requirements.txt
 cp ../ai-uc-03-context-engineering/.env .   # ANTHROPIC_API_KEY, gitignored
-.venv/bin/python -m pytest                   # 83 Tests, ohne LLM
+.venv/bin/python -m pytest                   # 83 tests, no LLM
 
-# Agent (kostet Geld, vorher schätzen: ca. 0,027 USD pro Ticket)
-.venv/bin/python agent.py T01                                   # ein Ticket, Prompt v3
+# Agent (costs money, estimate first: approx. 0.027 USD per ticket)
+.venv/bin/python agent.py T01                                   # one ticket, prompt v3
 .venv/bin/python agent.py --alle --laeufe 3 --prompt v3 --ausgabe evals/laeufe/v4
 
-# Auswertung
-.venv/bin/python score.py evals/laeufe/v3 --judge-version j2   # veröffentlichte Werte, ohne API-Aufrufe
-.venv/bin/python score.py evals/laeufe/v4                      # neuer Lauf: Judge j3, ca. 0,02 USD pro Urteil
+# Evaluation
+.venv/bin/python score.py evals/laeufe/v3 --judge-version j2   # published values, no API calls
+.venv/bin/python score.py evals/laeufe/v4                      # new run: judge j3, approx. 0.02 USD per verdict
 .venv/bin/python compare.py v1 v2 v3 --fall "T14:anderes Konto" --fall "T02:widersprechen" \
     --einordnung evals/einordnung_v1_v2_v3.md
 ```
 
-| Datei | Inhalt |
+| File | Contents |
 |---|---|
-| `werkzeuge.py`, `mcp_server.py` | 7 Werkzeuge, Protokoll je Aufruf, MCP-Hülle |
-| `agent.py` | Agent (Prompts v1–v3, PreToolUse- und Stop-Hook) |
-| `score.py`, `compare.py` | Auswertung, Vergleich, Fallbeispiele |
-| `evals/` | Goldset, Durchläufe mit Trajektorien, Ergebnisse, Judge-Prüfung |
-| `docs/decisions.md` | alle Entscheidungen, datiert |
+| `werkzeuge.py`, `mcp_server.py` | 7 tools, log per call, MCP wrapper |
+| `agent.py` | Agent (prompts v1–v3, PreToolUse and stop hook) |
+| `score.py`, `compare.py` | Evaluation, comparison, case examples |
+| `evals/` | Goldset, runs with trajectories, results, judge check |
+| `docs/decisions.md` | all decisions, dated |
